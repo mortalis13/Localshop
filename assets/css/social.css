@@ -1,0 +1,83 @@
+
+.site-contact-line{
+  text-align: right;
+  padding-right: 10px;
+}
+.site-contact-line .contact-icon{
+  display: inline-block;
+  /*margin-right: 5px;*/
+  font-size: 20px;
+}
+
+.contact-icon {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.contact-icon .fa {
+  /*width: 50px;*/
+  /*height: 50px;*/
+  /*line-height: 50px;*/
+  
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  
+  text-align: center;
+  color: #FFF;
+  color: rgba(255, 255, 255, 0.9);
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.contact-icon .fa{ 
+  border-radius: 50%;
+}
+
+.contact-icon .fa:hover, .contact-icon .fa:active {
+  color: #FFF;
+  -webkit-box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 2px rgba(0,0,0,0.5); 
+}
+
+.contact-icon .fa-whatsapp{background-color:#25d366;} 
+/*.contact-icon .fa-whatsapp{background-color:#128C7E;} */
+/*.contact-icon .fa-whatsapp{background-color:#075E54;} */
+
+.contact-icon .fa-adn{background-color:#504e54;} 
+.contact-icon .fa-apple{background-color:#aeb5c5;} 
+.contact-icon .fa-android{background-color:#A5C63B;}  
+.contact-icon .fa-bitbucket,.contact-icon .fa-bitbucket-square{background-color:#003366;} 
+.contact-icon .fa-bitcoin,.contact-icon .fa-btc{background-color:#F7931A;} 
+.contact-icon .fa-css3{background-color:#1572B7;} 
+.contact-icon .fa-dribbble{background-color:#F46899;}  
+.contact-icon .fa-dropbox{background-color:#018BD3;}
+.contact-icon .fa-facebook,.contact-icon .fa-facebook-square{background-color:#3C599F;}  
+.contact-icon .fa-flickr{background-color:#FF0084;}
+.contact-icon .fa-foursquare{background-color:#0086BE;}
+.contact-icon .fa-github,.contact-icon .fa-github-alt,.contact-icon .fa-github-square{background-color:#070709;} 
+.contact-icon .fa-google-plus,.contact-icon .fa-google-plus-square{background-color:#CF3D2E;} 
+.contact-icon .fa-html5{background-color:#E54D26;}
+.contact-icon .fa-instagram{background-color:#A1755C;}
+.contact-icon .fa-linkedin,.contact-icon .fa-linkedin-square{background-color:#0085AE;} 
+.contact-icon .fa-linux{background-color:#FBC002;color:#333;}
+.contact-icon .fa-maxcdn{background-color:#F6AE1C;}
+.contact-icon .fa-pagelines{background-color:#241E20;color:#3984EA;}
+.contact-icon .fa-pinterest,.contact-icon .fa-pinterest-square{background-color:#CC2127;} 
+.contact-icon .fa-renren{background-color:#025DAC;}
+.contact-icon .fa-skype{background-color:#01AEF2;}
+.contact-icon .fa-stack-exchange{background-color:#245590;}
+.contact-icon .fa-stack-overflow{background-color:#FF7300;}
+.contact-icon .fa-trello{background-color:#265A7F;}
+.contact-icon .fa-tumblr,.contact-icon .fa-tumblr-square{background-color:#314E6C;} 
+.contact-icon .fa-twitter,.contact-icon .fa-twitter-square{background-color:#32CCFE;} 
+.contact-icon .fa-vimeo-square{background-color:#229ACC;}
+.contact-icon .fa-vk{background-color:#375474;}
+.contact-icon .fa-weibo{background-color:#D72B2B;}
+.contact-icon .fa-windows{background-color:#12B6F3;}
+.contact-icon .fa-xing,.contact-icon .fa-xing-square{background-color:#00555C;} 
+.contact-icon .fa-youtube,.contact-icon .fa-youtube-play,.contact-icon .fa-youtube-square{background-color:#C52F30;}

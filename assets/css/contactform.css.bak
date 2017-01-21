@@ -1,0 +1,25 @@
+
+#contactFormSection{
+  width: 80%;
+  margin: 0 auto;
+}
+#contactForm label{
+  display: block;
+}
+#contactForm input{
+  min-width: 300px;
+}
+
+.contact-error,
+.contact-send-status{
+  display: block;
+  width: 80%;
+  margin: 20px auto;
+  font-weight: 700;
+}
+.contact-error{
+  color: #ce5757;
+}
+.contact-send-status{
+  color: #317139;
+}

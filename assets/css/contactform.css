@@ -1,0 +1,66 @@
+
+.contacts-wrap{
+  margin-top: 30px;
+}
+
+.contacts-list{
+  float: left;
+  width: 300px;
+  margin-left: 100px;
+}
+.contacts-list a{
+  color: #333;
+}
+.contacts-list a:hover{
+  color: #000;
+}
+.contacts-list .fa{
+  font-size: 26px;
+}
+.contacts-list-item{
+  margin-bottom: 15px;
+}
+.contacts-list-icon{
+  display: inline-block;
+  width: 35px;
+  vertical-align: middle;
+}
+.contacts-list-icon:hover{
+  cursor: default;
+  color: #000;
+}
+.contacts-list-caption{
+  display: inline-block;
+}
+.contacts-list-caption a:hover{
+  text-decoration: underline;
+}
+
+#contactFormSection{
+  float: left;
+  width: 500px;
+  /*margin: 0 auto;*/
+}
+#contactForm label{
+  display: block;
+}
+#contactForm input{
+  width: 100%;
+}
+#contactForm #contact-submit{
+  padding: 8px 40px;
+}
+
+.contact-error,
+.contact-send-status{
+  display: block;
+  width: 80%;
+  margin: 20px auto;
+  font-weight: 700;
+}
+.contact-error{
+  color: #ce5757;
+}
+.contact-send-status{
+  color: #317139;
+}
