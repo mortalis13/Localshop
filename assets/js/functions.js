@@ -57,8 +57,6 @@ jQuery(function($){
   }
   
   $('#signup-form').submit(function(){
-    startSignupWait();
-    
     var thisForm = $(this);
     
     var url = this.action
@@ -70,6 +68,8 @@ jQuery(function($){
       alert("Email is not valid");
       return false;
     }
+    
+    startSignupWait();
     
     $.ajax({
       type: "POST",

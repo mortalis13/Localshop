@@ -3564,10 +3564,6 @@ table tbody h2 {
     background-color: rgba(0, 0, 0, .025)
 }
 
-#comments {
-    padding-top: 2.617924em
-}
-
 #comments .comments-title {
     border-bottom: 1px solid rgba(0, 0, 0, .05);
     padding-bottom: .5407911001em;
@@ -4863,7 +4859,7 @@ button.menu-toggle:after {
         margin-right: 0
     }
     #respond {
-        padding: 2.617924em
+        padding: 0 0px 40px;
     }
     #respond .comment-form-author,
     #respond .comment-form-email,

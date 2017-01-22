@@ -27,15 +27,15 @@ if ( ! comments_open() ) {
 
 ?>
 <div id="reviews" class="woocommerce-Reviews">
-	<div id="comments">
-		<h2 class="woocommerce-Reviews-title"><?php
-			if ( get_option( 'woocommerce_enable_review_rating' ) === 'yes' && ( $count = $product->get_review_count() ) )
-				printf( _n( '%s review for %s%s%s', '%s reviews for %s%s%s', $count, 'woocommerce' ), $count, '<span>', get_the_title(), '</span>' );
-			// else
-			// 	_e( 'Reviews', 'woocommerce' );
-		?></h2>
+	<?php if ( have_comments() ) : ?>
+    <div id="comments">
+    <h2 class="woocommerce-Reviews-title"><?php
+      if ( get_option( 'woocommerce_enable_review_rating' ) === 'yes' && ( $count = $product->get_review_count() ) )
+        printf( _n( '%s review for %s%s%s', '%s reviews for %s%s%s', $count, 'woocommerce' ), $count, '<span>', get_the_title(), '</span>' );
+      // else
+      //  _e( 'Reviews', 'woocommerce' );
+    ?></h2>
 
-		<?php if ( have_comments() ) : ?>
 
 			<ol class="commentlist">
 				<?php wp_list_comments( apply_filters( 'woocommerce_product_review_list_args', array( 'callback' => 'woocommerce_comments' ) ) ); ?>
@@ -51,12 +51,9 @@ if ( ! comments_open() ) {
 				echo '</nav>';
 			endif; ?>
 
-		<?php else : ?>
-
-			<!-- <p class="woocommerce-noreviews"><?php _e( 'There are no reviews yet.', 'woocommerce' ); ?></p> -->
-
-		<?php endif; ?>
-	</div>
+	  </div>
+  <?php endif; ?>
+    
 
 	<?php if ( get_option( 'woocommerce_review_rating_verification_required' ) === 'no' || wc_customer_bought_product( '', get_current_user_id(), $product->id ) ) : ?>
 
@@ -86,7 +83,7 @@ if ( ! comments_open() ) {
 
 					if ( get_option( 'woocommerce_enable_review_rating' ) === 'yes' ) {
 						$comment_form['comment_field'] = '<p class="comment-form-rating"><label for="rating">' . __( 'Your Rating', 'woocommerce' ) .'</label><select name="rating" id="rating" aria-required="true" required>
-							<option value="">' . __( 'Rate&hellip;', 'woocommerce' ) . '</option>
+							<option value="">'  . __( 'Rate&hellip;', 'woocommerce' ) . '</option>
 							<option value="5">' . __( 'Perfect', 'woocommerce' ) . '</option>
 							<option value="4">' . __( 'Good', 'woocommerce' ) . '</option>
 							<option value="3">' . __( 'Average', 'woocommerce' ) . '</option>

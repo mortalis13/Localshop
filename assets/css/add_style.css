@@ -587,8 +587,6 @@ ul.products li.product.last {
   display: block;
 }
 
-.woocommerce-Tabs-panel{
-}
 .woocommerce-tabs .panel {
     width: 100%;
     float: none;
@@ -602,6 +600,12 @@ ul.products li.product.last {
     border-top: 1px solid #000;
     
     padding: 20px 30px 15px 30px;
+}
+.woocommerce-tabs .panel#tab-reviews {
+    padding: 20px 80px 15px;
+}
+.woocommerce-tabs .panel#tab-reviews #review_form_wrapper {
+    margin-top: 30px;
 }
 
 .woocommerce-tabs ul.tabs li.active a {
@@ -800,4 +804,16 @@ ul.footer-categories-list a:hover{
 
 .site-footer .signup-message{
   margin-top: 10px;
+}
+
+.error404 .woocommerce-breadcrumb{
+  display: none;
+}
+.error404 .page-header{
+  margin-top: 30px;
+}
+.error404 .content{
+  margin-top: 30px;
+  text-align: center;
+  margin-bottom: 100px;
 }

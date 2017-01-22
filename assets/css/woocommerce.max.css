@@ -630,6 +630,8 @@ a.reset_variations:before{
 
 #reviews #comments{
   padding-top:0
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
 }
 
 #reviews .woocommerce-Reviews-title{
@@ -646,7 +648,7 @@ a.reset_variations:before{
 }
 
 #reviews .commentlist li{
-  margin-bottom:2.617924em;
+  margin-bottom: 0px;
   list-style:none;
   clear:both
 }
@@ -658,7 +660,7 @@ a.reset_variations:before{
 }
 
 #reviews .commentlist li .comment_container{
-  padding:1.618em;
+  padding: 20px 0px;
   border-radius:3px
 }
 

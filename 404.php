@@ -18,51 +18,53 @@ get_header(); ?>
 					<header class="page-header">
 						<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'localshop' ); ?></h1>
 					</header><!-- .page-header -->
-
-					<p><?php esc_html_e( 'Nothing was found at this location. Try searching, or check out the links below.', 'localshop' ); ?></p>
+          
+          <div class="content">
+            <p><?php esc_html_e( 'Nothing was found at this location. Try to use the search.', 'localshop' ); ?></p>
+          </div>
 
 					<?php
 					echo '<section aria-label="Search">';
 
-					if ( localshop_is_woocommerce_activated() ) {
-						the_widget( 'WC_Widget_Product_Search' );
-					} else {
-						get_search_form();
-					}
+					// if ( localshop_is_woocommerce_activated() ) {
+					// 	the_widget( 'WC_Widget_Product_Search' );
+					// } else {
+					// 	get_search_form();
+					// }
 
 					echo '</section>';
 
 					if ( localshop_is_woocommerce_activated() ) {
 
-						echo '<div class="fourohfour-columns-2">';
+						// echo '<div class="fourohfour-columns-2">';
 
-							echo '<section class="col-1" aria-label="Promoted Products">';
+						// 	echo '<section class="col-1" aria-label="Promoted Products">';
 
-								localshop_promoted_products();
+						// 		localshop_promoted_products();
 
-							echo '</section>';
+						// 	echo '</section>';
 
-							echo '<nav class="col-2" aria-label="Product Categories">';
+						// 	echo '<nav class="col-2" aria-label="Product Categories">';
 
-							echo '<h2>' . esc_html__( 'Product Categories', 'localshop' ) . '</h2>';
+						// 	echo '<h2>' . esc_html__( 'Product Categories', 'localshop' ) . '</h2>';
 
-							the_widget( 'WC_Widget_Product_Categories', array(
-																			'count'		=> 1,
-							) );
-							echo '</nav>';
+						// 	the_widget( 'WC_Widget_Product_Categories', array(
+						// 													'count'		=> 1,
+						// 	) );
+						// 	echo '</nav>';
 
-							echo '</div>';
+						// 	echo '</div>';
 
-							echo '<section aria-label="Popular Products" >';
+						// 	echo '<section aria-label="Popular Products" >';
 
-							echo '<h2>' . esc_html__( 'Popular Products', 'localshop' ) . '</h2>';
+						// 	echo '<h2>' . esc_html__( 'Popular Products', 'localshop' ) . '</h2>';
 
-							echo localshop_do_shortcode( 'best_selling_products', array(
-								'per_page'  => 4,
-								'columns'   => 4,
-							) );
+						// 	echo localshop_do_shortcode( 'best_selling_products', array(
+						// 		'per_page'  => 4,
+						// 		'columns'   => 4,
+						// 	) );
 
-							echo '</section>';
+						// 	echo '</section>';
 					}
 					?>
 

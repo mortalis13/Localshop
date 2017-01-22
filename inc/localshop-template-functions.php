@@ -1042,12 +1042,12 @@ if ( ! function_exists( 'localshop_insert_newsletters_email' ) ) {
     $res = $wpdb->get_results($sql);
     
     if(!$res){
-      // $wpdb->insert($table_name,
-      //   array(
-      //     'email' => $email,
-      //   ),
-      //   array('%s')
-      // );
+      $wpdb->insert($table_name,
+        array(
+          'email' => $email,
+        ),
+        array('%s')
+      );
     }
     
     return true;
