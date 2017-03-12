@@ -30,10 +30,13 @@ global $post, $product;
         $attachment_count = count( $product->get_gallery_attachment_ids() );
         $gallery          = $attachment_count > 0 ? '[product-gallery]' : '';
         $props            = wc_get_product_attachment_props( get_post_thumbnail_id(), $post );
+        
         $image            = get_the_post_thumbnail( $post->ID, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ), array(
           'title'  => $props['title'],
           'alt'    => $props['alt'],
+          'data-zoom-image' => $props['url']
         ) );
+        
         echo apply_filters(
           'woocommerce_single_product_image_html',
           sprintf(
@@ -45,12 +48,11 @@ global $post, $product;
           ),
           $post->ID
         );
-      } else {
+      } 
+      else {
         echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<img src="%s" alt="%s" />', wc_placeholder_img_src(), __( 'Placeholder', 'woocommerce' ) ), $post->ID );
       }
       ?>
-      
-      <div id="zoom-region"></div>
     </div>
   </div>
     
@@ -58,5 +60,3 @@ global $post, $product;
     do_action( 'woocommerce_product_thumbnails' );
   ?>
 </div>
-
-<div id="zoom-panel"></div>
