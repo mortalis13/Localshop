@@ -193,12 +193,19 @@ if ( ! class_exists( 'Localshop' ) ) :
 			/**
 			 * Styles
 			 */
+      wp_enqueue_style( 'localshop-normalize-style', get_template_directory_uri() . '/assets/css/normalize.css', '', $localshop_version );
+      wp_enqueue_style( 'localshop-fonts-style', get_template_directory_uri() . '/assets/css/fonts.css', '', $localshop_version );
+      wp_enqueue_style( 'localshop-fontawesome-style', get_template_directory_uri() . '/assets/fonts/FontAwesome/css/font-awesome.css', '', $localshop_version );
+      
       wp_enqueue_style( 'localshop-style', get_template_directory_uri() . '/style.css', '', $localshop_version );
+      wp_enqueue_style( 'localshop-media-style', get_template_directory_uri() . '/assets/css/media.css', '', $localshop_version );
       
       wp_enqueue_style( 'localshop-contactform', get_template_directory_uri() . '/assets/css/contactform.css', '', $localshop_version );
       wp_enqueue_style( 'localshop-social', get_template_directory_uri() . '/assets/css/social.css', '', $localshop_version );
+      wp_enqueue_style( 'localshop-loaders-style', get_template_directory_uri() . '/assets/css/loaders.css', '', $localshop_version );
       
       wp_style_add_data( 'localshop-style', 'rtl', 'replace' );
+
 
       /**
        * Fonts
@@ -213,8 +220,8 @@ if ( ! class_exists( 'Localshop' ) ) :
       // );
 
       // $fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-
       // wp_enqueue_style( 'localshop-fonts', $fonts_url, array(), null );
+
 
       /**
        * Scripts
@@ -227,6 +234,7 @@ if ( ! class_exists( 'Localshop' ) ) :
         wp_enqueue_script( 'comment-reply' );
       }
     }
+
 
     /**
      * Enqueue child theme stylesheet.

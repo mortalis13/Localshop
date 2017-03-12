@@ -1,0 +1,28 @@
+
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins/Poppins-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Felipa;
+  src: url(../fonts/Felipa/Felipa-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Asul;
+  src: url(../fonts/Asul/Asul-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Asul;
+  src: url(../fonts/Asul/Asul-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}

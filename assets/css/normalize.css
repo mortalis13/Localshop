@@ -1,0 +1,201 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+img,
+legend {
+  border: 0;
+}
+
+legend,
+td,
+th {
+  padding: 0;
+}
+
+.fa,
+body,
+button,
+input,
+textarea {
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+pre {
+  max-width: 100%;
+}
+
+a,
+ins,
+mark {
+  text-decoration: none;
+}
+
+#comments .comment-list .comment-body:after,
+#comments .comment-list .comment-meta cite,
+#comments .comment-list .reply:after,
+#respond,
+.aligncenter,
+.clear:after,
+.comment-content:after,
+.entry-content:after,
+.error404 .fourohfour-columns-2:after,
+.gallery:after,
+.handheld-navigation,
+.header-widget-region:after,
+.main-navigation .menu,
+.main-navigation:after,
+.pagination,
+.pagination .page-numbers:after,
+.site-content:after,
+.site-footer:after,
+.site-header:after,
+.site-main nav.navigation:after,
+.woocommerce-pagination,
+.woocommerce-pagination .page-numbers:after,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+}
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+.fa,
+.fa-stack {
+  display: inline-block;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  color: #000;
+}
+
+sup {
+  top: -.5em;
+  bottom: 1ex;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+fieldset {
+  margin: 0 2px;
+}
+
+.fa.fa-pull-left,
+.fa.pull-left {
+  margin-right: .3em;
+}
+
+optgroup {
+  font-weight: 700;
+}

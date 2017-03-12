@@ -37,7 +37,7 @@ if ( ! class_exists( 'Localshop_WooCommerce' ) ) :
       }
 
       // Integrations.
-      add_action( 'wp_enqueue_scripts',             array( $this, 'woocommerce_integrations_scripts' ), 99 );
+      // add_action( 'wp_enqueue_scripts',             array( $this, 'woocommerce_integrations_scripts' ), 99 );
       add_action( 'wp_enqueue_scripts',                       array( $this, 'add_customizer_css' ), 140 );
 
       add_action( 'after_switch_theme',                       array( $this, 'set_localshop_style_theme_mods' ) );
@@ -110,8 +110,7 @@ if ( ! class_exists( 'Localshop_WooCommerce' ) ) :
     public function woocommerce_scripts() {
       global $localshop_version;
 
-      // wp_enqueue_style( 'localshop-woocommerce-style', get_template_directory_uri() . '/assets/sass/woocommerce/woocommerce.css', $localshop_version );
-      wp_enqueue_style( 'localshop-woocommerce-style', get_template_directory_uri() . '/assets/css/woocommerce.max.css', $localshop_version );
+      wp_enqueue_style( 'localshop-woocommerce-style', get_template_directory_uri() . '/assets/css/woocommerce.css', $localshop_version );
       wp_style_add_data( 'localshop-woocommerce-style', 'rtl', 'replace' );
 
       wp_register_script( 'localshop-header-cart', get_template_directory_uri() . '/assets/js/woocommerce/header-cart.min.js', array(), $localshop_version, true );
@@ -123,11 +122,11 @@ if ( ! class_exists( 'Localshop_WooCommerce' ) ) :
         wp_enqueue_script( 'localshop-sticky-payment' );
       }
       if ( is_product() ) {
+        wp_enqueue_script( 'localshop-jquery-zoom', get_template_directory_uri() . '/assets/js/jquery.zoom.js', 'jquery', $localshop_version, true );
         wp_enqueue_script( 'localshop-product', get_template_directory_uri() . '/assets/js/product.js', 'jquery', $localshop_version, true );
       }
       
       wp_enqueue_style( 'localshop-add-style', get_template_directory_uri() . '/assets/css/add_style.css', '', $localshop_version );
-      wp_enqueue_style( 'localshop-loaders-style', get_template_directory_uri() . '/assets/css/loaders.css', '', $localshop_version );
     }
 
     /**
@@ -173,7 +172,7 @@ if ( ! class_exists( 'Localshop_WooCommerce' ) ) :
      * @since  1.0.0
      */
     public function thumbnail_columns() {
-      return intval( apply_filters( 'localshop_product_thumbnail_columns', 4 ) );
+      return intval( apply_filters( 'localshop_product_thumbnail_columns', 5 ) );
     }
 
     /**

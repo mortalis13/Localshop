@@ -954,13 +954,6 @@ if ( ! function_exists( 'localshop_menu_line' ) ) {
               'container_class' => 'primary-navigation',
               )
           );
-
-          wp_nav_menu(
-            array(
-              'theme_location'  => 'handheld',
-              'container_class' => 'handheld-navigation',
-              )
-          );
           ?>
         </nav><!-- #site-navigation -->
       </div>

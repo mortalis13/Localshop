@@ -5,7 +5,6 @@
 }
 .site-contact-line .contact-icon{
   display: inline-block;
-  /*margin-right: 5px;*/
   font-size: 20px;
 }
 
@@ -15,10 +14,6 @@
 }
 
 .contact-icon .fa {
-  /*width: 50px;*/
-  /*height: 50px;*/
-  /*line-height: 50px;*/
-  
   width: 35px;
   height: 35px;
   line-height: 35px;
@@ -47,7 +42,6 @@
 .contact-icon .fa-whatsapp{background-color:#25d366;} 
 /*.contact-icon .fa-whatsapp{background-color:#128C7E;} */
 /*.contact-icon .fa-whatsapp{background-color:#075E54;} */
-
 .contact-icon .fa-adn{background-color:#504e54;} 
 .contact-icon .fa-apple{background-color:#aeb5c5;} 
 .contact-icon .fa-android{background-color:#A5C63B;}  

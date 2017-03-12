@@ -1,0 +1,25 @@
+*- add social icons
+*- search
+*- minor styles
+*- rename Storefront, host, db
+*- menu color, submenu active style
+*- image click
+*- in cat page click on product image (border overflow)
+*- newsletters action
+*- extend contact page
+*- http://localhost/wp-woo-2/product/stick-1 -> detail width
+*- cat page -> page numbers
+*- check related product max number
+*- organize css
+*- 404
+*- send review
+*- review style
+- multiimage for product details page
+- bread on brands, contact
+- organize css/js
+- responsive style
+
+- admin page
+- translate
+- multibrowser
+- remove outline social icons click
