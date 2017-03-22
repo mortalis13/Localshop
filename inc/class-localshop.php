@@ -198,7 +198,6 @@ if ( ! class_exists( 'Localshop' ) ) :
       wp_enqueue_style( 'localshop-fontawesome-style', get_template_directory_uri() . '/assets/fonts/FontAwesome/css/font-awesome.css', '', $localshop_version );
       
       wp_enqueue_style( 'localshop-style', get_template_directory_uri() . '/style.css', '', $localshop_version );
-      wp_enqueue_style( 'localshop-media-style', get_template_directory_uri() . '/assets/css/media.css', '', $localshop_version );
       
       wp_enqueue_style( 'localshop-contactform', get_template_directory_uri() . '/assets/css/contactform.css', '', $localshop_version );
       wp_enqueue_style( 'localshop-social', get_template_directory_uri() . '/assets/css/social.css', '', $localshop_version );
@@ -226,7 +225,7 @@ if ( ! class_exists( 'Localshop' ) ) :
       /**
        * Scripts
        */
-      wp_enqueue_script( 'localshop-navigation', get_template_directory_uri() . '/assets/js/navigation.min.js', array( 'jquery' ), '20120206', true );
+      wp_enqueue_script( 'localshop-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array( 'jquery' ), '20120206', true );
       wp_enqueue_script( 'localshop-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.min.js', array(), '20130115', true );
       wp_enqueue_script( 'localshop-functions', get_template_directory_uri() . '/assets/js/functions.js', array('jquery'), '20130115', true );
 

@@ -14,12 +14,16 @@
 *- 404
 *- send review
 *- review style
-- multiimage for product details page
-- bread on brands, contact
-- organize css/js
+*- multiimage for product details page
+*- organize css/js
 - responsive style
 
 - admin page
 - translate
 - multibrowser
 - remove outline social icons click
+- organize php
+- related products organize columns on media queries (masonry?)
+
+
+related product check link

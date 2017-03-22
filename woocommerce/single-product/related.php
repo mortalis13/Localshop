@@ -53,8 +53,48 @@ if ( $products->have_posts() ) : ?>
 		<?php woocommerce_product_loop_start(); ?>
 
 			<?php while ( $products->have_posts() ) : $products->the_post(); ?>
+        
+        <div <?php post_class(); ?>>
+        
+          <div class="product-image">
+            <?php
+              echo '<a href="' . get_the_permalink() . '" class="woocommerce-LoopProduct-link">';
+              echo woocommerce_get_product_thumbnail();
+              echo '</a>';
+            ?>
+          </div>
+          
+          <div class="product-summary">
+            <div class="product-link">
+              <?php
+                echo '<a href="' . get_the_permalink() . '" class="woocommerce-LoopProduct-link">';
+                echo get_the_title();
+                echo '</a>';
+              ?>
+            </div>
+            
+            <?php
+              global $product;
+              if ( is_search() ) {
+                echo '<div class="product-category">';
+                echo $product->get_categories( ', ', '<span class="posted_in">', '</span>' );
+                echo '</div>';
+              }
+            ?>
+            
+            <div class="product-description">
+              <?php the_excerpt(); ?>
+            </div>
+            
+            <div class="product-price">
+              <?php wc_get_template( 'loop/price.php' ); ?>
+            </div>
+          
+          </div>
+          
+        </div>
 
-				<?php wc_get_template_part( 'content', 'product' ); ?>
+				<?php // wc_get_template_part( 'content', 'product' ); ?>
 
 			<?php endwhile; // end of the loop. ?>
 

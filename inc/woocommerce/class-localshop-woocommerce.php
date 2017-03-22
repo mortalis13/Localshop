@@ -113,6 +113,10 @@ if ( ! class_exists( 'Localshop_WooCommerce' ) ) :
       wp_enqueue_style( 'localshop-woocommerce-style', get_template_directory_uri() . '/assets/css/woocommerce.css', $localshop_version );
       wp_style_add_data( 'localshop-woocommerce-style', 'rtl', 'replace' );
 
+      wp_enqueue_style( 'localshop-add-style', get_template_directory_uri() . '/assets/css/add_style.css', '', $localshop_version );
+      wp_enqueue_style( 'localshop-media-style', get_template_directory_uri() . '/assets/css/media.css', '', $localshop_version );
+      
+      
       wp_register_script( 'localshop-header-cart', get_template_directory_uri() . '/assets/js/woocommerce/header-cart.min.js', array(), $localshop_version, true );
       wp_enqueue_script( 'localshop-header-cart' );
 
@@ -126,8 +130,6 @@ if ( ! class_exists( 'Localshop_WooCommerce' ) ) :
         wp_enqueue_script( 'localshop-jquery-elevatezoom', get_template_directory_uri() . '/assets/js/jquery.elevatezoom.js', 'jquery', $localshop_version, true );
         wp_enqueue_script( 'localshop-product', get_template_directory_uri() . '/assets/js/product.js', 'jquery', $localshop_version, true );
       }
-      
-      wp_enqueue_style( 'localshop-add-style', get_template_directory_uri() . '/assets/css/add_style.css', '', $localshop_version );
     }
 
     /**
@@ -183,7 +185,8 @@ if ( ! class_exists( 'Localshop_WooCommerce' ) ) :
      * @since  1.0.0
      */
     public function products_per_page() {
-      return intval( apply_filters( 'localshop_products_per_page', 12 ) );
+      // return intval( apply_filters( 'localshop_products_per_page', 12 ) );
+      return intval( apply_filters( 'localshop_products_per_page', 5 ) );
       // return intval( apply_filters( 'localshop_products_per_page', 3 ) );
     }
 

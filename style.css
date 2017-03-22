@@ -26,9 +26,9 @@
 ************************
 */
 
-/* --------------------------------------------- */
+/*---------------------------------------------*/
 
-/*  1 - Global */
+/* ===== 1 - Global ===== */
 
 body,
 button,
@@ -313,7 +313,7 @@ a img{
 }
 
 
-/*  2 - Header */
+/* ===== 2 - Header ===== */
 
 .site-header .custom-logo-link img,
 .site-header .site-logo-anchor img,
@@ -386,18 +386,20 @@ a img{
 }
 
 
-/*  3 - Navigation */
+/* ===== 3 - Navigation ===== */
 
 button.menu-toggle {
   cursor: pointer;
-  text-align: left;
-  float: right;
+  float: none;
   position: relative;
-  border: 2px solid transparent;
   box-shadow: none;
-  border-radius: 2px;
-  padding: .6180469716em .875em .6180469716em 2.617924em;
-  font-size: .875em;
+  border-radius: 3px;
+  font-size: .9em;
+  color: #222;
+  text-align: center;
+  padding: 5px 70px;
+  background: #f6f6f6;
+  border: 1px solid #aac0c3;
 }
 
 button.menu-toggle span:before,
@@ -655,7 +657,7 @@ a.cart-contents:hover,
 }
 .main-navigation ul.menu > li:first-child,
 .main-navigation ul.nav-menu > li:first-child {
-  margin-left: -1em;
+  /*margin-left: -1em;*/
 }
 .main-navigation ul.menu > li.menu-item-has-children > a:after,
 .main-navigation ul.menu > li.page_item_has_children > a:after,
@@ -838,7 +840,7 @@ ul.menu li.current-menu-item > a {
 }
 
 
-/*  4 - Content */
+/* ===== 4 - Content ===== */
 
 .site-main {
   margin-bottom: 2.617924em;
@@ -854,7 +856,7 @@ ul.menu li.current-menu-item > a {
 
 .content-area {
   float: none;
-  width: 960px;
+  /*width: 960px;*/
   margin: 0 auto;
   margin-bottom: 2.617924em;
 }
@@ -956,7 +958,7 @@ ul.menu li.current-menu-item > a {
 }
 
 
-/*  5 - Comments */
+/* ===== 5 - Comments ===== */
 
 .comment-list .comment,
 .comment-list:after {
@@ -1216,7 +1218,7 @@ ul.menu li.current-menu-item > a {
 }
 
 
-/*  6 - Pagination */
+/* ===== 6 - Pagination ===== */
 
 .pagination,
 .woocommerce-pagination {
@@ -1288,7 +1290,7 @@ ul.menu li.current-menu-item > a {
 }
 
 
-/*  7 - Widgets */
+/* ===== 7 - Widgets ===== */
 
 .widget {
   margin: 0 0 3.706325903em;
@@ -1504,7 +1506,7 @@ ul.menu li.current-menu-item > a {
 }
 
 
-/*  8 - Footer */
+/* ===== 8 - Footer ===== */
 
 .site-footer {
   background-color: #f3f3f3;
@@ -1530,7 +1532,7 @@ ul.menu li.current-menu-item > a {
 }
 
 
-/*  9 - Tables */
+/* ===== 9 - Tables ===== */
 
 table {
   border-spacing: 0;
@@ -1571,7 +1573,7 @@ table tbody h2 {
 }
 
 
-/* 10 - Forms */
+/* ===== 10 - Forms ===== */
 
 fieldset,
 form {
@@ -1812,7 +1814,7 @@ fieldset legend {
 }
 
 
-/* 11 - 404 Page */
+/* ===== 11 - 404 Page ===== */
 
 .error404 .site-content .widget_product_search {
   padding: 1.618em;
@@ -1865,13 +1867,13 @@ fieldset legend {
 }
 
 
-/* 12 - Layout */
+/* ===== 12 - Layout ===== */
 
 .col-full {
-  max-width: 67.141em;
+  max-width: 1070px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 2.617924em;
+  padding: 0 50px;
   box-sizing: content-box;
 }
 .col-full:after,
@@ -1883,6 +1885,10 @@ fieldset legend {
   content: " ";
   display: block;
   clear: both;
+}
+
+.site-content .col-full {
+  max-width: 960px;
 }
 
 .right-sidebar .content-area {
@@ -1916,7 +1922,7 @@ fieldset legend {
 }
 
 
-/* 13 - Alignment */
+/* ===== 13 - Alignment ===== */
 
 .alignleft {
   display: inline;
@@ -1935,7 +1941,7 @@ fieldset legend {
 }
 
 
-/* 14 - Accessibility */
+/* ===== 14 - Accessibility ===== */
 
 .screen-reader-text {
   clip: rect(1px 1px 1px 1px);
@@ -1964,7 +1970,7 @@ fieldset legend {
 }
 
 
-/* 15 - Clearing */
+/* ===== 15 - Clearing ===== */
 
 #comments .comment-list .comment-body:after,
 #comments .comment-list .comment-body:before,
@@ -1987,7 +1993,7 @@ fieldset legend {
 }
 
 
-/* 16 - Captions */
+/* ===== 16 - Captions ===== */
 
 .wp-caption {
   max-width: 100%;
@@ -2007,7 +2013,7 @@ fieldset legend {
 }
 
 
-/* 17 - Galleries */
+/* ===== 17 - Galleries ===== */
 
 .gallery {
   margin-bottom: 1em;
@@ -2075,7 +2081,7 @@ fieldset legend {
 }
 
 
-/* 18 - Misc */
+/* ===== 18 - Misc ===== */
 
 .comment-list:after,
 .comment-list:before,

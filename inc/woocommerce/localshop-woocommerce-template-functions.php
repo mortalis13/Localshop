@@ -406,6 +406,7 @@ if ( ! function_exists( 'localshop_template_loop_category_title' ) ) {
     }
 
     if ( $image ) {
+      echo '<div class="category-image">';
       echo '<a href="' . get_term_link( $category, 'product_cat' ) . '">';
       // Prevent esc_url from breaking spaces in urls for image embeds
       // Ref: https://core.trac.wordpress.org/ticket/23605
@@ -413,6 +414,7 @@ if ( ! function_exists( 'localshop_template_loop_category_title' ) ) {
 
       echo '<img src="' . esc_url( $image ) . '" alt="' . esc_attr( $category->name ) . '" width="' . esc_attr( $dimensions['width'] ) . '" height="' . esc_attr( $dimensions['height'] ) . '" />';
       echo '</a>';
+      echo '</div>';
     }
   }
 }
@@ -423,7 +425,8 @@ if (  ! function_exists( 'localshop_subcategory_thumbnail' ) ) {
    * Show the subcategory title in the product loop.
    */
   function localshop_subcategory_thumbnail( $category ) {
-    echo '<a href="' . get_term_link( $category, 'product_cat' ) . '" class="category-title">';
+    echo '<div class="category-title">';
+    echo '<a href="' . get_term_link( $category, 'product_cat' ) . '">';
     ?>
       <?php
         echo $category->name;
@@ -433,6 +436,7 @@ if (  ! function_exists( 'localshop_subcategory_thumbnail' ) ) {
       ?>
     <?php
     echo '</a>';
+    echo '</div>';
   }
   }
 
@@ -483,11 +487,15 @@ if (  ! function_exists( 'woocommerce_template_loop_product_title' ) ) {
    * Show the product title in the product loop. By default this is an H3.
    */
   function localshop_template_loop_product_title() {
+    echo '<div class="product-summary">';
+    
     echo '<div class="product-link">';
+    echo '<h2 class="title">';
     echo '<a href="' . get_the_permalink() . '" class="woocommerce-LoopProduct-link">';
     // echo '<h3>' . get_the_title() . '</h3>';
     echo get_the_title();
     echo '</a>';
+    echo '</h2>';
     echo '</div>';
     
     global $product;
@@ -496,6 +504,16 @@ if (  ! function_exists( 'woocommerce_template_loop_product_title' ) ) {
       echo $product->get_categories( ', ', '<span class="posted_in">', '</span>' );
       echo '</div>';
     }
+    
+    echo '<div class="product-description">';
+    the_excerpt();
+    echo '</div>';
+    
+    echo '<div class="product-price">';
+    wc_get_template( 'loop/price.php' );
+    echo '</div>';
+    
+    echo '</div>';
   }
 }
 if ( ! function_exists( 'woocommerce_template_loop_price' ) ) {
@@ -506,15 +524,15 @@ if ( ! function_exists( 'woocommerce_template_loop_price' ) ) {
    * @subpackage  Loop
    */
   function localshop_template_loop_price() {
-    echo '<div class="product-description">';
-    // wc_get_template( 'single-product/tabs/description.php' );
-    // the_content();
-    the_excerpt();
-    echo '</div>';
+    // echo '<div class="product-description">';
+    // // wc_get_template( 'single-product/tabs/description.php' );
+    // // the_content();
+    // the_excerpt();
+    // echo '</div>';
     
-    echo '<div class="product-price">';
-    wc_get_template( 'loop/price.php' );
-    echo '</div>';
+    // echo '<div class="product-price">';
+    // wc_get_template( 'loop/price.php' );
+    // echo '</div>';
   }
 }
 

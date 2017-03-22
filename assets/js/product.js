@@ -1,5 +1,9 @@
 
+$ = jQuery;
+
 jQuery(function($){
+  
+  var DISABLE_ZOOM = false;
   
   var fullSizeImage = false;
   var zoomPanelSize = 500;
@@ -19,17 +23,44 @@ jQuery(function($){
   }
   
   function calcImages(){
-    var mainImageW = $('.images .main-image').outerWidth();
-    
+    var minItemW = 50;
     var imageN = 5;
-    var marginRight = 15;
+    var distanceR = 15;
     var paddingRL = 0;
     var borderW = 0;
     
-    var itemW = (mainImageW + marginRight) / imageN - (2*paddingRL + marginRight + 2*borderW);
+    var totalImages = $(thumbnails).length;
     
-    $(thumbnails).each(function(){
+    // var mainImageW = $('.images .main-image').outerWidth();
+    var mainImageW = $('.images .main-image')[0].getBoundingClientRect().width;
+    
+    // var itemW = (mainImageW + distanceR) / imageN - (2*paddingRL + distanceR + 2*borderW);
+    var itemW = (mainImageW - distanceR * (imageN - 1)) / imageN - 2 * borderW;
+    console.log('Thumbnail width 1: ' + itemW);
+    
+    itemW = Math.floor((itemW - 0.1) * 10) / 10;
+    console.log('Thumbnail width 2: ' + itemW);
+    
+    if(itemW < minItemW){
+      imageN = (mainImageW + distanceR) / (2 * borderW + minItemW + distanceR);
+      imageN = Math.floor(imageN);
+      
+      itemW = (mainImageW - distanceR * (imageN - 1)) / imageN - 2 * borderW;
+      itemW = Math.floor((itemW - 0.1) * 10) / 10;
+      
+      console.log('Recalculating thumbnails, new N: ' + imageN);
+    }
+    
+    $(thumbnails).removeClass('last');
+    
+    $(thumbnails).each(function(id, item){
+      if((id+1) % imageN == 0 || (id + 1) == totalImages){
+        $(this).addClass('last');
+      }
+      
       $(this).width(itemW);
+      $(this).filter('.last').css('margin-right', 0);
+      $(this).not('.last').css('margin-right', distanceR);
     });
   }
   
@@ -42,7 +73,7 @@ jQuery(function($){
         height: image.height
       };
       
-      console.log('Image size:', size.width, size.height);
+      // console.log('Image size:', size.width, size.height);
       
       if(callback != undefined){
         callback(size);
@@ -75,9 +106,10 @@ jQuery(function($){
   }
   
   function initZoom(){
-    var imgSrc = $(zoomImageContainer + ' a').attr('href');
-    
-    getImageSize(imgSrc, cbImageLoaded);
+    if(!DISABLE_ZOOM){
+      var imgSrc = $(zoomImageContainer + ' a').attr('href');
+      getImageSize(imgSrc, cbImageLoaded);
+    }
   }
   
   
@@ -113,7 +145,14 @@ jQuery(function($){
   
   // --------------------------------
   
-  calcImageDetailWidths();
+  if(window.screen.width > 640){
+    console.log('using calcImageDetailWidths()')
+    calcImageDetailWidths();
+  }
+  if(window.screen.width < 480){
+    console.log('disabling zoom')
+    DISABLE_ZOOM = true;
+  }
   
   calcImages();
   initZoom();

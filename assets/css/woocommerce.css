@@ -280,6 +280,7 @@ ul.products li.product{
   margin-bottom:4.235801032em;
   text-align:center;
   position:relative;
+  vertical-align: top;
 }
 
 ul.products li.product .price,
@@ -325,7 +326,38 @@ ul.products li.product.product-category h3{
 }
 
 ul.products li.product.product-category img{
-  margin-bottom:1.618em;
+  margin-bottom: 0;
+  border: 1px solid #aaa;
+  padding: 20px;
+  display: inline-block;
+}
+
+ul.products li.product.product-category .category-image img{
+  /*max-width: 300px;*/
+}
+
+.site-main ul.products li.product a {
+  height: 0;
+  display: inline-block;
+}
+
+.site-main ul.products li.product .category-title {
+  font-size: 20px !important;
+  margin: 0;
+}
+.site-main ul.products li.product .category-title a{
+  height: auto;
+  font-weight: 700;
+  color: #555;
+}
+.site-main ul.products li.product .category-title a:hover {
+  text-decoration: underline;
+}
+
+li.product .category-description {
+  max-width: 300px;
+  line-height: 1.3em;
+  color: #777;
 }
 
 ul.products li.product .button{
@@ -359,7 +391,8 @@ ul.products li.product .button{
 .single-product div.product .images,
 .single-product div.product .summary,
 .single-product div.product .woocommerce-product-gallery{
-  margin: 2px 0 0 2px;
+  width: 40%;
+  margin: 2px 0 0 0px;
   float: left;
 }
 
@@ -476,8 +509,8 @@ ul.products li.product .button{
   display:block;
   width:22.05%;
   margin-right: 15px;
+  margin-bottom: 10px;
   float:left;
-  margin-bottom: 0px;
   line-height: 0;
 }
 .single-product div.product .images .thumbnails img{
@@ -615,7 +648,7 @@ a.reset_variations:before{
 .search-results .product-category a{
   font-weight: 700;
   color: #5299AC;
-  font-size: 18px;
+  font-size: 1.2em;
   font-style: italic;
 }
 .single-product .product-category a:hover,
@@ -627,7 +660,7 @@ a.reset_variations:before{
 }
 .single-product .product-description{
   line-height: 1.4;
-  font-size: 18px;
+  font-size: 1.2em;
   margin-top: 20px;
 }
 
@@ -636,12 +669,13 @@ a.reset_variations:before{
 }
 .single-product .related .product{
   display: inline-block;
-  width: 200px;
-  margin-right: 20px;
+  width: 230px;
+  margin-bottom: 20px;
   vertical-align: top;
 }
 .single-product .related .product.last{
   margin-right: 0px;
+  margin-bottom: 0;
 }
 .single-product .related .product .product-link,
 .single-product .related .product .product-description,
@@ -1824,6 +1858,45 @@ p.stars.selected a:not(.active):before{
   clear: both;
 }
 
+.localshop-sorting select{
+  width:auto;
+  width: 200px;
+}
+.localshop-sorting select option{
+  padding: 8px 5px;
+}
+
+.woocommerce-result-count{
+  float:left;
+  position:relative;
+  margin-bottom:0;
+  padding:.327em 0;
+  margin-top: 6px;
+  font-weight: 700;
+}
+
+.woocommerce-ordering{
+  float:left;
+  margin-bottom:0;
+  padding:.327em 0;
+  margin-right: 30px;
+}
+
+.single-product div.product .images .thumbnails:after,
+.single-product div.product .images .thumbnails:before,
+.localshop-sorting:after,
+.localshop-sorting:before{
+  display:table;
+  content:"";
+}
+
+.single-product div.product .images .thumbnails:after,
+.single-product div.product .woocommerce-tabs,
+.localshop-full-width-content.single-product div.product .woocommerce-tabs,
+.localshop-sorting:after{
+  clear:both;
+}
+
 .wc-forward:after,
 .woocommerce-Button--next:after,
 .woocommerce-tabs ul.tabs li:after{
@@ -1921,7 +1994,7 @@ p.stars.selected a:not(.active):before{
   border-right: 1px solid #000;
   border-top: 1px solid #000;
   
-  padding: 20px 30px 15px 30px;
+  padding: 20px 30px 15px 23px;
   border-color: #4b723d;
 }
 .woocommerce-tabs .panel#tab-reviews {
@@ -1944,10 +2017,10 @@ p.stars.selected a:not(.active):before{
 }
 
 .woocommerce-tabs ul.tabs li.description_tab {
-  border-left: 1px solid #000;
+  border-left: 1px solid #4b723d;
 }
 .woocommerce-tabs ul.tabs li.reviews_tab {
-  border-right: 1px solid #000;
+  border-right: 1px solid #4b723d;
 }
 
 .woocommerce-error,
@@ -2220,14 +2293,6 @@ dl.variation dd{
     display:block;
   }
 
-  .single-product div.product .images .thumbnails:after,
-  .single-product div.product .images .thumbnails:before,
-  .localshop-sorting:after,
-  .localshop-sorting:before{
-    display:table;
-    content:"";
-  }
-
   .site-search form{
     margin:0;
   }
@@ -2241,13 +2306,6 @@ dl.variation dd{
 
   ul.products li.product.first{
     clear:both!important;
-  }
-
-  .single-product div.product .images .thumbnails:after,
-  .single-product div.product .woocommerce-tabs,
-  .localshop-full-width-content.single-product div.product .woocommerce-tabs,
-  .localshop-sorting:after{
-    clear:both;
   }
 
   ul.products li.product.last{
@@ -2334,17 +2392,6 @@ dl.variation dd{
     margin-right:5.8823529412%;
   }
   
-  li.product .category-title {
-    font-size: 20px !important;
-    margin: 0;
-    color: #555;
-  }
-
-  li.product .category-description {
-    line-height: 1.3em;
-    color: #777;
-  }
-
   .site-main ul.products li.product{
     width: 30%;
     float: none;
@@ -2352,21 +2399,7 @@ dl.variation dd{
     margin-right: 150px;
   }
   
-  .site-main ul.products li.product a {
-    height: 0;
-    display: inline-block;
-  }
-  .site-main ul.products li.product a.category-title {
-    height: auto;
-    font-weight: 700;
-  }
-  .site-main ul.products li.product a.category-title:hover {
-    text-decoration: underline;
-  }
-
   .site-main ul.products li.product img {
-    border: 1px solid #aaa;
-    padding: 20px;
     margin-bottom: 0px !important;
     display: inline-block;
   }
@@ -2455,34 +2488,6 @@ dl.variation dd{
 
   .woocommerce .page-description{
     margin-bottom:1.618em;
-  }
-
-  .localshop-sorting{
-    margin-bottom:2.617924em;
-  }
-
-  .localshop-sorting select{
-    width:auto;
-    width: 200px;
-  }
-  .localshop-sorting select option{
-    padding: 8px 5px;
-  }
-
-  .woocommerce-result-count{
-    float:left;
-    position:relative;
-    margin-bottom:0;
-    padding:.327em 0;
-    margin-top: 6px;
-    font-weight: 700;
-  }
-
-  .woocommerce-ordering{
-    float:left;
-    margin-bottom:0;
-    padding:.327em 0;
-    margin-right: 30px;
   }
 
   .woocommerce-pagination{
