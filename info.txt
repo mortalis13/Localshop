@@ -16,14 +16,12 @@
 *- review style
 *- multiimage for product details page
 *- organize css/js
-- responsive style
+*- responsive style
 
-- admin page
+*- admin page
 - translate
 - multibrowser
 - remove outline social icons click
 - organize php
 - related products organize columns on media queries (masonry?)
-
-
-related product check link
+- organize theme data (description, screenshot)

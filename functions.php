@@ -44,7 +44,8 @@ if ( localshop_is_woocommerce_activated() ) {
 }
 
 if ( is_admin() ) {
-	$localshop->admin = require 'inc/admin/class-localshop-admin.php';
+	// $localshop->admin = require 'inc/admin/class-localshop-admin.php';
+  require '/inc/admin/theme-options.php';
 }
 
 /**
