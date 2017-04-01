@@ -25,3 +25,10 @@
 - organize php
 - related products organize columns on media queries (masonry?)
 - organize theme data (description, screenshot)
+
+
+-------------------
+Generate POT
+
+e:\tools\xampp\php\php.exe e:\Documents\SVN\wordpress-src\tools\i18n\makepot.php wp-theme e:\tools\xampp\htdocs\wp-localshop\wp-content\themes\localshop
+

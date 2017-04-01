@@ -23,22 +23,22 @@ class ContactFormHandler {
       <div id ="contactFormSection">
         <form action="" id="contactForm" method="POST" enctype="multipart/form-data">
           <fieldset>
-            <label for="contactname">Name</label>
+            <label for="contactname"><?=__('Name', 'localshop')?></label>
             <input type="text" name="contactname" id="contactname" />
           </fieldset>
 
           <fieldset>
-            <label for="contactemail">Email <span class="required">*</span></label>
+            <label for="contactemail"><?=__('Email', 'localshop')?> <span class="required">*</span></label>
             <input type="text" name="contactemail" id="contactemail" />
           </fieldset>
         
           <fieldset>
-            <label for="contactcontent">Message <span class="required">*</span></label>
+            <label for="contactcontent"><?=__('Message', 'localshop')?> <span class="required">*</span></label>
             <textarea name="contactcontent" id="contactcontent" rows="10" cols="35" ></textarea>
           </fieldset>
         
           <fieldset>
-            <button id="contact-submit" type="submit" name="submitContactForm">Send</button>
+            <button id="contact-submit" type="submit" name="submitContactForm"><?=__('Send', 'localshop')?></button>
           </fieldset>
 
           <?php wp_nonce_field( 'submit_contact_form' , 'nonce_field_for_submit_contact_form'); ?>
@@ -52,17 +52,16 @@ class ContactFormHandler {
         $contactEmail = $_POST['contactemail'];
         $contactContent = $_POST['contactcontent'];
  
-        $emailTo = get_option( 'admin_email');
+        $emailTo = get_option('admin_email');
  
- 
-        $subject = 'New contact from  From '.$contactName;
+        $subject = 'New contact from '.$contactName;
         $body = "Contact Name: $contactName \n\nContact Email: $contactEmail \n\nContact contents: $contactContent";
         $headers = 'From: '.$contactName.' <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $contactEmail;
  
         wp_mail($emailTo, $subject, $body, $headers);
 
         echo '<div class="contact-send-status">';
-        echo "Your message was sent. We will reply to it soon.";
+        echo __("Your message was sent. We will reply to it soon.", 'localshop');
         echo '</div>';
     }
      
@@ -74,16 +73,16 @@ class ContactFormHandler {
      
     function isFormValid() {
         // if ( trim( $_POST['contactname'] ) === '' ) {
-        //     $error = 'Please enter your name.';
+        //     $error = __('Please enter your name.', 'localshop');
         //     $hasError = true;
         // } 
         // else
       
         if (!filter_var($_POST['contactemail'], FILTER_VALIDATE_EMAIL)  ) {
-            $error = 'Please enter a valid email';
+            $error = __('Please enter a valid email.', 'localshop');
             $hasError = true;
         } else if ( trim( $_POST['contactcontent'] ) === '' ) {
-            $error = 'Please enter the message';
+            $error = __('Please enter the message.', 'localshop');
             $hasError = true;
         } 
      

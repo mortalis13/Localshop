@@ -41,7 +41,7 @@ if ( ! woocommerce_products_will_display() )
     // printf( _n( 'Showing the single result', 'Showing all %d results', $total, 'woocommerce' ), $total );
     printf( __( 'Total %d', 'localshop' ), $total );
   } else {
-    printf( _n( 'Total 1', 'Products %d..%d of %d', $total, 'woocommerce' ), $first, $last, $total );
+    printf( _n( 'Total 1', 'Products %d..%d of %d', $total, 'localshop' ), $first, $last, $total );
 		// printf( _nx( 'Showing the single result', 'Showing %1$d&ndash;%2$d of %3$d results', $total, '%1$d = first, %2$d = last, %3$d = total', 'woocommerce' ), $first, $last, $total );
 	}
 	?>

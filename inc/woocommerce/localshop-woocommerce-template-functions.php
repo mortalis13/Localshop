@@ -764,7 +764,7 @@ if ( ! function_exists( 'localshop_default_product_tabs' ) ) {
     // Description tab - shows product content
     if ( $post->post_content ) {
       $tabs['description'] = array(
-        'title'    => __( 'Details', 'woocommerce' ),
+        'title'    => __( 'Details', 'localshop' ),
         'priority' => 10,
         'callback' => 'woocommerce_product_description_tab'
       );

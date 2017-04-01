@@ -4,103 +4,120 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Localshop 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/localshop\n"
-"POT-Creation-Date: 2017-04-01 10:28:56+00:00\n"
+"POT-Creation-Date: 2017-04-01 14:00+0200\n"
+"PO-Revision-Date: 2017-04-01 16:08+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: Poedit 2.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: 404.php:19
 msgid "That page can&rsquo;t be found."
-msgstr ""
+msgstr "Esta página no existe."
 
 #: 404.php:23
 msgid "Nothing was found at this location. Try to use the search."
-msgstr ""
+msgstr "No se encontró nada aquí. Intenta usar la búsqueda."
 
 #: comments.php:28
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 comentario para &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s comentarios para &ldquo;%2$s&rdquo;"
 
 #: comments.php:37 comments.php:55
 msgid "Comment navigation"
-msgstr ""
+msgstr "Navegación de comentarios"
 
 #: comments.php:38 comments.php:56
 msgid "&larr; Older Comments"
-msgstr ""
+msgstr "&larr; Comentarios anteriores"
 
 #: comments.php:39 comments.php:57
 msgid "Newer Comments &rarr;"
-msgstr ""
+msgstr "Comentarios Recientes &rarr;"
 
 #: comments.php:64
 msgid "Comments are closed."
-msgstr ""
+msgstr "Comentarios cerrados."
 
 #: content-none.php:14
 msgid "Nothing Found"
-msgstr ""
+msgstr "No se encontró nada"
 
 #: content-none.php:20
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
+"¿Listo para publicar tu primer post? <a href=“%1$s”> Empieza aquí </a>."
 
 #: content-none.php:24
-msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
 msgstr ""
+"No se ha encontrado nada con los términos de búsqueda. Por favor, inténtalo "
+"de nuevo con otras palabras."
 
 #: content-none.php:29
-msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
-msgstr ""
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "Parece que no se encuentra el contenido. Intenta usar la búsqueda."
 
 #: inc/admin/theme-options.php:17 inc/admin/theme-options.php:42
 msgid "Theme Options"
-msgstr ""
+msgstr "Ajustes del Tema"
 
 #: inc/admin/theme-options.php:45
 msgid "Style Has Been Reset"
-msgstr ""
+msgstr "Estilo ha sido restablecido"
 
 #: inc/class-localshop.php:86
 msgid "Primary Menu"
-msgstr ""
+msgstr "Menú Principal"
 
 #: inc/class-localshop.php:87
 msgid "Secondary Menu"
-msgstr ""
+msgstr "Menú Secundario"
 
 #: inc/class-localshop.php:88
 msgid "Handheld Menu"
-msgstr ""
+msgstr "Menú de Mano"
 
 #: inc/class-localshop.php:134
 msgid "Sidebar"
-msgstr ""
+msgstr "Sidebar"
 
 #: inc/class-localshop.php:140
 msgid "Below Header"
-msgstr ""
+msgstr "Debajo del Header"
 
 #: inc/class-localshop.php:142
-msgid "Widgets added to this region will appear beneath the header and above the main content."
+msgid ""
+"Widgets added to this region will appear beneath the header and above the "
+"main content."
 msgstr ""
+"Widgets añadidos a esta región aperecerán debajo del header y arriba del "
+"contenido principal."
 
 #: inc/class-localshop.php:151
 msgid "Footer %d"
-msgstr ""
+msgstr "Pie %d"
 
 #: inc/class-localshop.php:153
 msgid "Widgetized Footer Region %d."
-msgstr ""
+msgstr "Región de Pie con Widgets %d."
 
 #: inc/customizer/class-localshop-customizer-control-more.php:28
-msgid "There's a range of %s extensions available to put additional power in your hands. Check out the %s%s%s page in your dashboard for more information."
+msgid ""
+"There's a range of %s extensions available to put additional power in your "
+"hands. Check out the %s%s%s page in your dashboard for more information."
 msgstr ""
 
 #: inc/customizer/class-localshop-customizer-control-more.php:31
@@ -108,413 +125,416 @@ msgid "Enjoying %s?"
 msgstr ""
 
 #: inc/customizer/class-localshop-customizer-control-more.php:34
-msgid "Why not leave us a review on %sWordPress.org%s?  We'd really appreciate it!"
+msgid ""
+"Why not leave us a review on %sWordPress.org%s?  We'd really appreciate it!"
 msgstr ""
 
 #: inc/customizer/class-localshop-customizer.php:141
 msgid "Background"
-msgstr ""
+msgstr "Fondo"
 
 #: inc/customizer/class-localshop-customizer.php:145
 msgid "Header"
-msgstr ""
+msgstr "Cabecera"
 
 #: inc/customizer/class-localshop-customizer.php:183
 msgid "Typography"
-msgstr ""
+msgstr "Fuentes"
 
 #: inc/customizer/class-localshop-customizer.php:196
 #: inc/customizer/class-localshop-customizer.php:317
 msgid "Heading color"
-msgstr ""
+msgstr "Color del heading"
 
 #: inc/customizer/class-localshop-customizer.php:211
 #: inc/customizer/class-localshop-customizer.php:263
 #: inc/customizer/class-localshop-customizer.php:332
 #: inc/customizer/class-localshop-customizer.php:386
 msgid "Text color"
-msgstr ""
+msgstr "Color de texto"
 
 #: inc/customizer/class-localshop-customizer.php:226
 msgid "Link / accent color"
-msgstr ""
+msgstr "Color de enlace"
 
 #: inc/customizer/class-localshop-customizer.php:235
 msgid "Header background image"
-msgstr ""
+msgstr "Imagen de fondo de la cabecera"
 
 #: inc/customizer/class-localshop-customizer.php:248
 #: inc/customizer/class-localshop-customizer.php:302
 #: inc/customizer/class-localshop-customizer.php:371
 msgid "Background color"
-msgstr ""
+msgstr "Color de fondo"
 
 #: inc/customizer/class-localshop-customizer.php:278
 #: inc/customizer/class-localshop-customizer.php:347
 msgid "Link color"
-msgstr ""
+msgstr "Color de enlace"
 
 #: inc/customizer/class-localshop-customizer.php:288
 msgid "Footer"
-msgstr ""
+msgstr "Pie"
 
 #: inc/customizer/class-localshop-customizer.php:290
 msgid "Customise the look & feel of your web site footer."
-msgstr ""
+msgstr "Personaliza la apariencia del pie."
 
 #: inc/customizer/class-localshop-customizer.php:357
 msgid "Buttons"
-msgstr ""
+msgstr "Botones"
 
 #: inc/customizer/class-localshop-customizer.php:359
 msgid "Customise the look & feel of your web site buttons."
-msgstr ""
+msgstr "Personaliza la apariencia de los botones."
 
 #: inc/customizer/class-localshop-customizer.php:401
 msgid "Alternate button background color"
-msgstr ""
+msgstr "Color de botones alternativo"
 
 #: inc/customizer/class-localshop-customizer.php:416
 msgid "Alternate button text color"
-msgstr ""
+msgstr "Color de texto de botones alternativo"
 
 #: inc/customizer/class-localshop-customizer.php:426
 msgid "Layout"
-msgstr ""
+msgstr "Layout"
 
 #: inc/customizer/class-localshop-customizer.php:438
 msgid "General Layout"
-msgstr ""
+msgstr "Layout general"
 
 #: inc/customizer/class-localshop-customizer.php:451
 msgid "More"
-msgstr ""
+msgstr "Más"
 
 #: inc/customizer/class-localshop-customizer.php:461
 msgid "Looking for more options?"
-msgstr ""
+msgstr "Buscando más ajustes?"
 
 #: inc/localshop-template-functions.php:48
 msgid "Your comment is awaiting moderation."
-msgstr ""
+msgstr "Tu comentario espera la comprobación."
 
 #: inc/localshop-template-functions.php:64
 msgid "Edit"
-msgstr ""
+msgstr "Editar"
 
 #: inc/localshop-template-functions.php:128
 msgid "%1$s designed by %2$s."
-msgstr ""
+msgstr "%1$s diseñado por %2$s."
 
 #: inc/localshop-template-functions.php:230
 #: inc/localshop-template-functions.php:948
 msgid "Primary Navigation"
-msgstr ""
+msgstr "Navegación Principal"
 
 #: inc/localshop-template-functions.php:231
 #: inc/localshop-template-functions.php:949
 msgid "Menu"
-msgstr ""
+msgstr "Menú"
 
 #: inc/localshop-template-functions.php:262
 msgid "Secondary Navigation"
-msgstr ""
+msgstr "Navegación Secundaria"
 
 #: inc/localshop-template-functions.php:286
 msgid "Skip to navigation"
-msgstr ""
+msgstr "Ir a la navegación"
 
 #: inc/localshop-template-functions.php:287
 msgid "Skip to content"
-msgstr ""
+msgstr "Ir al contenido"
 
 #: inc/localshop-template-functions.php:322
 #: inc/localshop-template-functions.php:385
 msgid "Pages:"
-msgstr ""
+msgstr "Páginas:"
 
 #: inc/localshop-template-functions.php:377
 msgid "Continue reading %s"
-msgstr ""
+msgstr "Seguir leyendo %s"
 
 #: inc/localshop-template-functions.php:409
 msgid "Written by"
-msgstr ""
+msgstr "Escrito por"
 
 #. translators: used between list items, there is a space after the comma
-
 #: inc/localshop-template-functions.php:415
 #: inc/localshop-template-functions.php:428
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: inc/localshop-template-functions.php:420
 msgid "Posted in"
-msgstr ""
+msgstr "Publicado en"
 
 #: inc/localshop-template-functions.php:433
 msgid "Tagged"
-msgstr ""
+msgstr "Tagged"
 
 #: inc/localshop-template-functions.php:443
 msgid "Comments"
-msgstr ""
+msgstr "Comentarios"
 
 #: inc/localshop-template-functions.php:444
 msgid "Leave a comment"
-msgstr ""
+msgstr "Dejar un comentario"
 
 #: inc/localshop-template-functions.php:444
 msgid "1 Comment"
-msgstr ""
+msgstr "1 Comentario"
 
 #: inc/localshop-template-functions.php:444
 msgid "% Comments"
-msgstr ""
+msgstr "% Comentarios"
 
 #: inc/localshop-template-functions.php:461
 msgctxt "Next post"
 msgid "Next"
-msgstr ""
+msgstr "Siguiente"
 
 #: inc/localshop-template-functions.php:462
 msgctxt "Previous post"
 msgid "Previous"
-msgstr ""
+msgstr "Anterior"
 
 #: inc/localshop-template-functions.php:500
 msgctxt "post date"
 msgid "Posted on %s"
-msgstr ""
+msgstr "Publicado %s"
 
 #: inc/localshop-template-functions.php:539
 msgid "Shop by Category"
-msgstr ""
+msgstr "Tienda por Categoría"
 
 #: inc/localshop-template-functions.php:580
 msgid "New In"
-msgstr ""
+msgstr "Nuevo En"
 
 #: inc/localshop-template-functions.php:621
 msgid "We Recommend"
-msgstr ""
+msgstr "Recomendado"
 
 #: inc/localshop-template-functions.php:662
 msgid "Fan Favorites"
-msgstr ""
+msgstr "Favoritos"
 
 #: inc/localshop-template-functions.php:701
 msgid "On Sale"
-msgstr ""
+msgstr "Descuento"
 
 #: inc/localshop-template-functions.php:738
 msgid "Best Sellers"
-msgstr ""
+msgstr "Más Vendidos"
 
 #: inc/woocommerce/localshop-woocommerce-template-functions.php:74
 #: inc/woocommerce/localshop-woocommerce-template-functions.php:313
 msgid "View your shopping cart"
-msgstr ""
+msgstr "Ver el carrito"
 
 #: inc/woocommerce/localshop-woocommerce-template-functions.php:75
 msgid "%d item"
 msgid_plural "%d items"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d elemento"
+msgstr[1] "%d elementos"
 
 #: inc/woocommerce/localshop-woocommerce-template-functions.php:217
 msgid "Featured Products"
-msgstr ""
+msgstr "Productos Destacados"
 
 #: inc/woocommerce/localshop-woocommerce-template-functions.php:225
 msgid "On Sale Now"
-msgstr ""
+msgstr "Oferta"
 
 #: inc/woocommerce/localshop-woocommerce-template-functions.php:233
 msgid "New In Store"
-msgstr ""
+msgstr "Nuevo en la Tienda"
 
 #: inc/woocommerce/localshop-woocommerce-template-functions.php:300
 msgid "Search"
-msgstr ""
+msgstr "Buscar"
 
 #: inc/woocommerce/localshop-woocommerce-template-functions.php:327
 msgid "My Account"
-msgstr ""
+msgstr "Mi Cuenta"
 
 #: inc/woocommerce/localshop-woocommerce-template-functions.php:727
-msgid "Use $args argument as an array instead. Deprecated argument will be removed in WC 2.2."
+msgid ""
+"Use $args argument as an array instead. Deprecated argument will be removed "
+"in WC 2.2."
 msgstr ""
 
 #: inc/woocommerce/localshop-woocommerce-template-functions.php:767
 msgid "Details"
-msgstr ""
+msgstr "Detalles"
 
 #: inc/woocommerce/localshop-woocommerce-template-functions.php:785
 msgid "Reviews (%d)"
-msgstr ""
+msgstr "Reseñas (%d)"
 
 #: search.php:16
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Buscar Resultados para: %s"
 
 #: woocommerce/loop/result-count.php:42
 msgid "Total %d"
-msgstr ""
+msgstr "Total %d"
 
 #: woocommerce/loop/result-count.php:44
 msgid "Total 1"
 msgid_plural "Products %d..%d of %d"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Total 1"
+msgstr[1] "Productos %d..%d de %d"
 
 #: woocommerce/product-searchform.php:27
 msgid "Search for:"
-msgstr ""
+msgstr "Buscar:"
 
 #: woocommerce/product-searchform.php:28
 msgctxt "label"
 msgid "Search for:"
-msgstr ""
+msgstr "Buscar:"
 
 #: woocommerce/single-product/meta.php:35
 msgid "SKU:"
-msgstr ""
+msgstr "SKU:"
 
 #: woocommerce/single-product/meta.php:35
 msgid "N/A"
-msgstr ""
+msgstr "N/A"
 
 #: woocommerce/single-product/meta.php:39
 msgid "Category:"
 msgid_plural "Categories:"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Categoría:"
+msgstr[1] "Categorías:"
 
 #: woocommerce/single-product/meta.php:41
 msgid "Tag:"
 msgid_plural "Tags:"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Tag:"
+msgstr[1] "Tags:"
 
 #: woocommerce/single-product/product-image.php:53
 msgid "Placeholder"
-msgstr ""
+msgstr "Placeholder"
 
 #: woocommerce/single-product/related.php:51
 msgid "Related Products"
-msgstr ""
+msgstr "Productos Relacionados"
 
 #: woocommerce/single-product-reviews.php:34
 msgid "%s review for %s%s%s"
 msgid_plural "%s reviews for %s%s%s"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%s receña para %s%s%s"
+msgstr[1] "%s receñas para %s%s%s"
 
 #: woocommerce/single-product-reviews.php:66
 msgid "Add a review"
-msgstr ""
+msgstr "Añadir una receña"
 
 #: woocommerce/single-product-reviews.php:66
 msgid "Be the first to review &ldquo;%s&rdquo;"
-msgstr ""
+msgstr "Sé el primero en comentar &ldquo;%s&rdquo;"
 
 #: woocommerce/single-product-reviews.php:67
 msgid "Leave a Reply to %s"
-msgstr ""
+msgstr "Dejar un comentario"
 
 #: woocommerce/single-product-reviews.php:70
 msgid "Name"
-msgstr ""
+msgstr "Nombre"
 
 #: woocommerce/single-product-reviews.php:72
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: woocommerce/single-product-reviews.php:75
 msgid "Submit"
-msgstr ""
+msgstr "Enviar"
 
 #: woocommerce/single-product-reviews.php:81
 msgid "You must be <a href=\"%s\">logged in</a> to post a review."
 msgstr ""
+"Tienes que estar <a href=\"%s\">conectado</a> para publicar una receña."
 
 #: woocommerce/single-product-reviews.php:85
 msgid "Your Rating"
-msgstr ""
+msgstr "Tu Valoración"
 
 #: woocommerce/single-product-reviews.php:86
 msgid "Rate&hellip;"
-msgstr ""
+msgstr "Valora&hellip;"
 
 #: woocommerce/single-product-reviews.php:87
 msgid "Perfect"
-msgstr ""
+msgstr "Perfecto"
 
 #: woocommerce/single-product-reviews.php:88
 msgid "Good"
-msgstr ""
+msgstr "Bien"
 
 #: woocommerce/single-product-reviews.php:89
 msgid "Average"
-msgstr ""
+msgstr "Medio"
 
 #: woocommerce/single-product-reviews.php:90
 msgid "Not that bad"
-msgstr ""
+msgstr "No está mal"
 
 #: woocommerce/single-product-reviews.php:91
 msgid "Very Poor"
-msgstr ""
+msgstr "Muy mal"
 
 #: woocommerce/single-product-reviews.php:95
 msgid "Your Review"
-msgstr ""
+msgstr "Tu Receña"
 
 #: footer.php:30
 msgid "About Us"
-msgstr ""
+msgstr "Sobre Nosotros"
 
 #: footer.php:37
 msgid "Categories"
-msgstr ""
+msgstr "Categorías"
 
 #: footer.php:74
 msgid "Sign Up for Newsletters"
-msgstr ""
+msgstr "Suscribirse a Noticias"
 
 #: footer.php:78
 msgid "Sign Up"
-msgstr ""
+msgstr "Suscribirse"
 
 #: layouts/brands.php:8
 msgid "Our Brands"
-msgstr ""
+msgstr "Nuestras Marcas"
 
 #: layouts/contact.php:10
 msgid "Contact"
-msgstr ""
+msgstr "Contacto"
 
 #: handlers/contactformhandler.php:36
 msgid "Message"
-msgstr ""
+msgstr "Mensaje"
 
 #: handlers/contactformhandler.php:41
 msgid "Send"
-msgstr ""
+msgstr "Enviar"
 
 #: handlers/contactformhandler.php:64
 msgid "Your message was sent. We will reply to it soon."
-msgstr ""
+msgstr "Tu mensaje ha sido enviado. Pronto te respondemos."
 
 #: handlers/contactformhandler.php:76
 msgid "Please enter your name."
-msgstr ""
+msgstr "Por favor, introduce tu nombre."
 
 #: handlers/contactformhandler.php:82
 msgid "Please enter a valid email."
-msgstr ""
+msgstr "Por favor, introduce un email válido."
 
 #: handlers/contactformhandler.php:85
 msgid "Please enter the message."
-msgstr ""
+msgstr "Por favor, introduce el mensaje."

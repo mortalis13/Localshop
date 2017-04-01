@@ -27,14 +27,14 @@
       // do_action( 'localshop_footer' ); ?>
       
       <div class="footer-block first about">
-        <h3 class="block-title about-title">About Us</h3>
+        <h3 class="block-title about-title"><?=__('About Us', 'localshop')?></h3>
         <p class="about-text">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates vel id saepe similique ratione qui dolore sunt quae soluta consectetur perferendis nam culpa quaerat nulla amet aperiam aliquid rerum, in optio asperiores quasi, veniam eos ex ducimus.
         </p>
       </div>
       
       <div class="footer-block footer-categories">
-        <h3 class="block-title footer-categories-title">Categories</h3>
+        <h3 class="block-title footer-categories-title"><?=__('Categories', 'localshop')?></h3>
         
         <?php 
           $taxonomy     = 'product_cat';
@@ -71,13 +71,11 @@
       </div>
       
       <div class="footer-block last footer-newsletters">
-        <h3 class="block-title footer-signup-title">Sign Up for Newsletters</h3>
-        <!-- <form action="../newsletters-signup.php"> -->
-        <!-- <form action="" method="POST"> -->
+        <h3 class="block-title footer-signup-title"><?=__('Sign Up for Newsletters', 'localshop')?></h3>
         <form id="signup-form" action="<?php echo get_bloginfo('template_url') . '/handlers/newsletters-signup.php' ?>" method="POST">
-          <input type="text" name="signup-email" id="signup-email" class="text-field" placeholder="Email Address">
+          <input type="text" name="signup-email" id="signup-email" class="text-field" placeholder="<?=__('Email', 'localshop')?>">
           <button id="signup-submit">
-            <span class="signup-caption">Sign Up</span>
+            <span class="signup-caption"><?=__('Sign Up', 'localshop')?></span>
             <span class="dot1"></span>
             <span class="dot2"></span>
             <span class="dot3"></span>
