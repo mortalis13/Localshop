@@ -25,6 +25,8 @@
 - organize php
 - related products organize columns on media queries (masonry?)
 - organize theme data (description, screenshot)
+- fix image zoom for screen widths (calc zoom panel width/height)
+- fix lightbox for gallery
 
 
 -------------------

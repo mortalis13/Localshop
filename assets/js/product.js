@@ -9,7 +9,8 @@ jQuery(function($){
   var zoomPanelSize = 500;
   
   var zoomImageContainer = '.images .zoom-image';
-  var thumbnails = '.images .thumbnails a';
+  // var thumbnails = '.images .thumbnails a';
+  var thumbnails = '.images .thumbnails .zoom';
   
   
   function calcImageDetailWidths(){
@@ -126,7 +127,8 @@ jQuery(function($){
   
   $(thumbnails).mouseover(function(){
     var $img = $(this).find('img');
-    var imgSrc = $(this).attr('href');
+    // var imgSrc = $(this).attr('href');
+    var imgSrc = $img.attr('url');
     
     $(zoomImageContainer + ' a').attr('href', imgSrc);
     $(zoomImageContainer + ' img').attr('src', imgSrc);
@@ -149,7 +151,7 @@ jQuery(function($){
     console.log('using calcImageDetailWidths()')
     calcImageDetailWidths();
   }
-  if(window.screen.width < 480){
+  if(MOBILE_DEVICE || window.screen.width < 480){
     console.log('disabling zoom')
     DISABLE_ZOOM = true;
   }

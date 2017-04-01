@@ -1,4 +1,9 @@
 
+var MOBILE_DEVICE = false;
+if ( /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()) ){
+  MOBILE_DEVICE = true;
+}
+
 jQuery(function($){
   
   var waitHandler;

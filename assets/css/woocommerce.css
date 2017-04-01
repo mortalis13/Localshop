@@ -24,7 +24,7 @@ table.cart td.actions input[name=update_cart]:focus{
 #reviews .commentlist li:after,
 .form-row-wide,
 .product_list_widget li:after,
-.single-product div.product .images .thumbnails a.zoom.first,
+.single-product div.product .images .thumbnails .zoom.first,
 .single-product div.product .variations_button:after,
 .single-product div.product .woocommerce-product-gallery .flex-control-thumbs:after,
 .single-product div.product .woocommerce-product-rating:after,
@@ -505,7 +505,7 @@ ul.products li.product .button{
   margin-top: 10px;
 }
 
-.single-product div.product .images .thumbnails a.zoom{
+.single-product div.product .images .thumbnails .zoom{
   display:block;
   width:22.05%;
   margin-right: 15px;
@@ -513,12 +513,15 @@ ul.products li.product .button{
   float:left;
   line-height: 0;
 }
+.single-product div.product .images .thumbnails .zoom:hover{
+  cursor: pointer;
+}
 .single-product div.product .images .thumbnails img{
   padding: 5px;
   border: 1px solid #aaa;
 }
 
-.single-product div.product .images .thumbnails a.zoom.last{
+.single-product div.product .images .thumbnails .zoom.last{
   margin-right:0;
 }
 
@@ -2420,13 +2423,13 @@ dl.variation dd{
     box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
   }
 
-  .single-product div.product .images .thumbnails a.zoom{
+  .single-product div.product .images .thumbnails .zoom{
     width:14.2857142857%;
     float:left;
     /*margin-right:14.2857142857%;*/
   }
 
-  .single-product div.product .images .thumbnails a.zoom.last{
+  .single-product div.product .images .thumbnails .zoom.last{
     /*float:right;*/
     margin-right:0;
   }
@@ -2451,13 +2454,13 @@ dl.variation dd{
     margin-bottom:3.706325903em;
   }
 
-  .localshop-full-width-content.single-product div.product .images .thumbnails a.zoom{
+  .localshop-full-width-content.single-product div.product .images .thumbnails .zoom{
     width:14.2857142857%;
     float:left;
     margin-right:14.2857142857%;
   }
 
-  .localshop-full-width-content.single-product div.product .images .thumbnails a.zoom.last{
+  .localshop-full-width-content.single-product div.product .images .thumbnails .zoom.last{
     margin-right:0;
   }
 

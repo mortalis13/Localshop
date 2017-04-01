@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Localshop 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/localshop\n"
 "POT-Creation-Date: 2017-04-01 14:00+0200\n"
-"PO-Revision-Date: 2017-04-01 22:43+0200\n"
+"PO-Revision-Date: 2017-04-01 23:13+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -431,12 +431,12 @@ msgstr "Productos Relacionados"
 #: woocommerce/single-product-reviews.php:34
 msgid "%s review for %s%s%s"
 msgid_plural "%s reviews for %s%s%s"
-msgstr[0] "%s receña para %s%s%s"
-msgstr[1] "%s receñas para %s%s%s"
+msgstr[0] "%s reseña para %s%s%s"
+msgstr[1] "%s reseñas para %s%s%s"
 
 #: woocommerce/single-product-reviews.php:66
 msgid "Add a review"
-msgstr "Añadir una receña"
+msgstr "Añadir una reseña"
 
 #: woocommerce/single-product-reviews.php:66
 msgid "Be the first to review &ldquo;%s&rdquo;"
@@ -461,7 +461,7 @@ msgstr "Enviar"
 #: woocommerce/single-product-reviews.php:81
 msgid "You must be <a href=\"%s\">logged in</a> to post a review."
 msgstr ""
-"Tienes que estar <a href=\"%s\">conectado</a> para publicar una receña."
+"Tienes que estar <a href=\"%s\">conectado</a> para publicar una reseña."
 
 #: woocommerce/single-product-reviews.php:85
 msgid "Your Rating"
@@ -493,7 +493,7 @@ msgstr "Muy mal"
 
 #: woocommerce/single-product-reviews.php:95
 msgid "Your Review"
-msgstr "Tu Receña"
+msgstr "Tu Reseña"
 
 #: footer.php:14
 msgid "Email is not valid"

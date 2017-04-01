@@ -32,9 +32,9 @@ require 'inc/localshop-functions.php';
 require 'inc/localshop-template-hooks.php';
 require 'inc/localshop-template-functions.php';
 
-if ( class_exists( 'Jetpack' ) ) {
-	$localshop->jetpack = require 'inc/jetpack/class-localshop-jetpack.php';
-}
+// if ( class_exists( 'Jetpack' ) ) {
+// 	$localshop->jetpack = require 'inc/jetpack/class-localshop-jetpack.php';
+// }
 
 if ( localshop_is_woocommerce_activated() ) {
 	$localshop->woocommerce = require 'inc/woocommerce/class-localshop-woocommerce.php';
