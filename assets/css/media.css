@@ -163,7 +163,7 @@
 
 @media (max-width: 640px) {
 
-  .site-info-block{
+  .site-info-block .info-phone{
     display: none;
   }
   
@@ -198,6 +198,13 @@
   .woocommerce-tabs #tab-reviews.panel {
     padding-right: 30px;
     padding-left: 30px;
+  }
+  
+  #reviews .comment-form-url,
+  #reviews .comment-form-author,
+  #reviews .comment-form-email{
+    float: none;
+    width: 100%;
   }
   
 }
@@ -252,7 +259,7 @@
     margin-left: auto;
     margin-right: auto;
   }
-
+  
 }
 
 @media (max-width: 320px) {

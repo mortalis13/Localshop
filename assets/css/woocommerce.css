@@ -2169,6 +2169,17 @@ dl.variation dd{
   border-bottom:0;
 }
 
+#reviews .comment-form-author,
+#reviews .comment-form-email{
+  width:47%;
+}
+
+#reviews .comment-form-email{
+  margin-right:0;
+}
+
+
+
 @media (min-width:768px){
   .addresses header.title a:before,
   .demo_store a:before,
@@ -2430,15 +2441,6 @@ dl.variation dd{
   .single-product div.product .summary{
     width:52.9411764706%;
     float:right;
-    margin-right:0;
-  }
-
-  #reviews .comment-form-author,
-  #reviews .comment-form-email{
-    width:47%;
-  }
-
-  #reviews .comment-form-email{
     margin-right:0;
   }
 
@@ -2947,12 +2949,6 @@ dl.variation dd{
   .woocommerce-tabs:before{
     content:"";
     display:table;
-  }
-
-  .woocommerce-tabs ul.tabs{
-    width:29.4117647059%;
-    float:left;
-    margin-right:5.8823529412%;
   }
 
   .woocommerce-tabs ul.tabs li.active:after{

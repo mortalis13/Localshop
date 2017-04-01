@@ -522,7 +522,7 @@ button.menu-toggle:after {
 .main-navigation.toggled .handheld-navigation,
 .main-navigation.toggled div.menu,
 .menu-toggle {
-    display: none
+  display: none
 }
 
 .main-navigation li a{
@@ -623,7 +623,7 @@ a.cart-contents:hover,
 .main-navigation ul li:hover > ul,
 .secondary-navigation ul li.focus > ul,
 .secondary-navigation ul li:hover > ul {
-  left: 15px;
+  left: 0;
   display: block;
 }
 
