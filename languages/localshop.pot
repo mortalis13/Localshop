@@ -67,6 +67,10 @@ msgstr ""
 msgid "Style Has Been Reset"
 msgstr ""
 
+#: inc/admin/theme-options.php:57
+msgid "General settings"
+msgstr ""
+
 #: inc/class-localshop.php:86
 msgid "Primary Menu"
 msgstr ""
@@ -469,6 +473,14 @@ msgstr ""
 
 #: woocommerce/single-product-reviews.php:95
 msgid "Your Review"
+msgstr ""
+
+#: footer.php:14
+msgid "Email is not valid"
+msgstr ""
+
+#: footer.php:15
+msgid "Your email added to the news list"
 msgstr ""
 
 #: footer.php:30

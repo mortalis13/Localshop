@@ -54,7 +54,7 @@
 .contact-send-status{
   display: block;
   width: 80%;
-  margin: 20px auto;
+  margin: 20px 0;
   font-weight: 700;
 }
 .contact-error{

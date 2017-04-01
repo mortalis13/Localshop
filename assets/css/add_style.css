@@ -336,7 +336,6 @@
   columns: 2;
   -webkit-columns: 2;
   -moz-columns: 2;
-  width: 80%;
 }
 .site-footer .footer-categories-list a:hover{
   text-decoration: underline;

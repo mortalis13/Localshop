@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Localshop 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/localshop\n"
 "POT-Creation-Date: 2017-04-01 14:00+0200\n"
-"PO-Revision-Date: 2017-04-01 16:08+0200\n"
+"PO-Revision-Date: 2017-04-01 17:12+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -77,6 +77,10 @@ msgstr "Ajustes del Tema"
 #: inc/admin/theme-options.php:45
 msgid "Style Has Been Reset"
 msgstr "Estilo ha sido restablecido"
+
+#: inc/admin/theme-options.php:57
+msgid "General settings"
+msgstr "Ajustes generales"
 
 #: inc/class-localshop.php:86
 msgid "Primary Menu"
@@ -490,6 +494,14 @@ msgstr "Muy mal"
 #: woocommerce/single-product-reviews.php:95
 msgid "Your Review"
 msgstr "Tu Receña"
+
+#: footer.php:14
+msgid "Email is not valid"
+msgstr "Email no es válido"
+
+#: footer.php:15
+msgid "Your email added to the news list"
+msgstr "Email añadido con éxito"
 
 #: footer.php:30
 msgid "About Us"

@@ -56,12 +56,12 @@
     width: 25%;
   }
   .site-footer .footer-categories .block-title{
-    text-align: center;
+    /*text-align: center;*/
   }
   .site-footer .footer-categories-list{
     width: 100%;
     -moz-columns: 1;
-    text-align: center;
+    /*text-align: center;*/
   }
   .site-footer .footer-newsletters{
     width: 35%;
@@ -129,6 +129,7 @@
   .site-footer .footer-categories{
     width: 50%;
     margin: 0;
+    padding-left: 10%;
   }
   .site-footer .footer-newsletters{
     width: 49%;
@@ -226,6 +227,9 @@
   
   .site-footer .footer-block.first{
     width: 100%;
+  }
+  .site-footer .footer-categories{
+    padding-left: 0;
   }
   .site-footer .footer-newsletters #signup-email{
     width: 100%;

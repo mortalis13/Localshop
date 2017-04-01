@@ -58,8 +58,8 @@ if ( ! class_exists( 'Localshop' ) ) :
 			load_theme_textdomain( 'localshop', get_stylesheet_directory() . '/languages' );
 
 			// Loads wp-content/themes/localshop/languages/it_IT.mo.
-			load_theme_textdomain( 'localshop', get_template_directory() . '/languages' );
-
+      load_theme_textdomain( 'localshop', get_template_directory() . '/languages' );
+      
 			/**
 			 * Add default posts and comments RSS feed links to head.
 			 */

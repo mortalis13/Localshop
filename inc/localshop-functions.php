@@ -282,3 +282,13 @@ function localshop_categorized_blog() {
 		return false;
 	}
 }
+
+function localshop_get_option($name){
+  $options = get_option( 'custom_theme_options' );
+  
+  if($options && isset($options[$name])){
+    return $options[$name];
+  }
+  
+  return '';
+}

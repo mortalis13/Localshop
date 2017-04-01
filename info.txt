@@ -19,7 +19,7 @@
 *- responsive style
 
 *- admin page
-- translate
+*- translate
 - multibrowser
 - remove outline social icons click
 - organize php

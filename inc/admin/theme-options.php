@@ -1,96 +1,114 @@
 <?php
+class ThemeOptionsPage
+{
+    private $options;
 
-add_action( 'admin_init', 'starter_options_init' );
-add_action( 'admin_menu', 'starter_options_add_page' );
-
-/**
- * Init plugin options to white list our options
- */
-function starter_options_init(){
-  // register_setting('starter_options_group', 'starter_general_options','theme_options_validate');
-}
-
-/**
- * Load up the menu page
- */
-function starter_options_add_page() {
-  add_theme_page( __( 'Theme Options', 'localshop' ), __( 'Theme Options', 'localshop' ), 'edit_theme_options', 'theme_options', 'starter_options_do_page' );
-}
-
-/**
- * Create the options page and process requests
- */
-function starter_options_do_page() {
-  if(isset($_GET['subpage'])){
-    $subpage=$_GET['subpage'];
-    switch($subpage){
-      case 'editor_shortcuts':
-        require(dirname(__FILE__).'/editor-shortcuts.php');
-        break;
-      case 'css_snippets':
-        require(dirname(__FILE__).'/css-snippets.php');
-        break;
-      case 'emmet_abbr':
-        require(dirname(__FILE__).'/emmet-abbr.php');
-        break;
+    public function __construct()
+    {
+        add_action( 'admin_init', array( $this, 'page_init' ) );
+        add_action( 'admin_menu', array( $this, 'add_plugin_page' ) );
     }
-  }
-  else{
-  ?>
-  
-    <div class="wrap">
-      <h2><?php echo wp_get_theme()  .': '. __( 'Theme Options', 'localshop' )?></h2>
 
-      <?php if ( !empty($_GET['status']) && $_GET['status'] == 'reset' ) : ?>
-        <div class="updated fade"><p><strong><?php _e( 'Style Has Been Reset', 'localshop' ); ?></strong></p></div>
-      <?php endif; ?>
+    public function add_plugin_page()
+    {
+        add_theme_page(
+            __( 'Theme Options', 'localshop' ),
+            __( 'Theme Options', 'localshop' ),
+            'edit_theme_options', 
+            'theme_options', 
+            array( $this, 'create_admin_page' )
+        );
+    }
+
+    public function create_admin_page()
+    {
+        // Set class property
+        $this->options = get_option( 'custom_theme_options' );
+        
+        ?>
+        <div class="wrap">
+          <h2><?php echo wp_get_theme()  .': '. __( 'Theme Options', 'localshop' )?></h2>
+
+          <form method="post" action="options.php">
+          <?php
+              // This prints out all hidden setting fields
+              settings_fields( 'theme_option_group' );
+              do_settings_sections( 'theme_options' );
+              submit_button();
+          ?>
+          </form>
+        </div>
+        <?php
+    }
+
+    /**
+     * Register and add settings
+     */
+    public function page_init()
+    {        
+        register_setting(
+            'theme_option_group', // Option group
+            'custom_theme_options', // Option name
+            array( $this, 'validate_options' ) // Sanitize
+        );
+
+        add_settings_section(
+            'setting_section_id', // ID
+            __('General settings', 'localshop'), // Title
+            array( $this, 'print_section_info' ), // Callback
+            'theme_options' // Page
+        );  
+
+        add_settings_field(
+            'about-us',
+            __('About Us', 'localshop'),
+            array( $this, 'about_us_callback' ), 
+            'theme_options', 
+            'setting_section_id'
+        );      
+    }
+
+    /**
+     * Sanitize each setting field as needed
+     *
+     * @param array $input Contains all settings fields as array keys
+     */
+    public function validate_options( $input )
+    {
+        $new_input = array();
+        
+        // if( isset( $input['id_number'] ) )
+        //     $new_input['id_number'] = absint( $input['id_number'] );
+
+        if( isset( $input['about_us'] ) )
+            $new_input['about_us'] = sanitize_text_field( $input['about_us'] );
+
+        return $new_input;
+    }
+
+    /** 
+     * Print the Section text
+     */
+    public function print_section_info()
+    {
+    }
+
+    /** 
+     * Get the settings option array and print one of its values
+     */
+    public function about_us_callback()
+    {
+      $about_us_text = isset( $this->options['about_us'] ) ? esc_attr( $this->options['about_us']) : '';
+      ?>
       
-      <form method="post" id="options_form" action="options.php">
-        <?php settings_fields('starter_options_group') ?>
-
-        <p>
-          <?php submit_button(); ?>
-        </p>
-      </form>
+      <p class="admin-option">
+        <textarea name="custom_theme_options[about_us]" id="about_us" cols="50" rows="10"><?php echo esc_textarea($about_us_text) ?></textarea>
+      </p>
       
-    </div>
-  
-  <?php
-  }
+      <?php
+    }
 }
 
-/**
- * Validation function for checkboxes and textarea
- */
-function theme_options_validate( $input ) {
-  $checkboxes=array(
-    'disable_image_cropping',
-    'use_custom_css',
-    'use_category_colors'
-  );
-  
-  foreach($checkboxes as $ch){
-    if(!isset($input[$ch])) $input[$ch] = null;
-    $input[$ch]=($input[$ch]? 1 : 0 );
-  }
-  
-  $input['custom_css'] = wp_filter_post_kses( $input['custom_css'] );
-  
-  return $input;
+if( is_admin() ){
+    $theme_options_page = new ThemeOptionsPage();
 }
-
-/**
- * Restore factory color scheme
- */
-function starter_reset_customizer_settings() {
-  if( empty( $_POST['starter_reset_customizer'] ) || 'starter_reset_customizer_settings' !== $_POST['starter_reset_customizer'] )
-    return;
-  if( ! wp_verify_nonce( $_POST['starter_reset_customizer_nonce'], 'starter_reset_customizer_nonce' ) )
-    return;
-  if( ! current_user_can( 'manage_options' ) )
-    return;
-  
-  delete_option('starter_scheme_options');
-  wp_safe_redirect( admin_url( 'themes.php?page=theme_options&status=reset' ) ); exit;
-}
-add_action( 'admin_init', 'starter_reset_customizer_settings' );

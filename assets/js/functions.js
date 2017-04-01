@@ -13,48 +13,48 @@ jQuery(function($){
   function stopSignupWait() {
     var button = $("#signup-submit");
     button.removeClass('loader-4');
-    button.prepend('<span class="signup-caption">Sign Up</span>');
+    button.prepend('<span class="signup-caption">' + signUpText + '</span>');
   }
   
-  function startSignupWait1() {
-    var counter = 0;
-    var limit = 3;
+  // function startSignupWait1() {
+  //   var counter = 0;
+  //   var limit = 3;
     
-    var button = $("#signup-submit span");
-    var dotIcon = '<i class="fa fa-circle"></i>';
+  //   var button = $("#signup-submit span");
+  //   var dotIcon = '<i class="fa fa-circle"></i>';
     
-    var animDur = 150;
+  //   var animDur = 150;
     
-    var $dotIcon = $(dotIcon);
-    $dotIcon.css('opacity', 0);
-    button.html($dotIcon);
-    $dotIcon.animate({opacity: 1}, animDur);
+  //   var $dotIcon = $(dotIcon);
+  //   $dotIcon.css('opacity', 0);
+  //   button.html($dotIcon);
+  //   $dotIcon.animate({opacity: 1}, animDur);
     
-    clearInterval(waitHandler);
-    waitHandler = setInterval(function(){
-      if(counter < limit-1){
-        $dotIcon = $(dotIcon);
-        $dotIcon.css('opacity', 0);
-        button.append($dotIcon);
-        $dotIcon.animate({opacity: 1}, animDur);
+  //   clearInterval(waitHandler);
+  //   waitHandler = setInterval(function(){
+  //     if(counter < limit-1){
+  //       $dotIcon = $(dotIcon);
+  //       $dotIcon.css('opacity', 0);
+  //       button.append($dotIcon);
+  //       $dotIcon.animate({opacity: 1}, animDur);
         
-        counter++;
-      }
-      else{
-        $dotIcon = $(dotIcon);
-        $dotIcon.css('opacity', 0);
-        button.html($dotIcon);
-        $dotIcon.animate({opacity: 1}, animDur);
+  //       counter++;
+  //     }
+  //     else{
+  //       $dotIcon = $(dotIcon);
+  //       $dotIcon.css('opacity', 0);
+  //       button.html($dotIcon);
+  //       $dotIcon.animate({opacity: 1}, animDur);
         
-        counter = 0;
-      }
-    }, 600);
-  }
+  //       counter = 0;
+  //     }
+  //   }, 600);
+  // }
 
-  function stopSignupWait1() {
-    clearInterval(waitHandler);
-    $("#signup-submit").html("Sign Up");
-  }
+  // function stopSignupWait1() {
+  //   clearInterval(waitHandler);
+  //   $("#signup-submit").html("Sign Up");
+  // }
   
   $('#signup-form').submit(function(){
     var thisForm = $(this);
@@ -65,7 +65,7 @@ jQuery(function($){
     var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     
     if(!emailRegex.test(email)){
-      alert("Email is not valid");
+      alert(signUpEmailNotValidText);
       return false;
     }
     
@@ -81,7 +81,7 @@ jQuery(function($){
         
         if(data == 'true'){
           console.log('ok');
-          thisForm.find('.signup-message').html('Your email added to the news list');
+          thisForm.find('.signup-message').html(signUpEmailAddedText);
         }
       },
       error: function(jqXHR, textStatus, errorThrown){

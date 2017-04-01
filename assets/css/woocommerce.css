@@ -838,7 +838,7 @@ a.reset_variations:before{
 .woocommerce-breadcrumb{
   font-size:.875em;
   margin: 0 0 20px;
-  padding: 10px;
+  padding: 10px 0;
 }
 
 .woocommerce-breadcrumb a{
