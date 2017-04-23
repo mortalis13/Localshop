@@ -29,11 +29,10 @@
 - fix lightbox for gallery
 - add focus style for all elements (accessibility)
 - replace default fonts (Arial, Verdana by local site fonts)
+- category improve products total/of count
 
-
-% ie6,7,8,9,10
-% ie responsive
-
+-- ie6 winXP
+-- ie7 responsive
 -- ie8 thumbnails width not calculating correctly because of no support for media queries (main image width calculated before @media width 35%)
 
 -------------------

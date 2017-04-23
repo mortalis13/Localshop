@@ -5,13 +5,13 @@
 .site-info-block .fa{
   padding-right: 4px;
 }
-.ie7 .woocommerce-breadcrumb a .fa{
-  padding-right: 4px;
-}
-
 .search-top-block button.search-button{
   cursor: pointer;
   vertical-align: top;
+}
+
+.ie7 .woocommerce-breadcrumb a .fa{
+  padding-right: 4px;
 }
 
 .search-top-block .search-field,

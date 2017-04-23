@@ -96,6 +96,11 @@ jQuery(function($){
     });
     
     return false;
-  })
+  });
   
-})
+  
+  if(MOBILE_DEVICE && !$('html').hasClass('firefox')){
+    $('.woocommerce-result-count').css({'margin-top': 0});
+  }
+  
+});

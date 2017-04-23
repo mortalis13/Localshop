@@ -75,6 +75,7 @@
 }
 .search-top-block .table-div{
   display: inline-block;
+  vertical-align: top;
 }
 .search-top-block .widget_product_search{
   display: inline-block;
