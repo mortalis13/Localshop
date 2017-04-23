@@ -113,11 +113,13 @@ if ( ! class_exists( 'Localshop_WooCommerce' ) ) :
       wp_enqueue_style( 'localshop-woocommerce-style', get_template_directory_uri() . '/assets/css/woocommerce.css', $localshop_version );
       wp_style_add_data( 'localshop-woocommerce-style', 'rtl', 'replace' );
 
-      wp_enqueue_style( 'localshop-add-style', get_template_directory_uri() . '/assets/css/add_style.css', '', $localshop_version );
+      wp_enqueue_style( 'localshop-add_style-style', get_template_directory_uri() . '/assets/css/add_style.css', '', $localshop_version );
+      wp_enqueue_style( 'localshop-browser_fix-style', get_template_directory_uri() . '/assets/css/browser_fix.css', '', $localshop_version );
       wp_enqueue_style( 'localshop-media-style', get_template_directory_uri() . '/assets/css/media.css', '', $localshop_version );
       
       
-      wp_register_script( 'localshop-header-cart', get_template_directory_uri() . '/assets/js/woocommerce/header-cart.min.js', array(), $localshop_version, true );
+      // wp_register_script( 'localshop-header-cart', get_template_directory_uri() . '/assets/js/woocommerce/header-cart.min.js', array(), $localshop_version, true );
+      wp_register_script( 'localshop-header-cart', get_template_directory_uri() . '/assets/js/woocommerce/header-cart.js', array(), $localshop_version, true );
       wp_enqueue_script( 'localshop-header-cart' );
 
       wp_register_script( 'localshop-sticky-payment', get_template_directory_uri() . '/assets/js/woocommerce/checkout.min.js', 'jquery', $localshop_version, true );

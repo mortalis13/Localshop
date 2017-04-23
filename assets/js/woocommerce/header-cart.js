@@ -2,7 +2,13 @@
  * Makes the header cart content scrollable if the height of the dropdown exceeds the window height.
  */
 ( function() {
-	if ( document.body.classList.contains( 'woocommerce-cart' ) || document.body.classList.contains( 'woocommerce-checkout' ) || window.innerWidth < 768 || ! document.getElementById( 'site-header-cart' ) ) {
+  // var classes = document.body.classList;
+  // if ( classes.contains( 'woocommerce-cart' ) || classes.contains( 'woocommerce-checkout' ) || window.innerWidth < 768 || ! document.getElementById( 'site-header-cart' ) ) {
+  
+  
+	if ( document.body.className.search( 'woocommerce-cart' ) != -1 || 
+        document.body.className.search( 'woocommerce-checkout' ) != -1 || 
+        window.innerWidth < 768 || ! document.getElementById( 'site-header-cart' ) ) {
 		return;
 	}
 

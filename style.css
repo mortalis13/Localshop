@@ -43,12 +43,20 @@ Tags: white, light, one-column, responsive-layout, accessibility-ready, theme-op
 
 /* ===== 1 - Global ===== */
 
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
 body,
 button,
 input,
 select,
 textarea {
-  font-family: "Source Sans Pro", HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  /*font-family: "Source Sans Pro", HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
+  /*font-family: Helvetica, sans-serif;*/
+  font-family: Arial, sans-serif;
 }
 
 blockquote,
@@ -83,7 +91,7 @@ button,
 input,
 textarea {
   color: #43454b;
-  line-height: 1.618;
+  line-height: 26px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
@@ -195,7 +203,7 @@ table {
 }
 
 hr {
-  box-sizing: content-box;
+  /*box-sizing: content-box;*/
   background-color: #ccc;
   border: 0;
   height: 1px;
@@ -284,7 +292,6 @@ img {
   border-radius: 3px;
 }
 
-
 embed,
 iframe,
 object,
@@ -306,14 +313,6 @@ a:focus {
 }
 a img{
   display: inline-block;
-}
-
-.localshop-cute * {
-  font-family: "Comic Sans MS", sans-serif;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 .site {
@@ -862,6 +861,7 @@ ul.menu li.current-menu-item > a {
 
 .site-content {
   outline: 0;
+  padding: 0 50px;
 }
 .site-content:after {
   clear: both;
@@ -869,7 +869,6 @@ ul.menu li.current-menu-item > a {
 
 .content-area {
   float: none;
-  /*width: 960px;*/
   margin: 0 auto;
   margin-bottom: 2.617924em;
 }
@@ -1168,6 +1167,7 @@ ul.menu li.current-menu-item > a {
 #respond .comment-form-email input,
 #respond .comment-form-url input {
   width: 100%;
+  height: 40px;
 }
 
 #respond .form-submit,
@@ -1187,9 +1187,12 @@ ul.menu li.current-menu-item > a {
 #respond .comment-form-author,
 #respond .comment-form-email,
 #respond .comment-form-url {
-  width: 29.4117647059%;
+  width:47%;
   float: left;
   margin-right: 5.8823529412%;
+}
+#respond .comment-form-email{
+  margin-right:0;
 }
 #respond .comment-form-url {
   float: right;
@@ -1265,7 +1268,7 @@ ul.menu li.current-menu-item > a {
   border-left-width: 0;
   display: inline-block;
   padding: .3342343017em .875em;
-  background-color: rgba(0, 0, 0, .025);
+  background-color: #f2f2f2;
   color: #43454b;
 }
 
@@ -1524,7 +1527,7 @@ ul.menu li.current-menu-item > a {
 .site-footer {
   background-color: #f3f3f3;
   color: #76787e;
-  padding: 20px 0;
+  padding: 20px 50px;
 }
 
 .site-footer h1,
@@ -1765,7 +1768,7 @@ textarea {
   outline: 0;
   -webkit-appearance: none;
   border-radius: 2px;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
   font-weight: 400;
   border: 1px solid #bababa;
   box-shadow: none;
@@ -1883,11 +1886,11 @@ fieldset legend {
 /* ===== 12 - Layout ===== */
 
 .col-full {
-  max-width: 1070px;
+  max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 50px;
-  box-sizing: content-box;
+  /*padding: 0 20px;*/
+  /*box-sizing: content-box;*/
 }
 .col-full:after,
 .col-full:before {
@@ -1900,6 +1903,10 @@ fieldset legend {
   clear: both;
 }
 
+.site-header .col-full{
+  padding-left: 50px;
+  padding-right: 50px;
+}
 .site-content .col-full {
   max-width: 960px;
 }
@@ -1967,14 +1974,14 @@ fieldset legend {
 .screen-reader-text:hover {
   background-color: #f1f1f1;
   border-radius: 3px;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, .3);
   clip: auto!important;
   display: block;
   font-weight: 700;
   height: auto;
   left: 0;
   line-height: normal;
-  padding: 1em 1.618em;
+  padding: 8px 10px;
   text-decoration: none;
   top: 0;
   width: auto;
@@ -1984,6 +1991,10 @@ fieldset legend {
 
 
 /* ===== 15 - Clearing ===== */
+
+.clearfix{
+  clear: both;
+}
 
 #comments .comment-list .comment-body:after,
 #comments .comment-list .comment-body:before,

@@ -4,6 +4,7 @@ $ = jQuery;
 jQuery(function($){
   
   var DISABLE_ZOOM = false;
+  // var DISABLE_ZOOM = true;
   
   var fullSizeImage = false;
   var zoomPanelSize = 500;
@@ -17,39 +18,45 @@ jQuery(function($){
     var imageDetailDistance = 50;
     
     var images=$(".images");
-    var image=$(".woocommerce-main-image img");
+    var image=$(".images .main-image img");
     
     images.width(image.outerWidth()+2);
     $('.summary').width($('.summary').parent().width() - images.width() - imageDetailDistance);
   }
   
-  function calcImages(){
+  function calcThumbnails(){
+    var IE7_BROWSER = $('html').hasClass('ie7');
+    
     var minItemW = 50;
     var imageN = 5;
     var distanceR = 15;
-    var paddingRL = 0;
-    var borderW = 0;
+    var paddingRL = 5;
+    var borderW = 1;
     
     var totalImages = $(thumbnails).length;
     
     // var mainImageW = $('.images .main-image').outerWidth();
-    var mainImageW = $('.images .main-image')[0].getBoundingClientRect().width;
+    var boundingRect = $('.images .main-image')[0].getBoundingClientRect();
+    var mainImageW = boundingRect.width;
+    if(mainImageW === undefined){
+      mainImageW = boundingRect.right - boundingRect.left;
+    }
     
-    // var itemW = (mainImageW + distanceR) / imageN - (2*paddingRL + distanceR + 2*borderW);
-    var itemW = (mainImageW - distanceR * (imageN - 1)) / imageN - 2 * borderW;
-    console.log('Thumbnail width 1: ' + itemW);
+    /*
+      Original equation (total width eq: (2 borders + 2 paddings + image width) for N images + N-1 distances between images)
+      W = (2*b + 2*p + w)*N + d*(N-1)
+      
+      Each image width
+      w = (W - d*(N-1)) / N - (2*b + 2*p)
+    */
     
-    itemW = Math.floor((itemW - 0.1) * 10) / 10;
-    console.log('Thumbnail width 2: ' + itemW);
+    var itemW = calcItemWidth();
+    console.log('Thumbnail width: ' + itemW);
     
     if(itemW < minItemW){
-      imageN = (mainImageW + distanceR) / (2 * borderW + minItemW + distanceR);
-      imageN = Math.floor(imageN);
-      
-      itemW = (mainImageW - distanceR * (imageN - 1)) / imageN - 2 * borderW;
-      itemW = Math.floor((itemW - 0.1) * 10) / 10;
-      
-      console.log('Recalculating thumbnails, new N: ' + imageN);
+      imageN = calcImageCount();
+      itemW = calcItemWidth();
+      console.log('Recalculating thumbnails, new N: ' + imageN + ' new Thumbnail width: ' + itemW);
     }
     
     $(thumbnails).removeClass('last');
@@ -59,10 +66,33 @@ jQuery(function($){
         $(this).addClass('last');
       }
       
-      $(this).width(itemW);
+      if(IE7_BROWSER){
+        $(this).outerWidth(itemW);
+      }
+      else{
+        $(this).width(itemW);
+      }
+      
       $(this).filter('.last').css('margin-right', 0);
       $(this).not('.last').css('margin-right', distanceR);
     });
+    
+    
+    function calcImageCount(){
+      var imageN = (mainImageW + distanceR) / (2*borderW + 2*paddingRL + minItemW + distanceR);
+      imageN = Math.floor(imageN);
+      return imageN;
+    }
+    
+    function calcItemWidth(){
+      // var itemW = (mainImageW + distanceR) / imageN - (2*paddingRL + distanceR + 2*borderW);
+      // var itemW = (mainImageW - distanceR * (imageN - 1)) / imageN - (2*borderW);
+      // var itemW = (mainImageW - distanceR * (imageN - 1)) / imageN - (2*borderW + 2*paddingRL);
+      
+      var itemWidth = (mainImageW - distanceR * (imageN - 1)) / imageN - (2*borderW + 2*paddingRL);
+      itemWidth = Math.floor((itemWidth - 0.1) * 10) / 10;
+      return itemWidth;
+    }
   }
   
   function getImageSize(imgSrc, callback){
@@ -101,13 +131,15 @@ jQuery(function($){
     $(zoomImageContainer + ' img').elevateZoom({
       zoomWindowPosition: 'zoom-anchor',
       zoomWindowWidth: zoomWindowWidth,
-      zoomWindowHeight: zoomWindowHeight,
-      // gallery: 'gallery-images_id',
+      zoomWindowHeight: zoomWindowHeight
     });
   }
   
   function initZoom(){
     if(!DISABLE_ZOOM){
+      $('.zoomContainer').remove();
+      $('.zoomWindowContainer').remove();
+      
       var imgSrc = $(zoomImageContainer + ' a').attr('href');
       getImageSize(imgSrc, cbImageLoaded);
     }
@@ -147,16 +179,23 @@ jQuery(function($){
   
   // --------------------------------
   
-  if(window.screen.width > 640){
+  // var screenWidth = window.screen.width;
+  var screenWidth = window.innerWidth
+      || document.documentElement.clientWidth
+      || document.body.clientWidth;
+
+  console.log('screenWidth: ' + screenWidth);
+  
+  if(screenWidth > 640){
     console.log('using calcImageDetailWidths()')
     calcImageDetailWidths();
   }
-  if(MOBILE_DEVICE || window.screen.width < 480){
+  if(MOBILE_DEVICE || screenWidth < 480){
     console.log('disabling zoom')
     DISABLE_ZOOM = true;
   }
   
-  calcImages();
+  calcThumbnails();
   initZoom();
   highlightActiveImage($(thumbnails)[0]);
   

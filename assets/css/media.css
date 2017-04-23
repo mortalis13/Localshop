@@ -48,30 +48,24 @@
 
 @media (max-width: 960px) {
   
-  .site-content .col-full{
-    padding: 0 20px;
-  }
-  
   .site-footer .footer-categories{
     width: 25%;
   }
-  .site-footer .footer-categories .block-title{
-    /*text-align: center;*/
-  }
   .site-footer .footer-categories-list{
     width: 100%;
+    columns: 1;
+    -webkit-columns: 1;
     -moz-columns: 1;
-    /*text-align: center;*/
   }
   .site-footer .footer-newsletters{
     width: 35%;
   }
   
-  #contactFormSection {
-    width: 60%;
-  }
+  #contactFormSection,
   .contacts-list {
-    width: 30%;
+    float: none;
+    width: 80%;
+    margin: 0px auto;
   }
   
   .woocommerce-tabs #tab-reviews.panel {
@@ -87,21 +81,15 @@
     font-size: .9em;
   }
   
-}
-
-@media (max-width: 768px) {
-
   .woocommerce-active .site-branding{
     float: none;
     text-align: center;
   }
-  
   .header-right-content {
     float: none;
     text-align: center;
     display: block;
   }
-  
   .site-contact-line {
     display: none;
     text-align: center;
@@ -113,11 +101,17 @@
   }
   
   li.product .category-description {
+    max-width: 300px;
     margin: 0 auto;
   }
   
-  .site-footer .col-full{
-    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+
+  .site-footer{
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .site-footer .footer-block.first{
     float: none;
@@ -136,6 +130,14 @@
   }
   .site-footer .footer-newsletters #signup-email{
     width: 82%;
+  }
+  
+  .site-main ul.products li.product{
+    width: 100%;
+    display: block;
+    list-style:none;
+    position:relative;
+    margin-right: 0px;
   }
   
   .tax-product_cat .products .product, 
@@ -162,6 +164,13 @@
 }
 
 @media (max-width: 640px) {
+  
+  .site-header .col-full,
+  .site-content,
+  .site-footer{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 
   .site-info-block .info-phone{
     display: none;
@@ -169,13 +178,6 @@
   
   .site-footer .footer-block.first{
     width: 90%;
-  }
-  
-  #contactFormSection,
-  .contacts-list {
-    float: none;
-    width: 80%;
-    margin: 0px auto;
   }
   
   .single-product div.product .images{
@@ -209,27 +211,34 @@
   
 }
 
-
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   
-  .col-full{
-    padding: 0 10px;
-  }
-
   .menu-toggle{
     display: inline-block;
   }
-  
   .main-navigation ul {
     display: none;
   }
-  
   .main-navigation.toggled ul[aria-expanded="true"] {
     display: block;
   }
-  
   .main-navigation ul li{
     display: block;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  
+  .site-header .col-full,
+  .site-content,
+  .site-footer{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .site-info-block .info-email{
+    display: none;
   }
   
   .site-footer .footer-block.first{
@@ -260,6 +269,11 @@
     margin-right: auto;
   }
   
+  #contactFormSection,
+  .contacts-list {
+    width: 100%;
+  }
+  
 }
 
 @media (max-width: 320px) {
@@ -268,8 +282,16 @@
     font-size: 1.2em;
   }
   
-  #contactFormSection,
-  .contacts-list {
+  .footer-block{
+    float: none;
+  }
+  .site-footer .footer-categories{
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  .site-footer .footer-categories,
+  .site-footer .footer-newsletters{
     width: 100%;
   }
   
@@ -296,6 +318,12 @@
   }
   .search-top-block form .search-button-div{
     display: table-cell;
+  }
+  
+  .product-brand{
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 
 }

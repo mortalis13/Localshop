@@ -51,7 +51,9 @@ if ( ! comments_open() ) {
 				echo '</nav>';
 			endif; ?>
 
-	  </div>
+      <div class="clearfix"></div>
+    </div>
+    
   <?php endif; ?>
     
 

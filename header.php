@@ -17,6 +17,23 @@
 
 <?php wp_head(); ?>
 
+<!--[if IE]>
+  <link rel="stylesheet" id="ie-style" href="<?php echo get_template_directory_uri() . "/assets/css/ie.css"?>" type='text/css' media='all' />
+<![endif]-->
+
+<!--[if IE 7]>
+  <link rel="stylesheet" id="ie7-style3" href="<?php echo get_template_directory_uri() . "/assets/fonts/FontAwesome/css/font-awesome-ie7.css"?>" type='text/css' media='all' />
+  <link rel="stylesheet" id="ie7-style1" href="<?php echo get_template_directory_uri() . "/assets/css/ie7.css"?>" type='text/css' media='all' />
+  <script src="<?php echo get_template_directory_uri() . "/assets/js/ie7.js"?>"></script>
+<![endif]-->
+
+  <!-- <script src="<?php echo get_template_directory_uri() . "/assets/js/IE7.js"?>"></script> -->
+
+<!--[if lte IE 8]>
+  <script src="<?php echo get_template_directory_uri() . "/assets/js/html5shiv.js"?>"></script>
+  <script src="<?php echo get_template_directory_uri() . "/assets/js/respond.src.js"?>"></script>
+<![endif]-->
+
 </head>
 
 <body <?php body_class(); ?>>

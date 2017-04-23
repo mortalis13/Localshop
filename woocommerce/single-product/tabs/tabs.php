@@ -30,7 +30,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 $tabs = apply_filters( 'localshop_product_tabs', array() );
 
 if ( ! empty( $tabs ) ) : ?>
-
+  
+  <div class="ie7-clearfix"></div>
+  
 	<div class="woocommerce-tabs wc-tabs-wrapper">
 		<ul class="tabs wc-tabs">
 			<?php foreach ( $tabs as $key => $tab ) : ?>
@@ -39,7 +41,9 @@ if ( ! empty( $tabs ) ) : ?>
 				</li>
 			<?php endforeach; ?>
 		</ul>
-		<?php foreach ( $tabs as $key => $tab ) : ?>
+    
+    <?php foreach ( $tabs as $key => $tab ) : ?>
+      <div class="clearfix"></div>
 			<div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--<?php echo esc_attr( $key ); ?> panel entry-content wc-tab" id="tab-<?php echo esc_attr( $key ); ?>">
 				<?php call_user_func( $tab['callback'], $key, $tab ); ?>
 			</div>
