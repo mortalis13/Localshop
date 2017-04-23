@@ -1,0 +1,189 @@
+
+.site-info-block{
+  margin-top: 6px;
+}
+.site-info-block .fa{
+  padding-right: 4px;
+}
+.ie7 .woocommerce-breadcrumb a .fa{
+  padding-right: 4px;
+}
+
+.search-top-block button.search-button{
+  cursor: pointer;
+  vertical-align: top;
+}
+
+.search-top-block .search-field,
+.site-footer #signup-email{
+  height: 27px;
+  position: relative;
+  top: -1px;
+}
+#respond .comment-form-author input,
+#respond .comment-form-email input,
+#respond .comment-form-url input{
+  height: 27px;
+}
+#contactForm input{
+  height: 27px;
+}
+
+.ie7 .main-navigation ul.menu > li.menu-item-has-children > a .fa,
+.ie7 .main-navigation ul.menu > li.page_item_has_children > a .fa,
+.ie7 .main-navigation ul.nav-menu > li.menu-item-has-children > a .fa,
+.ie7 .main-navigation ul.nav-menu > li.page_item_has_children > a .fa{
+  padding-left: 4px;
+}
+
+.main-navigation ul ul li a, 
+.secondary-navigation ul ul li a{
+  width: 160px;
+}
+
+ul.products li.product img{
+  width: auto;
+}
+
+.tax-product_cat .products .product,
+.search-results .products .product{
+  margin-bottom: 35px;
+}
+.tax-product_cat .products .product .product-image,
+.search-results .products .product .product-image{
+  width: 18%;
+}
+.tax-product_cat .products .product .product-summary,
+.search-results .products .product .product-summary{
+  width: 75%;
+}
+.tax-product_cat .products .product a img,
+.search-results .products .product a img{
+  padding: 0;
+  border: 0;
+}
+.tax-product_cat .products .product .product-image,
+.search-results .products .product .product-image{
+  padding: 15px;
+  border: 1px solid #aaa;
+}
+
+.site-footer form{
+  margin-top: 0;
+}
+
+.woocommerce-result-count{
+  margin-top: 0;
+}
+
+.ie7-clearfix{
+  clear: none;
+  display: block;
+}
+
+.ie7 .single-product div.product .images .thumbnails:after,
+.ie7 .single-product div.product .woocommerce-tabs,
+.ie7 .localshop-full-width-content.single-product div.product .woocommerce-tabs{
+  clear: none;
+}
+#reviews .commentlist li{
+  clear: none;
+}
+#reviews .commentlist li .comment-text{
+  float: left;
+}
+#reviews .commentlist li p.meta{
+  margin-bottom: 0;
+}
+
+
+/* -------------- inline-block fix -------------- */
+
+.site-info-block .info-email,
+.site-info-block .info-phone{
+  *display: inline;
+  *zoom: 1;
+}
+
+.site-contact-line .contact-icon,
+.search-top-block .table-div,
+.header-right-content,
+.header-right-content .info-email,
+.header-right-content .info-phone,
+.header-right-content .widget_product_search,
+.tax-product_cat .products .product,
+.search-results .products .product,
+.tax-product_cat .products .product .product-link .title,
+.search-results .products .product .product-link .title,
+.product-brand,
+.main-navigation ul li,
+.secondary-navigation ul li,
+.pagination .page-numbers li,
+.woocommerce-pagination .page-numbers li,
+.pagination .page-numbers li .page-numbers,
+.woocommerce-pagination .page-numbers li .page-numbers,
+.widget_rating_filter .wc-layered-nav-rating .star-rating,
+.search-top-block .widget_product_search,
+.contacts-list-icon,
+.contacts-list-caption{
+  *display: inline;
+  *zoom: 1;
+}
+
+.main-navigation ul.menu > li.menu-item-has-children > a:after,
+.main-navigation ul.menu > li.page_item_has_children > a:after,
+.main-navigation ul.nav-menu > li.menu-item-has-children > a:after,
+.main-navigation ul.nav-menu > li.page_item_has_children > a:after {
+  *display: inline;
+  *zoom: 1;
+}
+
+.sticky .entry-title:before ,
+#comments .comment-list .bypostauthor > .comment-body cite:after {
+  *display: inline;
+  *zoom: 1;
+}
+
+.widget_archive ul li:before,
+.widget_categories ul li:before,
+.widget_links ul li:before,
+.widget_nav_menu ul li:before,
+.widget_pages ul li:before,
+.widget_recent_comments ul li:before,
+.widget_recent_entries ul li:before {
+  *display: inline;
+  *zoom: 1;
+}
+
+.localshop-handheld-footer-bar ul li,
+.site-main ul.products li.product,
+.single-product div.product .images .woocommerce-main-image,
+.single-product .related .product,
+a.reset_variations,
+.onsale,
+table.cart .product-quantity .plus,
+table.cart td.actions .coupon {
+  *display: inline;
+  *zoom: 1;
+}
+
+.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger:before,
+a.reset_variations:before,
+.woocommerce-breadcrumb a:first-of-type:before,
+.widget_product_categories ul li:before,
+a.remove:before,
+.blockUI:before,
+#payment .payment_methods>.wc_payment_method>label:before,
+#payment .terms label:before,
+.woocommerce-MyAccount-navigation ul li a:before,
+.woocommerce-Button--previous:before,
+.demo_store a:before,
+.addresses header.title a:before,
+.woocommerce-password-strength:after,
+p.order-again .button:after,
+.woocommerce-MyAccount-downloads .button:after,
+.woocommerce-Button--next:after,
+.site-header-cart .cart-contents:after{
+  *display: inline;
+  *zoom: 1;
+}

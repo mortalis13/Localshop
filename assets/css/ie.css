@@ -1,0 +1,12 @@
+
+.localshop-sorting select{
+  padding: 8px 5px;
+}
+
+textarea#comment{
+  height: 140px;
+}
+
+#contactForm textarea#contactcontent{
+  height: 250px;
+}
