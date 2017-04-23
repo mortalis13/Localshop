@@ -52,3 +52,12 @@
   }
   
 }
+
+@media (max-width: 480px) {
+
+  .site-footer .footer-categories,
+  .site-footer .footer-newsletters{
+    margin-left: 0;
+  }
+
+}

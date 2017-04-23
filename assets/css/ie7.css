@@ -95,11 +95,18 @@ ul.products li.product img{
 #reviews .commentlist li p.meta{
   margin-bottom: 0;
 }
+#reviews label{
+  display: block;
+}
 
 .woocommerce-tabs .panel{
-  /*width: 90%;*/
+  width: 90%;
   /*box-sizing: border-box;*/
   /**behavior: url('/wp-localshop/wp-content/themes/localshop/assets/js/boxsizing.htc');*/
+}
+.woocommerce-tabs .panel#tab-reviews {
+  padding-left: 40px;
+  padding-right: 60px;
 }
 
 /* -------------- inline-block fix -------------- */

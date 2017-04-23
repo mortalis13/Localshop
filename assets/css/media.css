@@ -179,6 +179,9 @@
   .site-footer .footer-block.first{
     width: 90%;
   }
+  .site-footer .footer-categories{
+    padding-left: 5%;
+  }
   
   .single-product div.product .images{
     width: 60% !important;
@@ -272,6 +275,15 @@
   #contactFormSection,
   .contacts-list {
     width: 100%;
+  }
+  
+}
+
+@media (max-width: 440px) {
+  
+  .woocommerce-result-count{
+    clear: both;
+    margin-top: 0px;
   }
   
 }
