@@ -119,12 +119,10 @@ if ( ! class_exists( 'Localshop_WooCommerce' ) ) :
       wp_enqueue_style( 'localshop-ie-style', get_template_directory_uri() . '/assets/css/ie.css', '', $localshop_version );
       wp_enqueue_style( 'localshop-faie7-style', get_template_directory_uri() . '/assets/fonts/FontAwesome/css/font-awesome-ie7.css', '', $localshop_version );
       wp_enqueue_style( 'localshop-ie7-style', get_template_directory_uri() . '/assets/css/ie7.css', '', $localshop_version );
-      wp_enqueue_style( 'localshop-ie7-style', get_template_directory_uri() . '/assets/css/ie6.css', '', $localshop_version );
       
       wp_style_add_data( 'localshop-ie-style', 'conditional', 'IE' );
       wp_style_add_data( 'localshop-faie7-style', 'conditional', 'lte IE 7' );
       wp_style_add_data( 'localshop-ie7-style', 'conditional', 'lte IE 7' );
-      wp_style_add_data( 'localshop-ie7-style', 'conditional', 'lte IE 6' );
       
       wp_enqueue_style( 'localshop-media-style', get_template_directory_uri() . '/assets/css/media.css', '', $localshop_version );
       
