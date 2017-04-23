@@ -2017,7 +2017,8 @@ p.stars.selected a:not(.active):before{
   border-color: #4b723d;
 }
 .woocommerce-tabs .panel#tab-reviews {
-  padding: 20px 80px 15px;
+  /*padding: 20px 80px 15px;*/
+  padding: 20px 0px 15px 80px;
 }
 .woocommerce-tabs .panel#tab-reviews #review_form_wrapper {
   margin-top: 30px;

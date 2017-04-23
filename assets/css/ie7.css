@@ -96,6 +96,11 @@ ul.products li.product img{
   margin-bottom: 0;
 }
 
+.woocommerce-tabs .panel{
+  /*width: 90%;*/
+  /*box-sizing: border-box;*/
+  /**behavior: url('/wp-localshop/wp-content/themes/localshop/assets/js/boxsizing.htc');*/
+}
 
 /* -------------- inline-block fix -------------- */
 

@@ -589,7 +589,7 @@ a.cart-contents:hover,
 
 .main-navigation ul ul,
 .secondary-navigation ul ul {
-  display: block;
+  display: none;
   border: 1px solid #c9c9c9;
   box-shadow: 3px 1px 5px rgba(0, 0, 0, 0.1);
   margin-left: 1.41575em;
@@ -622,8 +622,8 @@ a.cart-contents:hover,
 .main-navigation ul li:hover > ul,
 .secondary-navigation ul li.focus > ul,
 .secondary-navigation ul li:hover > ul {
-  left: 0;
   display: block;
+  left: 0;
 }
 
 .main-navigation ul li.focus > ul li > ul.sub-menu--is-touch-device,
@@ -1768,7 +1768,6 @@ textarea {
   outline: 0;
   -webkit-appearance: none;
   border-radius: 2px;
-  /*box-sizing: border-box;*/
   font-weight: 400;
   border: 1px solid #bababa;
   box-shadow: none;

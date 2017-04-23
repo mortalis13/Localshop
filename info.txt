@@ -32,7 +32,7 @@
 - category improve products total/of count
 
 -- ie6 winXP
--- ie7 responsive
+-- ie7 responsive, single products tabs width (fix content-box style)
 -- ie8 thumbnails width not calculating correctly because of no support for media queries (main image width calculated before @media width 35%)
 
 -------------------
