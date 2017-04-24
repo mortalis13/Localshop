@@ -6,29 +6,29 @@
   // if ( classes.contains( 'woocommerce-cart' ) || classes.contains( 'woocommerce-checkout' ) || window.innerWidth < 768 || ! document.getElementById( 'site-header-cart' ) ) {
   
   
-	if ( document.body.className.search( 'woocommerce-cart' ) != -1 || 
+  if ( document.body.className.search( 'woocommerce-cart' ) != -1 || 
         document.body.className.search( 'woocommerce-checkout' ) != -1 || 
         window.innerWidth < 768 || ! document.getElementById( 'site-header-cart' ) ) {
-		return;
-	}
+    return;
+  }
 
-	window.addEventListener( 'load', function() {
-		var cart = document.querySelector( '.site-header-cart' );
+  window.addEventListener( 'load', function() {
+    var cart = document.querySelector( '.site-header-cart' );
 
-		cart.addEventListener( 'mouseover', function() {
-			var windowHeight  = window.outerHeight,
-				cartBottomPos = cart.querySelector( '.widget_shopping_cart_content' ).getBoundingClientRect().bottom + cart.offsetHeight,
-				cartList      = cart.querySelector( '.cart_list' );
+    cart.addEventListener( 'mouseover', function() {
+      var windowHeight  = window.outerHeight,
+        cartBottomPos = cart.querySelector( '.widget_shopping_cart_content' ).getBoundingClientRect().bottom + cart.offsetHeight,
+        cartList      = cart.querySelector( '.cart_list' );
 
-			if ( cartBottomPos > windowHeight ) {
-				cartList.style.maxHeight = '15em';
-				cartList.style.overflowY = 'auto';
+      if ( cartBottomPos > windowHeight ) {
+        cartList.style.maxHeight = '15em';
+        cartList.style.overflowY = 'auto';
 
-				cart.addEventListener( 'mouseleave', function() {
-					cartList.style.maxHeight = '';
-					cartList.style.overflowY = '';
-				} );
-			}
-		} );
-	} );
+        cart.addEventListener( 'mouseleave', function() {
+          cartList.style.maxHeight = '';
+          cartList.style.overflowY = '';
+        } );
+      }
+    } );
+  } );
 } )();

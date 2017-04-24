@@ -20,9 +20,9 @@
 
 *- admin page
 *- translate
-- multibrowser
-- remove outline social icons click
-- organize php
+*- multibrowser
+*- remove outline social icons click
+*- organize php
 - related products organize columns on media queries (masonry?)
 - organize theme data (description, screenshot)
 - fix image zoom for screen widths (calc zoom panel width/height)
@@ -30,8 +30,12 @@
 - add focus style for all elements (accessibility)
 - replace default fonts (Arial, Verdana by local site fonts)
 - category improve products total/of count
+- contact form remember input data on errors
+
+% localshop-woocommerce-template-functions
 
 -- ie6 winXP
+-- ie7 merge style display: inline with inline-block in global style
 -- ie7 responsive, single products tabs width (fix content-box style)
 -- ie8 thumbnails width not calculating correctly because of no support for media queries (main image width calculated before @media width 35%)
 
@@ -40,3 +44,7 @@ Generate POT
 
 e:\tools\xampp\php\php.exe e:\Documents\SVN\wordpress-src\tools\i18n\makepot.php wp-theme e:\tools\xampp\htdocs\wp-localshop\wp-content\themes\localshop
 
+-------------------
+Shortcuts
+
+products_per_page - class-localshop-woocommerce

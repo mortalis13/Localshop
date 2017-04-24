@@ -42,13 +42,13 @@
         
         <?php 
           $args = array(
-                  'taxonomy'     => 'product_cat',
-                  'orderby'      => 'name',
-                  'show_count'   => 0,      // 1 for yes, 0 for no
-                  'pad_counts'   => 0,      // 1 for yes, 0 for no
-                  'hierarchical' => 1,      // 1 for yes, 0 for no  
-                  'title_li'     => '',
-                  'hide_empty'   => 0
+              'taxonomy'     => 'product_cat',
+              'orderby'      => 'name',
+              'show_count'   => 0,      // 1 for yes, 0 for no
+              'pad_counts'   => 0,      // 1 for yes, 0 for no
+              'hierarchical' => 1,      // 1 for yes, 0 for no  
+              'title_li'     => '',
+              'hide_empty'   => 0
           );
           
           $all_categories = get_categories( $args );

@@ -3,14 +3,12 @@ class ThemeOptionsPage
 {
     private $options;
 
-    public function __construct()
-    {
+    public function __construct() {
         add_action( 'admin_init', array( $this, 'page_init' ) );
         add_action( 'admin_menu', array( $this, 'add_plugin_page' ) );
     }
 
-    public function add_plugin_page()
-    {
+    public function add_plugin_page() {
         add_theme_page(
             __( 'Theme Options', 'localshop' ),
             __( 'Theme Options', 'localshop' ),
@@ -20,8 +18,7 @@ class ThemeOptionsPage
         );
     }
 
-    public function create_admin_page()
-    {
+    public function create_admin_page() {
         // Set class property
         $this->options = get_option( 'custom_theme_options' );
         
@@ -44,8 +41,7 @@ class ThemeOptionsPage
     /**
      * Register and add settings
      */
-    public function page_init()
-    {        
+    public function page_init() {
         register_setting(
             'theme_option_group', // Option group
             'custom_theme_options', // Option name
@@ -73,8 +69,7 @@ class ThemeOptionsPage
      *
      * @param array $input Contains all settings fields as array keys
      */
-    public function validate_options( $input )
-    {
+    public function validate_options( $input ) {
         $new_input = array();
         
         // if( isset( $input['id_number'] ) )
@@ -89,15 +84,13 @@ class ThemeOptionsPage
     /** 
      * Print the Section text
      */
-    public function print_section_info()
-    {
+    public function print_section_info() {
     }
 
     /** 
      * Get the settings option array and print one of its values
      */
-    public function about_us_callback()
-    {
+    public function about_us_callback() {
       $about_us_text = isset( $this->options['about_us'] ) ? esc_attr( $this->options['about_us']) : '';
       ?>
       

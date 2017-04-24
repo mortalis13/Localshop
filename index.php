@@ -13,21 +13,21 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) :
+    <?php if ( have_posts() ) :
 
-			get_template_part( 'loop' );
+      get_template_part( 'loop' );
 
-		else :
+    else :
 
-			get_template_part( 'content', 'none' );
+      get_template_part( 'content', 'none' );
 
-		endif; ?>
+    endif; ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+    </main><!-- #main -->
+  </div><!-- #primary -->
 
 <?php
 do_action( 'localshop_sidebar' );

@@ -1,4 +1,6 @@
-<?php /* Template Name: contact */ ?>
+<?php
+/* Template Name: contact */
+?>
 
 <?php require __DIR__ . "/../handlers/contactformhandler.php"; ?>
 
@@ -14,6 +16,31 @@ get_header(); ?>
           $wpContactFormObj = new ContactFormHandler(); 
           $wpContactFormObj->handleContactForm();
         ?>
+        
+        <div id ="contactFormSection">
+          <form action="" id="contactForm" method="POST" enctype="multipart/form-data">
+            <fieldset>
+              <label for="contactname"><?=__('Name', 'localshop')?></label>
+              <input type="text" name="contactname" id="contactname" />
+            </fieldset>
+
+            <fieldset>
+              <label for="contactemail"><?=__('Email', 'localshop')?> <span class="required">*</span></label>
+              <input type="text" name="contactemail" id="contactemail" />
+            </fieldset>
+          
+            <fieldset>
+              <label for="contactcontent"><?=__('Message', 'localshop')?> <span class="required">*</span></label>
+              <textarea name="contactcontent" id="contactcontent" rows="10" cols="35" ></textarea>
+            </fieldset>
+          
+            <fieldset>
+              <button id="contact-submit" type="submit" name="submitContactForm"><?=__('Send', 'localshop')?></button>
+            </fieldset>
+
+            <?php wp_nonce_field( 'submit_contact_form' , 'nonce_field_for_submit_contact_form'); ?>
+          </form>
+        </div>
         
         <div class="contacts-list">
           <div class="contacts-list-item">

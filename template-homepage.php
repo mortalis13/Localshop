@@ -14,24 +14,24 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
 
-			<?php
-			/**
-			 * Functions hooked in to homepage action
-			 *
-			 * @hooked localshop_homepage_content      - 10
-			 * @hooked localshop_product_categories    - 20
-			 * @hooked localshop_recent_products       - 30
-			 * @hooked localshop_featured_products     - 40
-			 * @hooked localshop_popular_products      - 50
-			 * @hooked localshop_on_sale_products      - 60
-			 * @hooked localshop_best_selling_products - 70
-			 */
-			do_action( 'homepage' ); ?>
+      <?php
+      /**
+       * Functions hooked in to homepage action
+       *
+       * @hooked localshop_homepage_content      - 10
+       * @hooked localshop_product_categories    - 20
+       * @hooked localshop_recent_products       - 30
+       * @hooked localshop_featured_products     - 40
+       * @hooked localshop_popular_products      - 50
+       * @hooked localshop_on_sale_products      - 60
+       * @hooked localshop_best_selling_products - 70
+       */
+      do_action( 'homepage' ); ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+    </main><!-- #main -->
+  </div><!-- #primary -->
 <?php
 get_footer();

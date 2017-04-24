@@ -23,20 +23,8 @@ add_action( 'localshop_sidebar',        'localshop_get_sidebar',          10 );
  * @see  localshop_primary_navigation()
  */
 add_action( 'localshop_header', 'localshop_skip_links',                       0 );
-// add_action( 'localshop_header', 'localshop_top_content',                    10 );
-// add_action( 'localshop_header', 'localshop_site_branding',                    20 );
 add_action( 'localshop_header', 'localshop_main_header',                    20 );
-
-// add_action( 'localshop_header', 'localshop_info_line', 40 );
-// add_action( 'localshop_header', 'localshop_product_search', 40 );
-// add_action( 'localshop_header', 'localshop_header_cart',    60 );
-
-
-// add_action( 'localshop_header', 'localshop_secondary_navigation',             30 );
-
-// add_action( 'localshop_header', 'localshop_primary_navigation_wrapper',       42 );
-// add_action( 'localshop_header', 'localshop_primary_navigation',               50 );
-// add_action( 'localshop_header', 'localshop_primary_navigation_wrapper_close', 68 );
+add_action( 'localshop_header_start', 'localshop_header_start',               0 );
 
 /**
  * Footer

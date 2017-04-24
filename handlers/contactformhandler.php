@@ -6,45 +6,8 @@ class ContactFormHandler {
         if($this->isFormSubmitted() && $this->isNonceSet()) {
             if($this->isFormValid()) {
                 $this->sendContactForm();
-                $this->displayContactForm();
             } 
-            else {
-              $this->displayContactForm();
-            }
         } 
-        else {
-            $this->displayContactForm();
-        }
-    }
-    
-    //This function displays the Contact form.
-    public function displayContactForm() {
-    ?>
-      <div id ="contactFormSection">
-        <form action="" id="contactForm" method="POST" enctype="multipart/form-data">
-          <fieldset>
-            <label for="contactname"><?=__('Name', 'localshop')?></label>
-            <input type="text" name="contactname" id="contactname" />
-          </fieldset>
-
-          <fieldset>
-            <label for="contactemail"><?=__('Email', 'localshop')?> <span class="required">*</span></label>
-            <input type="text" name="contactemail" id="contactemail" />
-          </fieldset>
-        
-          <fieldset>
-            <label for="contactcontent"><?=__('Message', 'localshop')?> <span class="required">*</span></label>
-            <textarea name="contactcontent" id="contactcontent" rows="10" cols="35" ></textarea>
-          </fieldset>
-        
-          <fieldset>
-            <button id="contact-submit" type="submit" name="submitContactForm"><?=__('Send', 'localshop')?></button>
-          </fieldset>
-
-          <?php wp_nonce_field( 'submit_contact_form' , 'nonce_field_for_submit_contact_form'); ?>
-        </form>
-      </div>
-    <?php
     }
     
     public function sendContactForm() {
@@ -66,9 +29,12 @@ class ContactFormHandler {
     }
      
     function isNonceSet() {
-        if( isset( $_POST['nonce_field_for_submit_contact_form'] )  &&
-          wp_verify_nonce( $_POST['nonce_field_for_submit_contact_form'], 'submit_contact_form' ) ) return true;
-        else return false;
+        if( isset( $_POST['nonce_field_for_submit_contact_form'] ) && wp_verify_nonce( $_POST['nonce_field_for_submit_contact_form'], 'submit_contact_form' ) ){
+          return true;
+        }
+        else{
+          return false;
+        }
     }
      
     function isFormValid() {
@@ -94,6 +60,7 @@ class ContactFormHandler {
             
             return false;
         }
+        
         return true;
     }
      

@@ -7,7 +7,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit;
+  exit;
 }
 
 /**
@@ -15,39 +15,39 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class Arbitrary_Localshop_Control extends WP_Customize_Control {
 
-	/**
-	 * The settings var
-	 *
-	 * @var string $settings the blog name.
-	 */
-	public $settings 	= 'blogname';
+  /**
+   * The settings var
+   *
+   * @var string $settings the blog name.
+   */
+  public $settings  = 'blogname';
 
-	/**
-	 * The description var
-	 *
-	 * @var string $description the control description.
-	 */
-	public $description = '';
+  /**
+   * The description var
+   *
+   * @var string $description the control description.
+   */
+  public $description = '';
 
-	/**
-	 * Renter the control
-	 *
-	 * @return void
-	 */
-	public function render_content() {
-		switch ( $this->type ) {
-			default:
-			case 'text' :
-				echo '<p class="description">' . wp_kses_post( $this->description ) . '</p>';
-			break;
+  /**
+   * Renter the control
+   *
+   * @return void
+   */
+  public function render_content() {
+    switch ( $this->type ) {
+      default:
+      case 'text' :
+        echo '<p class="description">' . wp_kses_post( $this->description ) . '</p>';
+      break;
 
-			case 'heading':
-				echo '<span class="customize-control-title">' . esc_html( $this->label ) . '</span>';
-			break;
+      case 'heading':
+        echo '<span class="customize-control-title">' . esc_html( $this->label ) . '</span>';
+      break;
 
-			case 'divider' :
-				echo '<hr style="margin: 1em 0;" />';
-			break;
-		}
-	}
+      case 'divider' :
+        echo '<hr style="margin: 1em 0;" />';
+      break;
+    }
+  }
 }
