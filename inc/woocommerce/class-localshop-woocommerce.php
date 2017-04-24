@@ -108,6 +108,7 @@ if ( ! class_exists( 'Localshop_WooCommerce' ) ) :
         // wp_enqueue_script( 'localshop-jquery-zoom', get_template_directory_uri() . '/assets/js/jquery.zoom.js', 'jquery', $localshop_version, true );
         wp_enqueue_script( 'localshop-jquery-elevatezoom', get_template_directory_uri() . '/assets/js/jquery.elevatezoom.js', 'jquery', $localshop_version, true );
         wp_enqueue_script( 'localshop-product', get_template_directory_uri() . '/assets/js/product.js', 'jquery', $localshop_version, true );
+        wp_enqueue_script( 'localshop-product-zoom', get_template_directory_uri() . '/assets/js/product-zoom.js', 'jquery', $localshop_version, true );
       }
       
       wp_enqueue_script( 'localshop-ie7-script', get_template_directory_uri() . '/assets/js/ie7.js', 'jquery', $localshop_version, false );

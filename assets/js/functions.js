@@ -10,7 +10,6 @@ jQuery(function($){
   
   function startSignupWait() {
     var button = $("#signup-submit");
-    // button.find('.signup-caption').html('');
     button.find('.signup-caption').remove();
     button.addClass('loader-4');
   }
