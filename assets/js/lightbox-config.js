@@ -5,7 +5,7 @@ $(document).ready(function(){
     fadeDuration: 100,
     imageFadeDuration: 100,
     resizeDuration: 500,
-    wrapAround: true,
+    wrapAround: true
   };
   lightbox.option(opts);
   
