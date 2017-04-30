@@ -48,11 +48,14 @@ if ( $attachment_ids ) {
       if ( ! $props['url'] ) {
         continue;
       }
-
+      
       echo apply_filters(
         'woocommerce_single_product_image_thumbnail_html',
         sprintf(
-          '<div class="%s" title="%s" data-rel="prettyPhoto[product-gallery]">%s</div>',
+          '<a href="%s" class="%s" title="%s" data-lightbox="product-gallery">%s</a>',
+          // '<a href="%s" class="%s" title="%s" rel="prettyPhoto[product-gallery]">%s</a>',
+          // '<a href="%s" class="%s" title="%s">%s</a>',
+          esc_url( $props['url'] ),
           esc_attr( $image_class ),
           esc_attr( $props['caption'] ),
           wp_get_attachment_image( $attachment_id, apply_filters( 'single_product_small_thumbnail_size', 'shop_thumbnail' ), 0, $props )

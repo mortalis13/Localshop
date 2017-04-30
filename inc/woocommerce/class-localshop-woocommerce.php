@@ -77,6 +77,10 @@ if ( ! class_exists( 'Localshop_WooCommerce' ) ) :
       wp_enqueue_style( 'localshop-woocommerce-style', get_template_directory_uri() . '/assets/css/woocommerce.css', $localshop_version );
       wp_style_add_data( 'localshop-woocommerce-style', 'rtl', 'replace' );
 
+      // wp_enqueue_style( 'localshop-prettyphoto-style', get_template_directory_uri() . '/assets/css/prettyPhoto.css', '', $localshop_version );
+      wp_enqueue_style( 'localshop-lightbox-style', get_template_directory_uri() . '/assets/css/lightbox.css', '', $localshop_version );
+      wp_enqueue_style( 'localshop-lightbox-add-style', get_template_directory_uri() . '/assets/css/lightbox-add.css', '', $localshop_version );
+      
       wp_enqueue_style( 'localshop-add_style-style', get_template_directory_uri() . '/assets/css/add_style.css', '', $localshop_version );
       wp_enqueue_style( 'localshop-browser_fix-style', get_template_directory_uri() . '/assets/css/browser_fix.css', '', $localshop_version );
       
@@ -107,8 +111,15 @@ if ( ! class_exists( 'Localshop_WooCommerce' ) ) :
       if ( is_product() ) {
         // wp_enqueue_script( 'localshop-jquery-zoom', get_template_directory_uri() . '/assets/js/jquery.zoom.js', 'jquery', $localshop_version, true );
         wp_enqueue_script( 'localshop-jquery-elevatezoom', get_template_directory_uri() . '/assets/js/jquery.elevatezoom.js', 'jquery', $localshop_version, true );
+        
         wp_enqueue_script( 'localshop-product', get_template_directory_uri() . '/assets/js/product.js', 'jquery', $localshop_version, true );
         wp_enqueue_script( 'localshop-product-zoom', get_template_directory_uri() . '/assets/js/product-zoom.js', 'jquery', $localshop_version, true );
+        
+        wp_enqueue_script( 'localshop-lightbox-script', get_template_directory_uri() . '/assets/js/lightbox-edit.js', 'jquery', $localshop_version, true );
+        wp_enqueue_script( 'localshop-lightbox-config-script', get_template_directory_uri() . '/assets/js/lightbox-config.js', 'jquery', $localshop_version, true );
+        
+        // wp_enqueue_script( 'localshop-prettyphoto-script', get_template_directory_uri() . '/assets/js/jquery.prettyPhoto.js', 'jquery', $localshop_version, false );
+        // wp_enqueue_script( 'localshop-prettyphoto-config-script', get_template_directory_uri() . '/assets/js/prettyphoto-config.js', 'jquery', $localshop_version, true );
       }
       
       wp_enqueue_script( 'localshop-ie7-script', get_template_directory_uri() . '/assets/js/ie7.js', 'jquery', $localshop_version, false );

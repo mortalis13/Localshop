@@ -157,6 +157,7 @@ jQuery(function($){
     $(zoomImageContainer + ' img').attr('srcset', imgSrc);
     
     $(zoomImageContainer + ' img').data('zoom-image', imgSrc);
+    $(zoomImageContainer + ' a').data('thumb-id', $(thumbnails).index(this));
     
     initZoom();
     
