@@ -50,6 +50,9 @@
 #contactForm #contact-submit{
   padding: 8px 40px;
 }
+#contactForm #contact-submit:focus{
+  background: #565862;
+}
 
 .contact-error,
 .contact-send-status{

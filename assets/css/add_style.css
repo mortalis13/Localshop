@@ -83,8 +83,6 @@
 .search-top-block form{
   margin: 0;
 }
-/*.search-top-block form input[type="search"]{*/
-/*.search-top-block form input[type=search]{*/
 .search-top-block .search-field{
   border: 0;
   box-shadow: none;
@@ -108,7 +106,8 @@
   box-shadow: none;
   text-align: center;
 }
-.search-top-block button.search-button:hover{
+.search-top-block button.search-button:hover,
+.search-top-block button.search-button:focus{
   background: #444;
 }
 .search-top-block .widget_product_search i.search-button{
@@ -374,6 +373,9 @@
   text-transform: uppercase;
   padding: 4px 14px;
   min-width: 95px;
+}
+.site-footer #signup-submit:focus{
+  background: #565862;
 }
 .site-footer #signup-submit .fa{
   font-size: 8px;

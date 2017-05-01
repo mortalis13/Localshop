@@ -33,7 +33,9 @@
 }
 
 .contact-icon .fa:hover, 
-.contact-icon .fa:active {
+.contact-icon .fa:active,
+.contact-icon .fa:focus,
+.contact-icon a:focus .fa{
   color: #FFF;
   -webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.7);
   -moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.7);
