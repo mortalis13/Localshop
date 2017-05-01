@@ -1,19 +1,23 @@
 <?php
 
 class ContactFormHandler {
- 
+
     function handleContactForm() {
         if($this->isFormSubmitted() && $this->isNonceSet()) {
             if($this->isFormValid()) {
                 $this->sendContactForm();
-            } 
-        } 
+                return true;
+            }
+            else{
+              return false;
+            }
+        }
     }
     
     public function sendContactForm() {
-        $contactName = $_POST['contactname'] ;
-        $contactEmail = $_POST['contactemail'];
-        $contactContent = $_POST['contactcontent'];
+        $contactName = sanitize_text_field($_POST['contactname']);
+        $contactEmail = sanitize_email($_POST['contactemail']);
+        $contactContent = esc_textarea($_POST['contactcontent']);
  
         $emailTo = get_option('admin_email');
  
@@ -27,7 +31,7 @@ class ContactFormHandler {
         echo __("Your message was sent. We will reply to it soon.", 'localshop');
         echo '</div>';
     }
-     
+    
     function isNonceSet() {
         if( isset( $_POST['nonce_field_for_submit_contact_form'] ) && wp_verify_nonce( $_POST['nonce_field_for_submit_contact_form'], 'submit_contact_form' ) ){
           return true;

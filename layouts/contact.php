@@ -14,24 +14,31 @@ get_header(); ?>
       <div class="contacts-wrap">
         <?php
           $wpContactFormObj = new ContactFormHandler(); 
-          $wpContactFormObj->handleContactForm();
+          $handleValid = $wpContactFormObj->handleContactForm();
+          
+          $contactName = $contactEmail = $contactContent = '';
+          if(!$handleValid){
+            $contactName = esc_attr($_POST['contactname']);
+            $contactEmail = esc_attr($_POST['contactemail']);
+            $contactContent = esc_textarea($_POST['contactcontent']);
+          }
         ?>
         
-        <div id ="contactFormSection">
+        <div id="contactFormSection">
           <form action="" id="contactForm" method="POST" enctype="multipart/form-data">
             <fieldset>
               <label for="contactname"><?=__('Name', 'localshop')?></label>
-              <input type="text" name="contactname" id="contactname" />
+              <input type="text" name="contactname" id="contactname" value="<?=$contactName?>" />
             </fieldset>
 
             <fieldset>
               <label for="contactemail"><?=__('Email', 'localshop')?> <span class="required">*</span></label>
-              <input type="text" name="contactemail" id="contactemail" />
+              <input type="text" name="contactemail" id="contactemail" value="<?=$contactEmail?>" />
             </fieldset>
           
             <fieldset>
               <label for="contactcontent"><?=__('Message', 'localshop')?> <span class="required">*</span></label>
-              <textarea name="contactcontent" id="contactcontent" rows="10" cols="35" ></textarea>
+              <textarea name="contactcontent" id="contactcontent" rows="10" cols="35"><?=$contactContent?></textarea>
             </fieldset>
           
             <fieldset>

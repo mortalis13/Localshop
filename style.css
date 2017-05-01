@@ -1787,7 +1787,6 @@ textarea:focus {
 
 textarea {
   overflow: auto;
-  padding-left: .875em;
   vertical-align: top;
   border: 1px solid #bababa;
   box-shadow: none;
