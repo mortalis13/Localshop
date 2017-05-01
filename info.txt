@@ -27,7 +27,7 @@
 *- fix image zoom for screen widths (calc zoom panel width/height)
 *- fix lightbox for gallery
 *- add focus style for all elements (accessibility)
-- contact form remember input data on errors
+*- contact form remember input data on errors
 
 - customizable contact icons urls 
 - related products organize columns on media queries (masonry?)
