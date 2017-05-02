@@ -144,12 +144,9 @@ jQuery(function($){
     $(item).css('box-shadow', '0px 0px 3px 1px #dd6d27');
   }
   
-  
-  // --------------------------------
-  
-  $(thumbnails).mouseover(function(){
-    var $img = $(this).find('img');
-    // var imgSrc = $(this).attr('href');
+  function loadImageFromThumbnail(item){
+    var $img = $(item).find('img');
+    // var imgSrc = $(item).attr('href');
     var imgSrc = $img.attr('url');
     
     $(zoomImageContainer + ' a').attr('href', imgSrc);
@@ -157,15 +154,35 @@ jQuery(function($){
     $(zoomImageContainer + ' img').attr('srcset', imgSrc);
     
     $(zoomImageContainer + ' img').data('zoom-image', imgSrc);
-    $(zoomImageContainer + ' a').data('thumb-id', $(thumbnails).index(this));
+    $(zoomImageContainer + ' a').data('thumb-id', $(thumbnails).index(item));
     
     initZoom();
     
     // var ezObj = $(zoomImageContainer + ' img').data('elevateZoom');
     // ezObj.swaptheimage(imgSrc, imgSrc);
     
-    highlightActiveImage(this);
+    highlightActiveImage(item);
+  }
+  
+  
+  // --------------------------------
+  
+  // $(thumbnails).keypress(function(e){
+  $(thumbnails).keydown(function(e){
+    if(e.keyCode == 13){
+      loadImageFromThumbnail(this);
+    }
   });
+  
+  $(thumbnails).mouseover(function(){
+    loadImageFromThumbnail(this);
+  });
+  
+  if(MOBILE_DEVICE){
+    $(thumbnails).focus(function(){
+      $(this).css({outline: 0});
+    });
+  }
   
   
   // var screenWidth = window.screen.width;

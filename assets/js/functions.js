@@ -1,10 +1,33 @@
 
+var DEBUG_BAR = false;
+// var DEBUG_BAR = true;
+
 var MOBILE_DEVICE = false;
 if ( /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()) ){
   MOBILE_DEVICE = true;
 }
 
+// var screenWidth = window.screen.width;
+var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+var screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
 jQuery(function($){
+  
+  function logDebug(text){
+    $(".debug-bar pre").append(text + '\n');
+  }
+
+  function test1(){
+    var screenSize = screenWidth + ' x ' + screenHeight;
+    logDebug('Screen size: ' + screenSize);
+  }
+  
+  if(DEBUG_BAR){
+    $(".debug-bar").show();
+    test1();
+  }
+  
+  // --------------------------------------------
   
   var waitHandler;
   

@@ -41,7 +41,7 @@ global $post, $product;
         echo apply_filters(
           'woocommerce_single_product_image_html',
           sprintf(
-            '<a href="%s" itemprop="image" class="woocommerce-main-image zoom" title="%s" %s data-thumb-id="0">%s</a>',
+            '<a href="%s" itemprop="image" class="woocommerce-main-image zoom" title="%s" %s data-thumb-id="0" target="_blank">%s</a>',
             esc_url( $props['url'] ),
             esc_attr( $props['caption'] ),
             $lighbox_attr,

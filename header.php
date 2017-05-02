@@ -21,6 +21,8 @@
 
 <body <?php body_class(); ?>>
 
+<div class="debug-bar"><pre></pre></div>
+
 <?php 
   // global $template;
   // print_r($template);

@@ -22,11 +22,11 @@ class ContactFormHandler {
         $emailTo = get_option('admin_email');
  
         $subject = 'New contact from '.$contactName;
-        $body = "Contact Name: $contactName \n\nContact Email: $contactEmail \n\nContact contents: $contactContent";
-        $headers = 'From: '.$contactName.' <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $contactEmail;
- 
+        $body = "Contact Name: $contactName \nContact Email: $contactEmail \nContact contents: $contactContent";
+        $headers = 'From: '.$contactName.' <'.$contactEmail.'>' . "\n" . 'Reply-To: ' . $contactEmail;
+        
         wp_mail($emailTo, $subject, $body, $headers);
-
+        
         echo '<div class="contact-send-status">';
         echo __("Your message was sent. We will reply to it soon.", 'localshop');
         echo '</div>';

@@ -1,6 +1,8 @@
 
 $(document).ready(function(){
   
+  var minScreenSize = 500;
+  
   var opts = {
     fadeDuration: 100,
     imageFadeDuration: 100,
@@ -18,6 +20,13 @@ $(document).ready(function(){
   });
   
   $(mainImageA).click(function(e){
+    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    var screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+    if(screenWidth < minScreenSize || screenHeight < minScreenSize){
+      return true;
+    }
+    
     e.preventDefault();
     
     lightbox.enabled = true;

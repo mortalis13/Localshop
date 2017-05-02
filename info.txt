@@ -29,6 +29,11 @@
 *- add focus style for all elements (accessibility)
 *- contact form remember input data on errors
 
+- zoom on mobile
+- test real email/contact send
+- newsletters admin page (show/edit/delete subscribers, send emails)
+
+- loader for product image when switching thumbnails on slow connection/large size
 - customizable contact icons urls 
 - related products organize columns on media queries (masonry?)
 - replace default fonts (Arial, Verdana by local site fonts)

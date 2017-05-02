@@ -13,12 +13,14 @@
   -moz-transition: opacity 0.2s;
   -o-transition: opacity 0.2s;
   transition: opacity 0.2s;
-  
-  margin-right: 10px;
 }
 
 .lb-data .lb-fullsize:hover {
   cursor: pointer;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
+}
+
+.lb-data .lb-close{
+  margin-left: 10px;
 }

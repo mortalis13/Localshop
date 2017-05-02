@@ -239,10 +239,9 @@ blockquote {
 }
 
 pre {
-  background: rgba(0, 0, 0, .1);
   font-family: "Courier 10 Pitch", Courier, monospace;
-  margin-bottom: 1.618em;
-  padding: 1.618em;
+  padding: 10px;
+  margin: 0;
   overflow: auto;
 }
 
