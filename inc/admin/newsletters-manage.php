@@ -63,7 +63,6 @@ class NewslettersManagePage
     
     $emailSubject = sanitize_text_field(localshop_get_theme_option('newsletter_email_subject'));
     $emailBody = esc_textarea(localshop_get_theme_option('newsletter_email_body'));
-    // $emailBody = html_entity_decode($emailBody);
     $emailBody = stripslashes(html_entity_decode($emailBody));
     
     ?>
@@ -79,6 +78,14 @@ class NewslettersManagePage
             </tr>
           
             <?php
+              if(!count($newsletters_list)){
+              ?>
+                <tr>
+                  <td class="text-center" colspan="3">No data found</td>
+                </tr>
+              <?php
+              }
+                
               foreach($newsletters_list as $row){
                 ?>
                   <tr data-email-id="<?= $row->id ?>">
@@ -229,9 +236,7 @@ class NewslettersManagePage
     $contactName = get_option('blogname');;
     
     $emailSubject = localshop_get_theme_option('newsletter_email_subject');
-    // $emailBody = html_entity_decode(localshop_get_theme_option('newsletter_email_body'));
     $emailBody = stripslashes(html_entity_decode(localshop_get_theme_option('newsletter_email_body')));
-    // $headers = 'From: '.$contactName.' <'.$emailFrom.'>';
     
     $headers = "MIME-Version: 1.0\n";
     $headers .= "Content-type:text/html;charset=UTF-8\n";

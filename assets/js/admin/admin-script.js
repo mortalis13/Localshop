@@ -135,9 +135,10 @@ jQuery(function($){
     var previewDocument = previewWindow.document;
     var previewBody = previewWindow.document.body;
     
+    var previewTitle = $("#email-subject").val();
     var previewHTML = $("#email-body").text();
     
-    previewDocument.title = '= Newsletters Template Preview =';
+    previewDocument.title = previewTitle;
     previewBody.innerHTML = previewHTML;
     
     return false;

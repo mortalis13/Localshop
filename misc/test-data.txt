@@ -1,0 +1,42 @@
+
+-- Newsletters emails
+
+delete from wp_newsletters_list;
+insert into wp_newsletters_list values(1, 'nepheligenous@unshrunken.net', '2011-02-04 22:22:26');
+insert into wp_newsletters_list values(2, 'egyptian@filmgoer.edu', '2013-11-26 18:17:10');
+insert into wp_newsletters_list values(3, 'trisomy@splairge.org', '2011-08-16 22:34:46');
+insert into wp_newsletters_list values(4, 'gelastic@tritheistic.org', '2012-01-22 12:13:52');
+insert into wp_newsletters_list values(5, 'pursue@dorsocentral.com', '2012-07-02 12:46:13');
+insert into wp_newsletters_list values(6, 'impiously@outbring.org', '2017-05-21 14:42:45');
+insert into wp_newsletters_list values(7, 'boltless@unpinked.net', '2012-08-06 19:28:52');
+insert into wp_newsletters_list values(8, 'danthonia@menopause.org', '2015-12-04 23:58:28');
+insert into wp_newsletters_list values(9, 'subelongate@nonconformism.edu', '2013-12-26 11:19:52');
+insert into wp_newsletters_list values(10, 'unhectored@pyramidate.com', '2016-06-01 22:24:22');
+
+
+-- Newsletters email body Template
+
+<style>
+  .title{
+    margin: 0;
+  }
+  .wrap{
+    padding: 20px;
+    margin: 20px auto;
+    border: 1px solid #eee;
+    width: 60%;
+    background: #fafafa;
+  }
+  code{
+    padding:2px 3px;
+    background: #cbe6f8;
+  }
+</style>
+
+<div class="wrap">
+  <h4 class="title">Good day</h4>
+  <div>This is our first newsletter. So read it carefully.</div>
+  <div>The text was created with a <b>HTML</b> markup from a <b>Wordpress</b> options page using a <code>textarea</code> element and <code>html_entity_decode()</code> <b>PHP</b> function to show the tags correctly in the Email body.</div>
+  <div>Thanks for your attention.</div>
+  <div>Hope we'll bring you more happiness with our future news!</div>
+</div>
