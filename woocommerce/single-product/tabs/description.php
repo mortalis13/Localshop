@@ -24,8 +24,8 @@ global $post;
 
 ?>
 
-<?php if ( $heading ): ?>
+<!-- <?php if ( $heading ): ?>
   <h2><?php echo $heading; ?></h2>
-<?php endif; ?>
+<?php endif; ?> -->
 
 <?php the_content(); ?>

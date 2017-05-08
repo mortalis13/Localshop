@@ -12,6 +12,8 @@ class ContactFormHandler {
         return false;
       }
     }
+    
+    return true;
   }
   
   public function sendContactForm() {
@@ -42,6 +44,8 @@ class ContactFormHandler {
   }
   
   function isFormValid() {
+    $hasError = false;
+    
     // if ( trim( $_POST['contactname'] ) === '' ) {
     //   $error = __('Please enter your name.', 'localshop');
     //   $hasError = true;
@@ -57,7 +61,7 @@ class ContactFormHandler {
     }
     
     //Check if any error was detected in validation.
-    if($hasError == true) {
+    if($hasError) {
       echo '<div class="contact-error">';
       echo $error;
       echo '</div>';
