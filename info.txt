@@ -28,10 +28,10 @@
 *- fix lightbox for gallery
 *- add focus style for all elements (accessibility)
 *- contact form remember input data on errors
-
+*- test real email/contact send
+*- newsletters admin page (show/edit/delete subscribers, send emails)
 - zoom on mobile
-- test real email/contact send
-- newsletters admin page (show/edit/delete subscribers, send emails)
+- wp_debug=true, fix warnings
 
 - loader for product image when switching thumbnails on slow connection/large size
 - customizable contact icons urls 

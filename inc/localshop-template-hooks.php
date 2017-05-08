@@ -91,5 +91,3 @@ add_action( 'localshop_page',       'localshop_page_header',          10 );
 add_action( 'localshop_page',       'localshop_page_content',         20 );
 add_action( 'localshop_page',       'localshop_init_structured_data', 30 );
 add_action( 'localshop_page_after', 'localshop_display_comments',     10 );
-
-add_action( 'after_switch_theme', 'localshop_create_custom_tables');

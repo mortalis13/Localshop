@@ -1,0 +1,112 @@
+
+.appearance_page_newsletters_manage #wpbody-content{
+  padding-bottom: 40px;
+}
+
+.newsletters-main{
+  padding: 20px 0px;
+}
+
+table.newsletters-list{
+  margin-bottom: 15px;
+  border-collapse: collapse;
+}
+table.newsletters-list th{
+  padding: 10px 0;
+  border: 1px solid #aaa;
+  background: #e0e0e0;
+}
+table.newsletters-list td{
+  padding: 7px 10px;
+  border: 1px solid #aaa;
+}
+
+.newsletter-button{
+  background: #424f75;
+  border: 1px solid #aaa;
+  padding: 6px 15px;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+.newsletter-button:hover{
+  background: #4f5f8d;
+}
+.newsletter-button.first{
+  /*margin-right: 8px;*/
+}
+.newsletter-button.btnDeleteNewsletter{
+  background: #a84545;
+}
+.newsletter-button.btnDeleteNewsletter:hover{
+  background: #b75050;
+}
+
+.newsletter-button.btnSendNewsletter{
+  border-right: none;
+}
+.newsletter-button.btnDeleteNewsletter{
+  border-left: none;
+}
+
+.newsletter-button:disabled,
+.newsletter-button.disabled{
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+.newsletters-template{
+  padding-top: 20px;
+  margin-top: 20px;
+  border-top: 1px solid rgb(204, 204, 204);
+}
+.newsletters-template .form-wrapper{
+  width: 50%;
+}
+.newsletters-template .submit{
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.form-group{
+  margin-bottom: 15px;
+}
+.control-label{
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+}
+.controls{
+  margin-top: 5px;
+}
+.control-input{
+  width: 100%;
+}
+
+#email-subject{
+  height: 38px;
+}
+#email-body{
+  height: 500px;
+  font-family: Consolas, "Courier New", monospaced;
+  white-space: pre;
+  resize: both;
+}
+
+.template-preview{
+  margin-bottom: 20px;
+}
+.template-preview #preview{
+  background: none;
+  border: none;
+  padding: 0px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #444;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+}
+.template-preview #preview:hover{
+  color: #111;
+  border-bottom: 1px solid #555;
+}

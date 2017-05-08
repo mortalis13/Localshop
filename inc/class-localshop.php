@@ -27,9 +27,11 @@ if ( ! class_exists( 'Localshop' ) ) :
      */
     public function __construct() {
       add_action( 'after_setup_theme',          array( $this, 'setup' ) );
+      add_action( 'after_switch_theme',         array( $this, 'create_custom_tables') );
       add_action( 'widgets_init',               array( $this, 'widgets_init' ) );
       add_action( 'wp_enqueue_scripts',         array( $this, 'scripts' ),       10 );
       add_action( 'wp_enqueue_scripts',         array( $this, 'child_scripts' ), 30 ); // After WooCommerce.
+      add_action( 'admin_enqueue_scripts',      array( $this, 'admin_scripts') );
       add_filter( 'body_class',                 array( $this, 'body_classes' ) );
       add_filter( 'wp_page_menu_args',          array( $this, 'page_menu_args' ) );
       add_filter( 'navigation_markup_template', array( $this, 'navigation_markup_template' ) );
@@ -208,10 +210,10 @@ if ( ! class_exists( 'Localshop' ) ) :
       /**
        * Scripts
        */
-      wp_enqueue_script( 'localshop-css_browser_selector', get_template_directory_uri() . '/assets/js/css_browser_selector_dev.js', array(), '20120206', false );
-      wp_enqueue_script( 'localshop-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array( 'jquery' ), '20120206', true );
-      wp_enqueue_script( 'localshop-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.min.js', array(), '20130115', true );
-      wp_enqueue_script( 'localshop-functions', get_template_directory_uri() . '/assets/js/functions.js', array('jquery'), '20130115', true );
+      wp_enqueue_script( 'localshop-css_browser_selector', get_template_directory_uri() . '/assets/js/css_browser_selector_dev.js', array(), $localshop_version, false );
+      wp_enqueue_script( 'localshop-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array( 'jquery' ), $localshop_version, true );
+      wp_enqueue_script( 'localshop-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.min.js', array(), $localshop_version, true );
+      wp_enqueue_script( 'localshop-functions', get_template_directory_uri() . '/assets/js/functions.js', array('jquery'), $localshop_version, true );
       
       if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
@@ -345,6 +347,43 @@ if ( ! class_exists( 'Localshop' ) ) :
 
       return $sanitized;
     }
+    
+    public function create_custom_tables() {
+      global $wpdb;
+      
+      $charset_collate = $wpdb->get_charset_collate();
+      
+      $table_name = $wpdb->prefix . 'newsletters_list';
+
+      $sql = "CREATE TABLE IF NOT EXISTS $table_name (
+        id mediumint(9) NOT NULL AUTO_INCREMENT,
+        email VARCHAR(255) DEFAULT '',
+        date DATETIME NULL DEFAULT NULL,
+        UNIQUE KEY id (id)
+      ) $charset_collate;";
+
+      require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+      dbDelta( $sql );
+      
+      
+      $table_name = $wpdb->prefix . 'localshop_options';
+
+      $sql = "CREATE TABLE IF NOT EXISTS $table_name (
+        id mediumint(9) NOT NULL AUTO_INCREMENT,
+        name VARCHAR(255) DEFAULT '',
+        value TEXT NULL,
+        UNIQUE KEY id (id)
+      ) $charset_collate;";
+
+      dbDelta( $sql );
+    }
+   
+    public function admin_scripts() {
+      wp_enqueue_style( 'localshop-admin-style', get_template_directory_uri() . '/assets/css/admin/admin-style.css', '', $localshop_version );
+
+      wp_enqueue_script( 'localshop-admin-script', get_template_directory_uri() . '/assets/js/admin/admin-script.js', array('jquery'), $localshop_version, false );
+    }
+    
   }
 endif;
 

@@ -293,22 +293,38 @@ function localshop_get_option($name){
   return '';
 }
 
-if ( ! function_exists( 'localshop_create_custom_tables' ) ) {
-  function localshop_create_custom_tables() {
-    global $wpdb;
-    
-    $table_name = $wpdb->prefix . 'newsletters_list';
-    $charset_collate = $wpdb->get_charset_collate();
-
-    $sql = "CREATE TABLE IF NOT EXISTS $table_name (
-      id mediumint(9) NOT NULL AUTO_INCREMENT,
-      email varchar(255) DEFAULT '',
-      UNIQUE KEY id (id)
-    ) $charset_collate;";
-
-    require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
-    dbDelta( $sql );
+function localshop_get_theme_option($name){
+  global $wpdb;
+  
+  $table_name = $wpdb->prefix . 'localshop_options';
+  $sql = $wpdb->prepare('select value from ' . $table_name . ' where name=%s', $name);
+  $res = $wpdb->get_row($sql);
+  
+  $option_value = '';
+  if(isset($res)){
+    $option_value = $res->value;
   }
+  
+  return $option_value;
+}
+
+function localshop_set_theme_option($name, $value){
+  global $wpdb;
+  
+  $table_name = $wpdb->prefix . 'localshop_options';
+  $sql = $wpdb->prepare('select value from ' . $table_name . ' where name=%s', $name);
+  $res = $wpdb->get_row($sql);
+  
+  if(isset($res)){
+    $res = $wpdb->update( $table_name, array('value' => $value), array('name' => $name), '%s', '%s' );
+  }
+  else{
+    $res = $wpdb->insert( $table_name, array('name' => $name, 'value' => $value) );
+    // $res = $wpdb->insert( $table_name, array('name' => $name, 'value' => $value), array('%s', '%s') );
+    // $res = $wpdb->query('insert into '. $table_name . ' values(10, "'.$name.'", "'.$value.'")');
+  }
+  
+  return $res;
 }
 
 if ( ! function_exists( 'localshop_insert_newsletters_email' ) ) {
@@ -316,16 +332,16 @@ if ( ! function_exists( 'localshop_insert_newsletters_email' ) ) {
     global $wpdb;
     
     $table_name = $wpdb->prefix . 'newsletters_list';
-    
-    $sql = $wpdb->prepare('select * from ' . $table_name . ' where email=%s', $email );
+    $sql = $wpdb->prepare('select * from ' . $table_name . ' where email=%s', $email);
     $res = $wpdb->get_results($sql);
     
     if(!$res){
+      // $date = date('d/m/Y H:i:s');
+      $date = date('c');
+      
       $wpdb->insert($table_name,
-        array(
-          'email' => $email,
-        ),
-        array('%s')
+        array('email' => $email, 'date' => $date),
+        array('%s', '%s')
       );
     }
     

@@ -41,6 +41,7 @@ if ( localshop_is_woocommerce_activated() ) {
 
 if ( is_admin() ) {
   require 'inc/admin/theme-options.php';
+  require 'inc/admin/newsletters-manage.php';
 }
 
 /**
