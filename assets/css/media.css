@@ -237,10 +237,13 @@
 @media (max-width: 480px) {
   
   .site-header .col-full,
-  .site-content,
-  .site-footer{
+  .site-content{
     padding-left: 10px;
     padding-right: 10px;
+  }
+  .site-footer{
+    padding-left: 20px;
+    padding-right: 20px;
   }
   
   .site-info-block .info-email{
