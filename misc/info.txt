@@ -30,10 +30,11 @@
 *- contact form remember input data on errors
 *- test real email/contact send
 *- newsletters admin page (show/edit/delete subscribers, send emails)
-- zoom on mobile
-- wp_debug=true, fix warnings
+*- zoom on mobile
+*- wp_debug=true, fix warnings
 
 - loader for product image when switching thumbnails on slow connection/large size
+- mobile, zoom image on finger move
 - customizable contact icons urls 
 - related products organize columns on media queries (masonry?)
 - replace default fonts (Arial, Verdana by local site fonts)

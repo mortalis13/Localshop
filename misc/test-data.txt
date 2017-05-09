@@ -16,27 +16,10 @@ insert into wp_newsletters_list values(10, 'unhectored@pyramidate.com', '2016-06
 
 -- Newsletters email body Template
 
-<style>
-  .title{
-    margin: 0;
-  }
-  .wrap{
-    padding: 20px;
-    margin: 20px auto;
-    border: 1px solid #eee;
-    width: 60%;
-    background: #fafafa;
-  }
-  code{
-    padding:2px 3px;
-    background: #cbe6f8;
-  }
-</style>
-
-<div class="wrap">
-  <h4 class="title">Good day</h4>
+<div class="wrap" style="padding: 20px;margin: 20px auto;border: 1px solid #eee;width: 60%;background: #fafafa;">
+  <h4 class="title" style="margin: 0 0 8px; font-weight: 700; display: inline-block;">Good day</h4>
   <div>This is our first newsletter. So read it carefully.</div>
-  <div>The text was created with a <b>HTML</b> markup from a <b>Wordpress</b> options page using a <code>textarea</code> element and <code>html_entity_decode()</code> <b>PHP</b> function to show the tags correctly in the Email body.</div>
+  <div>The text was created with a <b>HTML</b> markup from a <b>Wordpress</b> options page using a <code style="padding: 2px 3px;background: #cbe6f8;">textarea</code> element and <code style="padding: 2px 3px;background: #cbe6f8;">html_entity_decode()</code> <b>PHP</b> function to show the tags correctly in the Email body.</div>
   <div>Thanks for your attention.</div>
   <div>Hope we'll bring you more happiness with our future news!</div>
 </div>
