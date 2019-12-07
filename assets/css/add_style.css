@@ -199,6 +199,10 @@
   color: #56a56b;
 }
 
+.tax-product_cat .term-description {
+  display: none;
+}
+
 .tax-product_cat .products .product,
 .search-results .products .product{
   text-align: left;
@@ -269,12 +273,15 @@
 }
 .tax-product_cat .products .product .product-description,
 .search-results .products .product .product-description{
-  font-size: 1.1em;
+  font-size: 1.3em;
   line-height: 1.3;
 }
 .product .product-price{
   font-weight: 700;
   color: #99d;
+}
+.product .product-add-to-cart{
+  margin-top: 10px;
 }
 .tax-product_cat .products .product .product-price,
 .single-product .product .product-price{
@@ -301,6 +308,9 @@
   margin-top: 0;
 }
 
+.single-product .woocommerce-Reviews-title {
+  display: none;
+}
 
 
 .product_title{

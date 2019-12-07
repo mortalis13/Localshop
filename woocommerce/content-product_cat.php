@@ -11,42 +11,46 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @author  WooThemes
  * @package WooCommerce/Templates
  * @version 2.6.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-  exit;
+	exit;
 }
 ?>
-
 <li <?php wc_product_cat_class( '', $category ); ?>>
-  <?php
+	<?php
+	/**
+	 * woocommerce_before_subcategory hook.
+	 *
+	 * @hooked woocommerce_template_loop_category_link_open - 10
+	 */
+	// do_action( 'woocommerce_before_subcategory', $category );
 
-  /**
-   * woocommerce_before_subcategory_title hook.
-   *
-   * @hooked woocommerce_subcategory_thumbnail - 10
-   */
-  do_action( 'localshop_before_subcategory_title', $category );
+	/**
+	 * woocommerce_before_subcategory_title hook.
+	 *
+	 * @hooked woocommerce_subcategory_thumbnail - 10
+	 */
+	do_action( 'localshop_before_subcategory_title', $category );
 
-  /**
-   * woocommerce_shop_loop_subcategory_title hook.
-   *
-   * @hooked woocommerce_template_loop_category_title - 10
-   */
-  do_action( 'localshop_shop_loop_subcategory_title', $category );
+	/**
+	 * woocommerce_shop_loop_subcategory_title hook.
+	 *
+	 * @hooked woocommerce_template_loop_category_title - 10
+	 */
+	do_action( 'localshop_shop_loop_subcategory_title', $category );
 
-  /**
-   * woocommerce_after_subcategory_title hook.
-   */
-  do_action( 'localshop_after_subcategory_title', $category );
+	/**
+	 * woocommerce_after_subcategory_title hook.
+	 */
+	do_action( 'localshop_after_subcategory_title', $category );
 
-  /**
-   * woocommerce_after_subcategory hook.
-   *
-   * @hooked woocommerce_template_loop_category_link_close - 10
-   */
-  do_action( 'localshop_after_subcategory', $category ); ?>
+	/**
+	 * woocommerce_after_subcategory hook.
+	 *
+	 * @hooked woocommerce_template_loop_category_link_close - 10
+	 */
+	do_action( 'localshop_after_subcategory', $category ); ?>
 </li>

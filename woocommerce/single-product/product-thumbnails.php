@@ -24,14 +24,13 @@ global $post, $product, $woocommerce;
 
 $attachment_ids = $product->get_gallery_attachment_ids();
 
-if ( $attachment_ids ) {
+if ( $attachment_ids && $product->get_image_id() ) {
   $loop     = 0;
   $columns  = apply_filters( 'woocommerce_product_thumbnails_columns', 3 );
   ?>
   <div class="thumbnails <?php echo 'columns-' . $columns; ?>"><?php
 
     foreach ( $attachment_ids as $attachment_id ) {
-
       $classes = array( 'zoom' );
 
       if ( $loop === 0 || $loop % $columns === 0 ) {
@@ -49,17 +48,12 @@ if ( $attachment_ids ) {
         continue;
       }
       
-      echo apply_filters(
-        'woocommerce_single_product_image_thumbnail_html',
-        sprintf(
-          '<a href="%s" class="%s" title="%s" data-lightbox="product-gallery">%s</a>',
-          // '<a href="%s" class="%s" title="%s" rel="prettyPhoto[product-gallery]">%s</a>',
-          // '<a href="%s" class="%s" title="%s">%s</a>',
+      echo apply_filters('woocommerce_single_product_image_thumbnail_html',
+        sprintf('<a href="%s" class="%s" title="%s" data-lightbox="product-gallery">%s</a>',
           esc_url( $props['url'] ),
           esc_attr( $image_class ),
           esc_attr( $props['caption'] ),
-          wp_get_attachment_image( $attachment_id, apply_filters( 'single_product_small_thumbnail_size', 'shop_thumbnail' ), 0, $props )
-        ),
+          wp_get_attachment_image( $attachment_id, apply_filters( 'single_product_small_thumbnail_size', 'shop_thumbnail' ), 0, $props )),
         $attachment_id,
         $post->ID,
         esc_attr( $image_class )

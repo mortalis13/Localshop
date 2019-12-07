@@ -72,7 +72,7 @@ if ( ! function_exists( 'localshop_cart_link' ) ) {
   function localshop_cart_link() {
     ?>
       <a class="cart-contents" href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'localshop' ); ?>">
-        <span class="amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span> <span class="count"><?php echo wp_kses_data( sprintf( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'localshop' ), WC()->cart->get_cart_contents_count() ) );?></span>
+        <span class="count"><?php echo wp_kses_data( sprintf( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'localshop' ), WC()->cart->get_cart_contents_count() ) );?></span> <span class="amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span>
       </a>
     <?php
   }
@@ -493,6 +493,13 @@ if (  ! function_exists( 'woocommerce_template_loop_product_title' ) ) {
       
       <div class="product-price">
         <?php wc_get_template( 'loop/price.php' ); ?>
+      </div>
+    
+      <div class="product-add-to-cart">
+        <?php
+          // wc_get_template( 'loop/add-to-cart.php' );
+          woocommerce_template_loop_add_to_cart();
+        ?>
       </div>
     
     </div>

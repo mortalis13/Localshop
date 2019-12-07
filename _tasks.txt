@@ -1,0 +1,4 @@
+archive-product.php
+content-product.php
+content-single-product.php
+single-product-reviews.php

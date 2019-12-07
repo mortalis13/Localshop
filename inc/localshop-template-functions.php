@@ -972,6 +972,7 @@ if ( ! function_exists( 'localshop_main_header' ) ) {
       ?>
       
       <div class="header-right-content">
+        <?php localshop_header_cart(); ?>
         <?php localshop_contact_line(); ?>
         <?php localshop_menu_line(); ?>
       </div>

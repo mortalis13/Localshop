@@ -10,31 +10,33 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see       https://docs.woocommerce.com/document/template-structure/
- * @author    WooThemes
- * @package   WooCommerce/Templates
+ * @see 	    https://docs.woocommerce.com/document/template-structure/
+ * @package 	WooCommerce/Templates
  * @version     2.3.0
  * @see         woocommerce_breadcrumb()
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-  exit;
+	exit;
 }
 
 if ( ! empty( $breadcrumb ) ) {
 
-  echo $wrap_before;
+	echo $wrap_before;
 
-  foreach ( $breadcrumb as $key => $crumb ) {
-    echo $before;
-    echo '<a href="' . esc_url( $crumb[1] ) . '">' . esc_html( $crumb[0] ) . '</a>';
-    echo $after;
+	foreach ( $breadcrumb as $key => $crumb ) {
 
-    if ( sizeof( $breadcrumb ) !== $key + 1 ) {
-      echo $delimiter;
-    }
-  }
+		echo $before;
 
-  echo $wrap_after;
+		echo '<a href="' . esc_url( $crumb[1] ) . '">' . esc_html( $crumb[0] ) . '</a>';
+
+		echo $after;
+
+		if ( sizeof( $breadcrumb ) !== $key + 1 ) {
+			echo $delimiter;
+		}
+	}
+
+	echo $wrap_after;
 
 }

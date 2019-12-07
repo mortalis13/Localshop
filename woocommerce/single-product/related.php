@@ -47,61 +47,31 @@ $woocommerce_loop['columns'] = apply_filters( 'woocommerce_related_products_colu
 if ( $products->have_posts() ) : ?>
 
   <div class="related products">
-
     <h2 class="related-title"><?php _e( 'Related Products', 'woocommerce' ); ?></h2>
 
     <?php woocommerce_product_loop_start(); ?>
-
       <?php while ( $products->have_posts() ) : $products->the_post(); ?>
         
         <div <?php post_class(); ?>>
-        
           <div class="product-image">
-            <?php
-              echo '<a href="' . get_the_permalink() . '" class="woocommerce-LoopProduct-link">';
-              echo woocommerce_get_product_thumbnail();
-              echo '</a>';
-            ?>
+            <a href="<?=get_the_permalink()?>" class="woocommerce-LoopProduct-link"><?=woocommerce_get_product_thumbnail()?></a>
           </div>
           
           <div class="product-summary">
             <div class="product-link">
-              <?php
-                echo '<a href="' . get_the_permalink() . '" class="woocommerce-LoopProduct-link">';
-                echo get_the_title();
-                echo '</a>';
-              ?>
-            </div>
-            
-            <?php
-              global $product;
-              if ( is_search() ) {
-                echo '<div class="product-category">';
-                echo $product->get_categories( ', ', '<span class="posted_in">', '</span>' );
-                echo '</div>';
-              }
-            ?>
-            
-            <div class="product-description">
-              <?php the_excerpt(); ?>
+              <a href="<?=get_the_permalink()?>" class="woocommerce-LoopProduct-link"><?=get_the_title()?></a>
             </div>
             
             <div class="product-price">
               <?php wc_get_template( 'loop/price.php' ); ?>
             </div>
-          
           </div>
-          
         </div>
-
-        <?php // wc_get_template_part( 'content', 'product' ); ?>
-
+        
       <?php endwhile; // end of the loop. ?>
-
     <?php woocommerce_product_loop_end(); ?>
 
   </div>
-
 <?php endif;
 
 wp_reset_postdata();

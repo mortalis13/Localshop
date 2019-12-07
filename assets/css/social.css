@@ -1,5 +1,6 @@
 
 .site-contact-line{
+  float: right;
   text-align: right;
   padding-right: 10px;
 }

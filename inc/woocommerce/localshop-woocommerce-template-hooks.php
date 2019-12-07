@@ -65,6 +65,7 @@ add_action( 'localshop_single_product_summary', 'localshop_template_single_desc'
 add_action( 'localshop_single_product_summary', 'localshop_template_single_rating', 10 );
 add_action( 'localshop_single_product_summary', 'localshop_template_single_price', 10 );
 add_action( 'localshop_single_product_summary', 'localshop_template_single_sharing', 50 );
+add_action( 'localshop_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
 
 add_action( 'localshop_after_single_product_summary', 'localshop_output_product_data_tabs', 10 );
 add_action( 'localshop_after_single_product_summary', 'localshop_upsell_display', 15 );

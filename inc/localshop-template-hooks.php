@@ -22,9 +22,11 @@ add_action( 'localshop_sidebar',        'localshop_get_sidebar',          10 );
  * @see  localshop_site_branding()
  * @see  localshop_primary_navigation()
  */
-add_action( 'localshop_header', 'localshop_skip_links',                       0 );
-add_action( 'localshop_header', 'localshop_main_header',                    20 );
 add_action( 'localshop_header_start', 'localshop_header_start',               0 );
+
+add_action( 'localshop_header', 'localshop_skip_links',                       0 );
+add_action( 'localshop_header', 'localshop_main_header',                     20 );
+// add_action( 'localshop_header', 'localshop_header_cart',                     60 );
 
 /**
  * Footer
