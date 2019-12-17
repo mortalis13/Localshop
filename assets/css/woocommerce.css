@@ -558,11 +558,11 @@ ul.products li.product .button{
 }
 
 .single-product div.product form.cart .quantity{
-  float:left;
+  float:right;
 }
 
 .single-product div.product form.cart .button{
-  float:right;
+  float:left;
 }
 
 .single-product div.product .price{
@@ -2550,6 +2550,9 @@ dl.variation dd{
   
   .woocommerce-cart #primary a {
     text-decoration: underline;
+  }
+  .woocommerce-cart #primary .button {
+    text-decoration: none;
   }
   .woocommerce-cart #primary a:hover {
     text-decoration: none;

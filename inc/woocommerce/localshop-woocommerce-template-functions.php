@@ -462,7 +462,7 @@ if ( ! function_exists( 'woocommerce_template_loop_product_thumbnail' ) ) {
   
 }
 
-if (  ! function_exists( 'woocommerce_template_loop_product_title' ) ) {
+if (  ! function_exists( 'localshop_template_loop_product_title' ) ) {
 
   /**
    * Show the product title in the product loop. By default this is an H3.
@@ -498,6 +498,7 @@ if (  ! function_exists( 'woocommerce_template_loop_product_title' ) ) {
       <div class="product-add-to-cart">
         <?php
           // wc_get_template( 'loop/add-to-cart.php' );
+          echo do_shortcode('[wc_quick_buy type="link"]');
           woocommerce_template_loop_add_to_cart();
         ?>
       </div>

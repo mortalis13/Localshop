@@ -383,7 +383,7 @@ if ( ! class_exists( 'Localshop' ) ) :
       
       wp_enqueue_style( 'localshop-admin-style', get_template_directory_uri() . '/assets/css/admin/admin-style.css', '', $localshop_version );
 
-      wp_enqueue_script( 'localshop-admin-script', get_template_directory_uri() . '/assets/js/admin/admin-script.js', array('jquery'), $localshop_version, false );
+      // wp_enqueue_script( 'localshop-admin-script', get_template_directory_uri() . '/assets/js/admin/admin-script.js', array('jquery'), $localshop_version, false );
     }
     
   }

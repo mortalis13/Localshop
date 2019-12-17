@@ -340,8 +340,8 @@ msgstr "Ver el carrito"
 #: inc/woocommerce/localshop-woocommerce-template-functions.php:75
 msgid "%d item"
 msgid_plural "%d items"
-msgstr[0] "%d elemento"
-msgstr[1] "%d elementos"
+msgstr[0] "%d ítem"
+msgstr[1] "%d ítems"
 
 #: inc/woocommerce/localshop-woocommerce-template-functions.php:217
 msgid "Featured Products"

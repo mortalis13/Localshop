@@ -44,7 +44,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	/**
 	 * Hook: woocommerce_shop_loop_item_title.
 	 *
-	 * @hooked woocommerce_template_loop_product_title - 10
+	 * @hooked localshop_template_loop_product_title - 10
 	 */
 	do_action( 'localshop_shop_loop_item_title' );
 
