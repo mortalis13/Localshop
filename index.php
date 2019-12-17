@@ -16,19 +16,19 @@ get_header(); ?>
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
 
-    <?php if ( have_posts() ) :
-
-      get_template_part( 'loop' );
-
-    else :
-
-      get_template_part( 'content', 'none' );
-
-    endif; ?>
+<?php 
+      ob_start();
+      woocommerce_output_product_categories(
+        array(
+          'parent_id' => is_product_category() ? get_queried_object_id() : 0,
+        )
+      );
+      $loop_html .= ob_get_clean();
+      echo $loop_html;
+ ?>
 
     </main><!-- #main -->
   </div><!-- #primary -->
 
 <?php
-do_action( 'localshop_sidebar' );
 get_footer();

@@ -201,9 +201,7 @@ if ( ! function_exists( 'localshop_site_title_or_logo' ) ) {
 
       $html = apply_filters( 'jetpack_the_site_logo', $html, $logo, $size );
     } else {
-      $tag = is_home() ? 'h1' : 'div';
-
-      $html = '<' . esc_attr( $tag ) . ' class="beta site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . esc_html( get_bloginfo( 'name' ) ) . '</a></' . esc_attr( $tag ) .'>';
+      $html = '<div class="beta site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . esc_html( get_bloginfo( 'name' ) ) . '</a></div>';
 
       if ( '' !== get_bloginfo( 'description' ) ) {
         $html .= '<p class="site-description">' . esc_html( get_bloginfo( 'description', 'display' ) ) . '</p>';
