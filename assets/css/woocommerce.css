@@ -66,6 +66,10 @@ ul.products:after{
   position:relative;
 }
 
+.woocommerce-products-header {
+  margin-bottom: 2em;
+}
+
 .woocommerce-active .site-branding{
   float:left;
 }
@@ -288,6 +292,20 @@ ul.products:before{
   margin-bottom:4.235801032em;
   margin-left:0;
   text-align:center;
+}
+
+.home .site-main ul.main-page-products li.product{
+  width: 24%;
+  float: none;
+  display: inline-block;
+  margin: 0;
+  padding: 10px;
+  vertical-align: top;
+  margin-bottom:4.235801032em;
+  text-align:center;
+}
+.home .site-main ul.main-page-products li.product .product-link a{
+  font-size: 16px;
 }
 
 .site-main ul.products li.product img:hover {
