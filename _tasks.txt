@@ -42,6 +42,7 @@
 - larger price
 - check "define( 'WP_DEBUG', true );"
 - remove autoscroll on cart purge
+- check pages ?page_id=1...
 
 -- ie7 merge style display: inline with inline-block in global style
 -- ie7 responsive, single products tabs width (fix content-box style)

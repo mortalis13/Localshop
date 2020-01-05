@@ -20,8 +20,8 @@
 
 </head>
 
-<body <?php body_class(); ?>>
-
+<body <?php body_class(is_user_logged_in() ? 'logged_in': ''); ?>>
+  
 <div class="debug-bar"><pre></pre></div>
 
 <?php 
