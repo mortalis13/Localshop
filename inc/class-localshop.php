@@ -36,8 +36,11 @@ if ( ! class_exists( 'Localshop' ) ) :
       add_filter( 'wp_page_menu_args',          array( $this, 'page_menu_args' ) );
       add_filter( 'navigation_markup_template', array( $this, 'navigation_markup_template' ) );
       add_action( 'wp_footer',                  array( $this, 'get_structured_data' ) );
+      
+      add_action( 'wp_ajax_nopriv_ajax_pagination', array( $this, 'my_ajax_pagination' ) );
+      add_action( 'wp_ajax_ajax_pagination', array( $this, 'my_ajax_pagination' ) );
     }
-
+    
     /**
      * Sets up theme defaults and registers support for various WordPress features.
      *
@@ -215,6 +218,10 @@ if ( ! class_exists( 'Localshop' ) ) :
       wp_enqueue_script( 'localshop-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.min.js', array(), $localshop_version, true );
       wp_enqueue_script( 'localshop-functions', get_template_directory_uri() . '/assets/js/functions.js', array('jquery'), $localshop_version, true );
       
+      wp_enqueue_script( 'ajax-pagination', get_template_directory_uri() . '/assets/js/ajax-pagination.js', array('jquery'), $localshop_version, true );
+      
+      wp_localize_script( 'ajax-pagination', 'ajax_pagination', array('ajax_url' => admin_url( 'admin-ajax.php' ) ));
+      
       if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
       }
@@ -384,6 +391,73 @@ if ( ! class_exists( 'Localshop' ) ) :
       wp_enqueue_style( 'localshop-admin-style', get_template_directory_uri() . '/assets/css/admin/admin-style.css', '', $localshop_version );
 
       // wp_enqueue_script( 'localshop-admin-script', get_template_directory_uri() . '/assets/js/admin/admin-script.js', array('jquery'), $localshop_version, false );
+    }
+    
+    
+    function my_ajax_pagination() {
+      // ---
+      // $page = ( get_query_var( 'page' ) ) ? absint( get_query_var( 'page' ) ) : 1;
+      $page = ( $_POST['page'] ) ? absint( $_POST['page'] ) : 1;
+      
+      $args = array(
+        'post_type' => 'product',
+        'posts_per_page' => 4,
+        'paged' => $page
+        );
+      $loop = new WP_Query( $args );
+      
+      if ( $loop->have_posts() ) {
+        wc_set_loop_prop( 'total', $loop->found_posts );
+        wc_set_loop_prop( 'total_pages', $loop->max_num_pages );
+        wc_set_loop_prop( 'current_page', $page );
+        woocommerce_pagination();
+        
+        // ------------
+        echo '<ul>';
+        while ( $loop->have_posts() ) : $loop->the_post();
+          global $product;
+          if ( empty( $product ) || ! $product->is_visible() ) {
+            continue;
+          }
+          ?><li <?php wc_product_class( '', $product ); ?>>
+            <div class="product-image">
+              <a href="<?php echo get_the_permalink(); ?>" class="woocommerce-LoopProduct-link">
+                <div class="img-wrapper">
+                <?php echo woocommerce_get_product_thumbnail(); ?>
+                </div>
+              </a>
+            </div>
+            
+            <div class="product-summary">
+              <div class="product-link">
+                <h2 class="title">
+                  <a href="<?php echo get_the_permalink(); ?>" class="woocommerce-LoopProduct-link">
+                    <?php echo get_the_title(); ?>
+                  </a>
+                </h2>
+              </div>
+              
+              <?php
+                global $product;
+                if ( is_search() ) {
+                  echo '<div class="product-category">';
+                  echo $product->get_categories( ', ', '<span class="posted_in">', '</span>' );
+                  echo '</div>';
+                }
+              ?>
+              
+              <div class="product-price">
+                <?php wc_get_template( 'loop/price.php' ); ?>
+              </div>
+            
+            </div>
+          </li><?php endwhile;
+        echo '</ul><!--/.products-->';
+      }
+      wp_reset_postdata();
+      // ---
+      
+      die();
     }
     
   }

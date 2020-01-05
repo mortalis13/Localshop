@@ -294,18 +294,50 @@ ul.products:before{
   text-align:center;
 }
 
-.home .site-main ul.main-page-products li.product{
-  width: 24%;
+.home .site-main .products-separator{
+  padding-bottom: 2em;
+  border-top: 1px solid #aaa;
+  width: 90%;
+  margin: 0 auto;
+}
+.home .site-main .woocommerce-pagination li{
+  margin: 0 2px;
+}
+.home .site-main .main-page-products ul{
+  margin: 0;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.home .site-main .main-page-products ul li.product{
+  width: 25%;
   float: none;
   display: inline-block;
   margin: 0;
-  padding: 10px;
   vertical-align: top;
-  margin-bottom:4.235801032em;
+  margin-bottom: 2em;
   text-align:center;
+  padding: 0 14px 0;
 }
-.home .site-main ul.main-page-products li.product .product-link a{
-  font-size: 16px;
+.home .site-main .main-page-products ul li.product .product-image{
+  padding: 1em;
+}
+.home .site-main .main-page-products ul li.product:hover .product-link a{
+  text-decoration: underline;
+}
+.home .site-main .main-page-products ul li.product .product-link a{
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 18px;
+}
+.home .site-main .main-page-products ul li.product .product-link .title{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.home .site-main .main-page-products ul li.product .product-price{
+  font-size: 1.5em;
 }
 
 .site-main ul.products li.product img:hover {

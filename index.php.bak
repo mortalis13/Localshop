@@ -43,33 +43,49 @@ get_header(); ?>
 <?php
   global $page;
   $page = ( get_query_var( 'page' ) ) ? absint( get_query_var( 'page' ) ) : 1;
-  $ordering                = WC()->query->get_catalog_ordering_args();
-  $ordering['orderby']     = array_shift(explode(' ', $ordering['orderby']));
-  $ordering['orderby']     = stristr($ordering['orderby'], 'price') ? 'meta_value_num' : $ordering['orderby'];
-  $ordering['orderby']     = stristr($ordering['orderby'], 'menu_order') ? '' : $ordering['orderby'];
-  $products_per_page       = apply_filters('loop_shop_per_page', wc_get_default_products_per_row() * wc_get_default_product_rows_per_page());
+  echo "orderby: $orderby";
+  echo "<br>";
+  
   
   // -----------
-  echo "<pre>";
-  
-  $args = array(
-    'paginate' => true,
-    'limit' => 8, 
-    'page' => $page,
-    'orderby' => $ordering['orderby'],
-    'order'   => $ordering['order'],
-  );
+  $args = array('paginate' => true, 'limit' => 8);
+  // $args = array('paginate' => true, 'limit' => 8, 'order' => 'ASC', 'orderby' => 'price');
   $results = wc_get_products( $args );
   $products = $results->products;
+  echo $results->total . ' products found<br>';
+  echo 'Page 1 of ' . $results->max_num_pages . '<br>';
+  echo 'First product id is: ' . $results->products[0]->get_id() . '<br><br><br>';
   
+  $products = wc_products_array_orderby( $products, 'price', 'ASC' );
+  // print_r($ordered);
+  // echo "<br>";
+  
+  echo "<pre>";
+  foreach ($products as $key => $value) {
+    print_r($value->get_id() . " => " . $value->get_name() . " :: " . $value->get_price());
+    echo "<br>";
+  }
   echo "</pre>";
   // -----------
   
   
+  $args = array(
+    'post_type' => 'product',
+    'posts_per_page' => 8,
+    'paged' => $page,
+    'order' => 'ASC',
+    // 'orderby' => $orderby
+    'orderby' => 'price'
+    );
+  $loop = new WP_Query( $args );
+  
+  // echo "<pre>"; print_r($loop); echo "</pre>";
+  
   echo '<div class="main-page-products">';
-  if (isset($results) && $results->total > 0) {
-    wc_set_loop_prop( 'total', $results->total );
-    wc_set_loop_prop( 'total_pages', $results->max_num_pages );
+  if ( $loop->have_posts() ) {
+    
+    wc_set_loop_prop( 'total', $loop->found_posts );
+    wc_set_loop_prop( 'total_pages', $loop->max_num_pages );
     wc_set_loop_prop( 'current_page', $page );
     
     woocommerce_catalog_ordering();
@@ -79,32 +95,49 @@ get_header(); ?>
     
     // ------------
     echo '<ul class="products-list">';
-    foreach ( $products as $product ) {
+    while ( $loop->have_posts() ) : $loop->the_post();
+      global $product;
       if ( empty( $product ) || ! $product->is_visible() ) {
         continue;
       }
-      
       ?><li <?php wc_product_class( '', $product ); ?>>
         <div class="product-image">
-          <a href="<?=$product->get_permalink()?>" class="woocommerce-LoopProduct-link">
-            <div class="img-wrapper"><?=woocommerce_get_product_thumbnail()?></div>
+          <a href="<?php echo get_the_permalink(); ?>" class="woocommerce-LoopProduct-link">
+            <div class="img-wrapper">
+            <?php echo woocommerce_get_product_thumbnail(); ?>
+            </div>
           </a>
         </div>
         
         <div class="product-summary">
           <div class="product-link">
             <h2 class="title">
-              <a href="<?=$product->get_permalink()?>" class="woocommerce-LoopProduct-link"><?=$product->get_name()?></a>
+              <a href="<?php echo get_the_permalink(); ?>" class="woocommerce-LoopProduct-link">
+                <?php echo get_the_title(); ?>
+              </a>
             </h2>
           </div>
           
-          <div class="product-price"><?php wc_get_template( 'loop/price.php' ); ?></div>
+          <?php
+            global $product;
+            if ( is_search() ) {
+              echo '<div class="product-category">';
+              echo $product->get_categories( ', ', '<span class="posted_in">', '</span>' );
+              echo '</div>';
+            }
+          ?>
+          
+          <div class="product-price">
+            <?php wc_get_template( 'loop/price.php' ); ?>
+          </div>
+        
         </div>
-      </li><?php
-    }
+      </li><?php endwhile;
     echo '</ul><!--/.products-->';
   }
   echo '</div>';
+  
+  wp_reset_postdata();
 ?>
 
     </main><!-- #main -->
