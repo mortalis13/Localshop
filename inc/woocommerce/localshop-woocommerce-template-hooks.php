@@ -67,6 +67,9 @@ add_action( 'localshop_single_product_summary', 'localshop_template_single_price
 add_action( 'localshop_single_product_summary', 'localshop_template_single_sharing', 50 );
 add_action( 'localshop_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
 
+// add_action( 'localshop_single_product_summary', array( WC_Wishlists_Plugin, 'add_to_wishlist_button' ), 40 );
+// add_action( 'localshop_single_product_summary', array( 'WC_Wishlists_Plugin', 'add_to_wishlist_button' ), 40 );
+
 add_action( 'localshop_after_single_product_summary', 'localshop_output_product_data_tabs', 10 );
 add_action( 'localshop_after_single_product_summary', 'localshop_upsell_display', 15 );
 add_action( 'localshop_after_single_product_summary', 'localshop_output_related_products', 20 );

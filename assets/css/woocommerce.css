@@ -2131,6 +2131,7 @@ p.stars.selected a:not(.active):before{
 p.no-comments{
   padding:1em 1.618em;
   margin-bottom:2.617924em;
+  margin-top: 1em;
   background-color:#0f834d;
   margin-left:0;
   border-radius:2px;

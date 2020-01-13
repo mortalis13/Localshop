@@ -497,9 +497,12 @@ if (  ! function_exists( 'localshop_template_loop_product_title' ) ) {
     
       <div class="product-add-to-cart">
         <?php
+          global $product;
           // wc_get_template( 'loop/add-to-cart.php' );
           echo do_shortcode('[wc_quick_buy type="link"]');
           woocommerce_template_loop_add_to_cart();
+          
+          echo do_shortcode('[ti_wishlists_addtowishlist product_id="'.$product->get_id().'"]');
         ?>
       </div>
     

@@ -207,6 +207,8 @@ if ( ! class_exists( 'Localshop' ) ) :
       wp_enqueue_style( 'localshop-social', get_template_directory_uri() . '/assets/css/social.css', '', $localshop_version );
       wp_enqueue_style( 'localshop-loaders-style', get_template_directory_uri() . '/assets/css/loaders.css', '', $localshop_version );
       
+      wp_enqueue_style( 'localshop-wishlist', get_template_directory_uri() . '/assets/css/ti-wishlist.css', '', $localshop_version );
+      
       wp_style_add_data( 'localshop-style', 'rtl', 'replace' );
 
 
@@ -219,7 +221,6 @@ if ( ! class_exists( 'Localshop' ) ) :
       wp_enqueue_script( 'localshop-functions', get_template_directory_uri() . '/assets/js/functions.js', array('jquery'), $localshop_version, true );
       
       wp_enqueue_script( 'ajax-pagination', get_template_directory_uri() . '/assets/js/ajax-pagination.js', array('jquery'), $localshop_version, true );
-      
       wp_localize_script( 'ajax-pagination', 'ajax_pagination', array('ajax_url' => admin_url( 'admin-ajax.php' ) ));
       
       if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

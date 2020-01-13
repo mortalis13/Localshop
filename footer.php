@@ -85,6 +85,8 @@
 
   <?php do_action( 'localshop_after_footer' ); ?>
 
+<img class="action-loader" src="<?=get_template_directory_uri().'/assets/images/loader.svg'?>">
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

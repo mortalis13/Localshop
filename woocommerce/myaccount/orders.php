@@ -97,7 +97,7 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 
 <?php else : ?>
 	<div class="woocommerce-message woocommerce-message--info woocommerce-Message woocommerce-Message--info woocommerce-info">
-		<a class="woocommerce-Button button" href="<?=get_site_url()?>">
+		<a class="woocommerce-Button button" href="<?=esc_url(get_site_url())?>">
 			<?php esc_html_e( 'Browse products', 'woocommerce' ); ?>
 		</a>
 		<?php esc_html_e( 'No order has been made yet.', 'woocommerce' ); ?>
