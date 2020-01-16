@@ -348,3 +348,13 @@ if ( ! function_exists( 'localshop_insert_newsletters_email' ) ) {
     return true;
   }
 }
+
+function tn_custom_excerpt_length( $length ) {
+  return 35;
+}
+add_filter( 'excerpt_length', 'tn_custom_excerpt_length', 999 );
+
+function st_woocommerce_shop_url(){
+  return site_url();
+}
+add_filter( 'woocommerce_return_to_shop_redirect', 'st_woocommerce_shop_url' );

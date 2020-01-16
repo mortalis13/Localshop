@@ -488,7 +488,14 @@ if (  ! function_exists( 'localshop_template_loop_product_title' ) ) {
       ?>
       
       <div class="product-description">
-        <?php the_excerpt(); ?>
+        <?php
+          $text = get_the_excerpt();
+          $max_text_size = 150;
+          if (strlen($text) > $max_text_size) {
+            $text = substr($text, 0, $max_text_size) . " [...]";
+          }
+          echo $text;
+        ?>
       </div>
       
       <div class="product-price">
@@ -793,4 +800,3 @@ if ( ! function_exists( 'localshop_sort_product_tabs' ) ) {
     return $tabs;
   }
 }
-

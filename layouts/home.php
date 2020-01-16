@@ -8,7 +8,6 @@ get_header(); ?>
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
 
-
 <header class="woocommerce-products-header">
   <h1 class="woocommerce-products-header__title page-title">Nuestros Productos</h1>
 </header>

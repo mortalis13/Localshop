@@ -23,8 +23,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! empty( $breadcrumb ) ) {
 
 	echo $wrap_before;
-
+  
 	foreach ( $breadcrumb as $key => $crumb ) {
+    if (is_search() && preg_match("/\/home\/?$/", $crumb[1])) continue;
 
 		echo $before;
 

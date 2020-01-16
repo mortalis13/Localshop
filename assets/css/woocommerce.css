@@ -1292,7 +1292,12 @@ a.remove:before{
 }
 
 .checkout_coupon{
+  margin-top:-1.4em;
   margin-bottom:2.617924em;
+}
+.checkout_coupon #coupon_code {
+  padding-left: .6em;
+  padding-right: .6em;
 }
 
 form.checkout{
@@ -2789,6 +2794,7 @@ dl.variation dd{
   #order_review,
   #order_review_heading{
     width:41.1764705882%;
+    padding: 5px 15px;
     float:right;
     margin-right:0;
   }
@@ -3085,7 +3091,7 @@ dl.variation dd{
   .form-row-first{
     width:47.0588235294%;
     float:left;
-    margin-right:5.8823529412%;
+    margin-right:3%;
     clear:both;
   }
 

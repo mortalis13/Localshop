@@ -1,9 +1,11 @@
 
-.tax-product_cat .products .product .tinvwl-shortcode-add-to-cart {
+.tax-product_cat .products .product .tinvwl-shortcode-add-to-cart,
+.search-results .products .product .tinvwl-shortcode-add-to-cart {
   float: left;
   margin-left: 10px;
 }
-.tax-product_cat .products .product .tinvwl-shortcode-add-to-cart .tinvwl_add_to_wishlist_button {
+.tax-product_cat .products .product .tinvwl-shortcode-add-to-cart .tinvwl_add_to_wishlist_button,
+.search-results .products .product .tinvwl-shortcode-add-to-cart .tinvwl_add_to_wishlist_button {
   margin: 0;
   padding: .6180469716em 0.5em;
 }

@@ -43,6 +43,8 @@
 - check "define( 'WP_DEBUG', true );"
 - remove autoscroll on cart purge
 - check pages ?page_id=1...
+- "remove-all" from cart
+- total count on main page products list
 
 -- ie7 merge style display: inline with inline-block in global style
 -- ie7 responsive, single products tabs width (fix content-box style)

@@ -28,7 +28,7 @@
   // global $template;
   // print_r($template);
 ?>
- 
+
 <div id="page" class="hfeed site">
   <?php
   do_action( 'localshop_before_header' ); ?>
