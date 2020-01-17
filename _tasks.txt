@@ -33,6 +33,8 @@
 *- zoom on mobile
 *- wp_debug=true, fix warnings
 
+- favicon, logos, colors
+
 - loader for product image when switching thumbnails on slow connection/large size
 - mobile, zoom image on finger move
 - customizable contact icons urls 
