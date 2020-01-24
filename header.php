@@ -13,8 +13,13 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"> -->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.0, user-scalable=1">
+
+<link rel='shortcut icon' type='image/x-icon' href='<?php echo $home_url.'favicon.ico'?>' />
+
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+
+<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Courgette&display=swap" rel="stylesheet"> 
 
 <?php wp_head(); ?>
 

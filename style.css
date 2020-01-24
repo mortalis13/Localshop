@@ -348,12 +348,24 @@ a img{
   z-index: 999;
 }
 
+.site-header .logo{
+  margin: 13px 0 0;
+  line-height: 0;
+  max-width: 500px;
+}
+.site-header .logo a{
+  display: inline-block;
+  line-height: 0;
+  outline: 0;
+}
+
 .main-header{
   padding-top: 10px;
 }
 
 .site-title a{
-  color: #20a87e;
+  color: #d34545;
+  /*color: #20a87e;*/
   /*font-family: Poppins;*/
   font-family: Asul;
 }
@@ -377,7 +389,7 @@ a img{
 .site-header .site-branding {
   display: block;
   clear: both;
-  margin: 4px 0 0 !important;
+  margin: 0;
 }
 .site-header .site-branding img {
   height: auto;
@@ -389,6 +401,7 @@ a img{
 }
 .site-branding .site-title {
   font-size: 2em;
+  margin-top: 4px !important;
   letter-spacing: -1px;
   margin: 0;
 }
@@ -722,7 +735,8 @@ button.menu-toggle:hover {
 }
 
 .main-navigation ul.menu li.current-menu-item > a {
-  color: #23A74D;
+  color: #d34545;
+  /*color: #23a74d;*/
 }
 
 .localshop-primary-navigation {
@@ -1902,8 +1916,8 @@ fieldset legend {
 }
 
 .site-header .col-full{
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 140px;
+  padding-right: 140px;
 }
 .site-content .col-full {
   max-width: 960px;
@@ -2116,4 +2130,3 @@ fieldset legend {
   display: table;
   content: "";
 }
-

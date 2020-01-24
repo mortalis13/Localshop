@@ -1,11 +1,11 @@
 
 @font-face {
-    font-family: 'Asul';
-    src: url('../fonts/Asul/Asul-Regular.eot');
-    src: url('../fonts/Asul/Asul-Regular.eot?iefix') format('opentype'),
-         url('../fonts/Asul/Asul-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Asul';
+  src: url('../fonts/Asul/Asul-Regular.eot');
+  src: url('../fonts/Asul/Asul-Regular.eot?iefix') format('opentype'),
+       url('../fonts/Asul/Asul-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
