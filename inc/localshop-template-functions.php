@@ -178,7 +178,8 @@ if ( ! function_exists( 'localshop_site_title_or_logo' ) ) {
   function localshop_site_title_or_logo( $echo = true ) {
     if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
       $logo = get_custom_logo();
-      $html = is_home() ? '<h1 class="logo">' . $logo . '</h1>' : $logo;
+      // $html = is_home() ? '<h1 class="logo">' . $logo . '</h1>' : $logo;
+      $html = '<h1 class="logo">' . $logo . '</h1>';
     } elseif ( function_exists( 'jetpack_has_site_logo' ) && jetpack_has_site_logo() ) {
       // Copied from jetpack_the_site_logo() function.
       $logo    = site_logo()->logo;
