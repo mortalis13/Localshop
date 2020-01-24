@@ -395,6 +395,7 @@ a img{
   height: auto;
   max-width: 100%;
   max-height: none;
+  box-shadow: 2px 2px 2px 0px #0002;
 }
 .site-branding .site-title a{
   font-weight: 700;
