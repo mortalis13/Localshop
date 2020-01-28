@@ -47,7 +47,7 @@ $woocommerce_loop['columns'] = apply_filters( 'woocommerce_related_products_colu
 if ( $products->have_posts() ) : ?>
 
   <div class="related products">
-    <h2 class="related-title"><?php _e( 'Related Products', 'woocommerce' ); ?></h2>
+    <h2 class="related-title"><?php _e( 'Related Products', 'localshop' ); ?></h2>
 
     <?php woocommerce_product_loop_start(); ?>
       <?php while ( $products->have_posts() ) : $products->the_post(); ?>

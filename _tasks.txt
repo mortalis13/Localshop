@@ -33,7 +33,10 @@
 *- zoom on mobile
 *- wp_debug=true, fix warnings
 
-- favicon, logos, colors
+*- favicon, logos, colors
+*- translate wishlist
+*- wishlist link for guest
+- 'Sign me up for the newsletter' translate
 
 - loader for product image when switching thumbnails on slow connection/large size
 - mobile, zoom image on finger move

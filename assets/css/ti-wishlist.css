@@ -46,7 +46,11 @@ table.tinvwl-table-manage-list td.product-name {
   max-width: 200px;
 }
 .tinv-wishlist .product-action {
-  width: 180px;
+  width: 200px;
+}
+
+.tinvwl-table-manage-list {
+  margin-top: 10px;
 }
 
 .tinv-wishlist.woocommerce .cart-empty {

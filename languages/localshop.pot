@@ -530,3 +530,6 @@ msgstr ""
 #: handlers/contactformhandler.php:85
 msgid "Please enter the message."
 msgstr ""
+
+msgid "Wishlist"
+msgstr ""

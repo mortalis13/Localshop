@@ -5,14 +5,14 @@ msgstr ""
 "Project-Id-Version: Localshop 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/localshop\n"
 "POT-Creation-Date: 2017-04-01 14:00+0200\n"
-"PO-Revision-Date: 2017-04-02 00:00+0200\n"
+"PO-Revision-Date: 2020-01-27 16:55+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0\n"
+"X-Generator: Poedit 2.2.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: 404.php:19
@@ -126,7 +126,7 @@ msgstr ""
 
 #: inc/customizer/class-localshop-customizer-control-more.php:31
 msgid "Enjoying %s?"
-msgstr ""
+msgstr "Disfrutando %s?"
 
 #: inc/customizer/class-localshop-customizer-control-more.php:34
 msgid ""
@@ -550,3 +550,6 @@ msgstr "Por favor, introduce un email válido."
 #: handlers/contactformhandler.php:85
 msgid "Please enter the message."
 msgstr "Por favor, introduce el mensaje."
+
+msgid "Wishlist"
+msgstr "q123"
