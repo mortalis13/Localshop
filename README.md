@@ -1,8 +1,8 @@
 # Localshop
 
 Wordpress theme for online shops.  
-Uses **WooCommerce** for categories, products and cart.
-Example: localshop.c1.biz.
+Uses **WooCommerce** for categories, products and cart.  
+Example: [localshop.c1.biz](http://localshop.c1.biz).  
 
 ## Features
 
