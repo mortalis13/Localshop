@@ -402,13 +402,12 @@ a img{
 }
 .site-branding .site-title {
   font-size: 2em;
-  margin-top: 4px !important;
   letter-spacing: -1px;
   margin: 0;
 }
 
 .site-branding .site-description {
-  font-size: .875em;
+  font-size: .95em;
   font-style: italic;
   color: #444;
   margin-bottom: 0;
@@ -1542,7 +1541,7 @@ button.menu-toggle:hover {
 .site-footer {
   background-color: #f3f3f3;
   color: #76787e;
-  padding: 20px 50px;
+  padding: 30px 50px 20px;
 }
 
 .site-footer h1,

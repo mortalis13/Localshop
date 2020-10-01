@@ -9,7 +9,7 @@ get_header(); ?>
     <main id="main" class="site-main" role="main">
 
 <header class="woocommerce-products-header">
-  <h1 class="woocommerce-products-header__title page-title">Nuestros Productos</h1>
+  <h1 class="woocommerce-products-header__title page-title">Our Products</h1>
 </header>
 
 <ul class="products columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?>">
